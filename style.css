@@ -1,0 +1,745 @@
+/*
+Theme Name: Inpixel Blank Responsive
+Theme URI: http:// 
+Author: Stephanie Walter
+Author URI: http://www.inpixelitrust.fr
+Description: Inpixelitrust reset theme based on <a href="http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/">Randy Jensen & Randy Hoyt HTML5 starter theme </a>a> with other goodies added plus chunks of Paul Irish's <a href="http://html5boilerplate.com/">HTML5 Boilerplate </a> mixed in for good measure. Shake well. With pieces of <a href="http://knacss.com/">Raphael Goetter's knacss in it</a>
+Version: 0.1
+License: 
+License URI: 
+*/
+
+
+/* ----------------------------- */
+/* summary */
+/* ----------------------------- */
+/*
+/* A. General structure 
+1- Reset 
+2- Baseline for elements
+3- Base Typography
+4- Layout and modules
+5- Hidding / unhidding content
+6- Images
+7- WordPress alignement
+
+/* B. WordPress template structure
+1-  General
+2-  Header
+3-  Menu
+4-  Content
+5-  Footer
+
+/* C. Media queries
+
+/* D. Print style
+*/
+
+
+
+/*
+ *
+ * Reset 
+ *
+ */
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+/*** Uncomment for a hard reset **/
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;	
+	border: 0;	
+	margin: 0;	
+	padding: 0;	
+	vertical-align: baseline;
+}*/
+
+/** A softer reset**/
+html, body, blockquote, ul, ol, form, p, div {
+	background: transparent;	
+	border: 0;	
+	margin: 0;	
+	padding: 0;	
+	vertical-align: baseline;
+}
+ul, ol {padding-left: 2em}
+blockquote {quotes: none;}
+blockquote:before, blockquote:after {
+	content: '';	content: none;}
+del {	text-decoration: line-through;}
+/* tables still need 'cellspacing="0"' in the markup */
+table {	border-collapse: collapse;	border-spacing: 0;}
+a img {	border: none;}
+select, input, textarea, button { font:99% sans-serif; color: #444;  }
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+
+/* HTML 5 elements */
+header,nav,section,article,dialog,figure,aside,footer{display:block;margin:0;padding:0;}
+
+
+/*
+ *
+ * Baseline for elements
+ *
+ */
+
+ /* base font-size corresponds to 10px */
+html {
+	font-size: 62.5%;
+	overflow-y: scroll;
+}
+body {
+	color: #444; 
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4; /* adapt to your design */
+}
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
+/*  j.mp/webkit-tap-highlight-color */
+
+
+/*
+ *
+ * Base Typography 
+ *
+ */
+
+/* font-sizing for content */
+p, li, td, th, textarea {font-size: 1.4em;}
+li li, li p, td p, th p, li h1, li h2, li h3, li h4, li h5, li h6, button, input, select {font-size: 100%;}
+h1, .h1-like {font-size: 2.4em; } /* 24 pixels */
+h2, .h2-like {font-size: 2.0em; } /* 20 pixels */
+h3, .h3-like {font-size: 1.8em; } /* 18 pixels */
+h4, .h4-like {font-size: 1.6em; } /* 16 pixels */
+h5, .h5-like {font-size: 1.4em; } /* 14 pixels */
+
+/* alternate font-sizing */
+.smallest {font-size: .7em;}
+.smaller {font-size: .8em;}
+.small {font-size: .9em;}
+.big {font-size: 1.07em;} /* 15 pixels */
+.bigger {font-size: 1.14em;} /* 16 pixels */
+.biggest {font-size: 1.28em;} /* 18 pixels */
+
+/* avoid collapsing margins */
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, p:first-child {
+    margin-top: 0;
+}
+
+/* avoid last paragraph bottom margin */
+p:last-child {margin-bottom: 0;}
+
+/* styling headings */
+h1, .h1-like {}
+h2, .h2-like {}
+h3, .h3-like {}
+h4, .h4-like {}
+h5, .h5-like {}
+h6, .h6-like {}
+
+/* max values */
+img, table, td, blockquote, code, pre, textarea, input, object, embed, video{
+    max-width: 100%; height: auto;
+}
+iframe {
+    max-width: 100%;
+   /** height: auto; */ /** this can make video embeded in iframe look very small, uncomment if necessary **/
+}
+/* you shall not pass */
+textarea, table, td, th, code, pre, samp, div, p {
+    word-wrap: break-word;
+}
+code, pre, samp {
+    white-space: pre-wrap;
+}
+small {
+font-size: 85%; 
+}
+strong, th { 
+font-weight: bold; 
+}
+td, td img { 
+vertical-align: top; 
+} 
+sub { 
+vertical-align: sub; 
+font-size: smaller; 
+}
+sup { 
+vertical-align: super; 
+font-size: smaller; 
+}
+pre { 
+  padding: 15px; 
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+
+/*
+ *
+ *Links
+ *
+ */
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, 
+a:active { 
+outline: none; 
+}
+a, 
+a:active, 
+a:visited { 
+color: #607890; 
+}
+a:hover { 
+color: #036; 
+}
+a:link { -webkit-tap-highlight-color: #FF5E99; } 
+a img {border: 0;}
+
+
+/*
+ *
+ *  Layout and modules
+ *
+ */
+
+/* switching box model for all elements */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+/* float layout */
+/* ----------- */
+
+/* block that can contains several .mod , can contains floats */
+.line {}
+/* module, contains floats */
+.mod {
+    padding: 1em;
+}
+
+/* generaly inside .mod, can contains .item */
+.items {}
+
+/* fluid, contains floats, can be placed next to a float */
+.item {
+    overflow: hidden;
+}
+
+/* table layout */
+/* ------------------ */
+.row {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.row > *, .col {
+    display: table-cell;
+    padding: 1em;
+}
+
+/* 1em gutter between elements if parent is .gut */
+.line.gut > * + * {
+    margin-left: 1em;
+}
+.row.gut > * + * {
+    border-left: 1em solid #fff; /* must be color of parent background */
+}
+
+/* blocks that needs to be placed under floats */
+.clear, .line, .row {
+    clear: both;
+}
+
+/* blocks that can contains floats */
+.clearfix:after, .line:after, .mod:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* alignments (blocks and inline) */
+/* ----------------------------- */
+
+/* left and 1em gutter */
+.left {
+    float: left; margin-right: 1em
+}
+/* right and 1em gutter */
+.right {
+    float: right; margin-left: 1em
+}
+
+/* juste inline-block */
+.inbl {display: inline-block;}
+
+/* blocks widths (percentage and pixels) */
+.w10 {width: 10%}
+.w20 {width: 20%}
+.w25 {width: 25%}
+.w30 {width: 30%}
+.w33 {width: 33.33%}
+.w40 {width: 40%}
+.w50 {width: 50%}
+.w60 {width: 60%}
+.w70 {width: 70%}
+.w80 {width: 80%}
+.w90 {width: 90%}
+.w100 {width: 100%}
+
+
+
+/*
+ *
+ * Hidding / unhidding content 
+ *
+ */
+/* for image replacement */
+.ir { 
+display: block; 
+text-indent: -999em; 
+overflow: hidden; 
+background-repeat: no-repeat; 
+text-align: left; 
+direction: ltr; 
+}
+/* Hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; } 
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders 
+   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
+.assistive-text, 
+.visuallyhidden{
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+#access a.assistive-text:active,
+#access a.assistive-text:focus {
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	color: #1982d1;
+	clip: auto !important;
+	font-size: 12px;
+	position: absolute;
+	text-decoration: underline;
+	top: 0;
+	left: 7.6%;
+}
+
+/* hiding content */
+.desktop-hidden {display: none;} /* hidden on desktop */
+.mobile-hidden {} /* hidden on mobile */
+.tablet-hidden {} /* hidden on tablets */
+.phone-hidden {} /* hidden on smartphones */
+
+
+
+
+/*
+ *
+ * Forms
+ *
+ */
+
+legend {border: 0; white-space: normal;}
+form, fieldset { border: none;}
+label{ cursor: pointer; } /* hand cursor on clickable input elements */
+/* webkit browsers add a 2px margin outside the chrome of form elements */  
+button, 
+input, 
+select, 
+textarea { 
+margin: 0; 
+}
+/* colors for form validity 
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid { 
+      border-radius: 1px;
+    -moz-box-shadow: 0px 0px 5px red; 
+ -webkit-box-shadow: 0px 0px 5px red; 
+         box-shadow: 0px 0px 5px red;
+}
+* */
+button, input, select {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+	*vertical-align: middle;   /* Improves appearance in IE6/7 */	
+}
+textarea { 
+	overflow: auto; 
+	min-height: 5em;
+	vertical-align: top;
+    resize: vertical;
+    font-size: 1em;
+} 
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button; /* clickable input types in iOS */
+	*overflow: visible; /* Corrects inner spacing displayed oddly in IE7 */
+}
+input[type="checkbox"], input[type="radio"] {
+	padding: 0; /* Corrects excess space around these inputs in IE8/9 */
+	*width: 13px; *height: 13px; /* Corrects excess space around these inputs in IE7 */
+}
+input[type="search"] {-webkit-appearance: textfield;}
+input[type="radio"] { 
+vertical-align: text-bottom; 
+}
+input[type="checkbox"] { 
+vertical-align: bottom; 
+}
+.ie7 input[type="checkbox"] { 
+vertical-align: baseline; 
+}
+.ie6 input { 
+vertical-align: text-bottom; 
+}
+/* 'x' appears on right of search input when text is entered. This removes it */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
+/* Removes inner padding and border in FF3+ */
+button::-moz-focus-inner,
+input[type='button']::-moz-focus-inner,
+input[type='reset']::-moz-focus-inner,
+input[type='submit']::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+/** style the placeholder **/
+::-webkit-input-placeholder {color: #777;}
+input:-moz-placeholder, textarea:-moz-placeholder {color: #777;}
+
+.ie6 legend, 
+.ie7 legend { 
+margin-left: -7px; 
+} /* thnx ivannikolic! */
+/* haslayout for IE6/IE7 */
+.ie7 .clearfix,.ie7 .line, .ie7 .mod, .ie7 .row, .ie7 .col {
+    zoom: 1;
+}
+.no-boxshadow input:invalid, 
+.no-boxshadow textarea:invalid { background-color: #f0dddd; }
+/* Forms - Class for labelling required form items */
+.required {
+	color: #cc0033;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ *
+ * Images
+ *
+ */
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft {
+	margin-right: 1em;
+}
+img.alignright {
+	margin-left: 1em;
+}
+.wp-caption {
+	padding: .5em;
+	text-align: center;
+}
+.wp-caption img {
+	margin: .25em;
+}
+.wp-caption .wp-caption-text {
+	margin: .5em;
+}
+.gallery-caption{
+}
+/* bicubic resizing for non-native sized IMG: 
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+
+
+/*
+ *
+ *  WordPress alignement styles and other used styles
+ *
+ */
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+
+
+/*************************** Template structure here **************************/
+
+/*
+ *
+ *  General
+ *
+ */
+#page {
+}
+#content {	
+}
+#primary {	
+}
+#main .widget-area {	
+}
+#colophon {	
+}
+
+/*
+ *
+ * Header
+ *
+ */
+#site-title {
+	font-weight: bold;
+	margin: .67em 0;
+}
+#site-description {
+	font-weight: normal;
+	margin: 0 0 1em;
+}
+
+
+/*
+ *
+ * Menu
+ *
+ */
+#access {
+	background: #eee;
+	display: block;
+	float: left;
+	margin: 0 auto 1em;
+	width: 100%;
+}
+#access ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+#access li {
+	float: left;
+	position: relative;
+}
+#access a {
+	display: block;
+	line-height: 2em;
+	padding: 0 1em;
+	text-decoration: none;
+}
+#access ul ul {
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#access ul ul a {
+	background: #333;
+	color: #fff;
+	line-height: 1em;
+	padding: .5em .5em .5em 1em;
+	width: 10em;
+	height: auto;
+}
+#access li:hover > a,
+#access ul ul :hover > a {
+	background: #333;
+	color: #fff;
+}
+#access ul ul a:hover {
+	background: #000;
+}
+#access ul li:hover > ul {
+	display: block;
+}
+
+/*
+ *
+ * Content
+ *
+ */
+#content nav {
+	display: block;
+	overflow: hidden;
+}
+#content nav .nav-previous {
+	float: left;
+	width: 50%;
+}
+#content nav .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+#content #nav-above {
+	display: none;
+}
+.paged #content #nav-above,
+.single #content #nav-above {
+	display: block;
+}
+#nav-below {
+	margin: 1em 0 0;
+}
+.page-link {
+	margin: 0 0 1em;
+}
+
+
+/*
+ *
+ * Footer
+ *
+ */
+#colophon {
+	padding: 1em 0 0;
+}
+.sticky{
+}
+.bypostauthor{	
+}
+
+
+
+
+/*
+ *
+ * Media queries and mobile optimisation
+ *
+ */
+
+/*
+ *
+ * Media queries for responsive design
+ * These follow after primary styles so they will successfully override. 
+ *
+ */
+@media all and (orientation:portrait) { 
+  /* Style adjustments for portrait mode goes here */
+}
+@media all and (orientation:landscape) { 
+  /* Style adjustments for landscape mode goes here */
+}
+/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
+   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+
+/* quick smartphone reset */
+@media (max-width: 640px) {
+    .phone-hidden {display: none}
+    .mod, .col {
+     display: block !important;
+     margin: 0 !important;
+     border: 0 !important;
+     float: none !important;
+     width: auto !important;
+    }
+    [class*="mw"], [class*="w9"], [class*="w8"],
+    [class*="w7"], [class*="w6"], [class*="w5"],
+    [class*="w4"], [class*="w3"] {
+        width: auto;
+    }
+}
+
+@media screen and (max-device-width: 480px) {  
+	  /* Style adjustments for  smartphone mode goes here */
+	
+}
+
+
+/*
+ *
+ * Print style
+ *
+ */
+@media print {
+	p, blockquote {orphans: 2; widows: 2;}
+    blockquote, ul, ol {page-break-inside: avoid;}
+    h1, h2, h3, caption { page-break-after: avoid;}
+  * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a:after { content: " (" attr(href) ")"; } 
+  abbr:after { content: " (" attr(title) ")"; }
+  .ir a:after { content: ""; }  /* Don't show links for images */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */ 
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}

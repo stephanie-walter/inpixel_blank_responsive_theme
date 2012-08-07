@@ -1,0 +1,57 @@
+/*  The css for the login page ! */
+
+.login h1 a {
+background:url(../images/logo.png) 14px 17px no-repeat; 
+width:280px; 
+height:70px; 
+}
+body.login { 
+border-top-color:#bccad3; 
+}
+
+/* Barre du haut - Lien */
+.login p#backtoblog a:link,.login p#backtoblog a:visited { color:#6c7880; }
+
+/* Barre du haut - Effet de survol*/
+.login p#backtoblog a:hover,.login p#backtoblog a:active { color:#6c7880; text-decoration:underline; }
+
+/* Modification de la taille du bloc "Connexion" */
+#login { 
+width:400px; 
+margin:0em auto; 
+}
+
+/* Modification de bouton "Se connecter" et des autres liens*/
+#login form .submit input { 
+border-color:#bccad3!important; 
+border-radius:3px !important;
+font-weight:bold; 
+color:#FFF!important; 
+text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+background: #d3dfea; /* Old browsers */
+background: -moz-linear-gradient(top,  #d3dfea 0%, #b1d1ed 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3dfea), color-stop(100%,#b1d1ed)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #d3dfea 0%,#b1d1ed 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #d3dfea 0%,#b1d1ed 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #d3dfea 0%,#b1d1ed 100%); /* IE10+ */
+background: linear-gradient(top,  #d3dfea 0%,#b1d1ed 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3dfea', endColorstr='#b1d1ed',GradientType=0 ); /* IE6-9 */
+ 
+}
+#login form .submit input:hover { 
+background: #e1eef7; /* Old browsers */
+background: -moz-linear-gradient(top,  #e1eef7 1%, #b9def7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#e1eef7), color-stop(100%,#b9def7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e1eef7 1%,#b9def7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e1eef7 1%,#b9def7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e1eef7 1%,#b9def7 100%); /* IE10+ */
+background: linear-gradient(top,  #e1eef7 1%,#b9def7 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1eef7', endColorstr='#b9def7',GradientType=0 ); /* IE6-9 */
+
+color:#FFFFFF!important; 
+}
+
+.login #nav a { color:#7c8991!important; 
+}
+.login #nav a:hover { color:#6f7a81!important; 
+}
