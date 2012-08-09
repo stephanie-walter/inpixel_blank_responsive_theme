@@ -1,7 +1,16 @@
 <?php
+/**
+ * Template Name: Left Sidebar
+ * Description: A template with the sidebar on the left
+ *
+ *
+ */
+
 get_header(); ?>
 
 		<?php get_sidebar(); ?>
+		
+			
 		<section id="primary" class=" content mod item ">
 			<div id="content">
 

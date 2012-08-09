@@ -8,7 +8,8 @@
 
 get_header(); ?>
 
-			<div id="content" class="full-width">
+			<section id="primary" class=" content mod item ">
+				<div id="content" class="full-width">
 
 				<?php the_post(); ?>
 

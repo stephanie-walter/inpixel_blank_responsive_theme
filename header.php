@@ -77,6 +77,9 @@
 	
 	
 		<div id="main" class="line gut">
-			<?php if ( !is_page_template('left-sidebar-page.php')){?>
+			<?php if ( !(
+			is_page_template('left-sidebar-page.php') || 
+			is_page_template('full-width-page.php'))
+			){?>
 			<section id="primary" role="region" class="mod left w70">
 			<?php } ?>
