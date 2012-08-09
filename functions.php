@@ -2,11 +2,11 @@
   
 
 /*** clean ups and enhancements, uncomment to use */
-// require_once('functions/wordpress_cleanup.php'); //admin cleanups 
+require_once('functions/wordpress_cleanup.php'); //admin cleanups 
 // require_once('functions/custom_post_types.php'); // boiler template for CPT
-// require_once('functions/script_style_cleanups.php'); // javascript cleanups
+require_once('functions/script_style_cleanups.php'); // javascript cleanups
 // require_once('functions/remove-comments-absolute.php'); //to remove comments completely
-// require_once ( 'functions/theme-options.php' );
+require_once ( 'functions/theme-options.php' );
 
 
 /**
