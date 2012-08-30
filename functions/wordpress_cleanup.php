@@ -111,29 +111,29 @@ feel free to comment / uncomment  */
 
 function customize_meta_boxes() {
   /* Removes meta boxes from Posts */
-  remove_meta_box('postcustom','post','normal'); // custom fields metabox
-  remove_meta_box('trackbacksdiv','post','normal'); // trackbacks metabox 
-  remove_meta_box('commentstatusdiv','post','normal'); // comment status metabox 
-  remove_meta_box('commentsdiv','post','normal'); // comments  metabox 
+  //remove_meta_box('postcustom','post','normal'); // custom fields metabox
+  //remove_meta_box('trackbacksdiv','post','normal'); // trackbacks metabox 
+  //remove_meta_box('commentstatusdiv','post','normal'); // comment status metabox 
+  //remove_meta_box('commentsdiv','post','normal'); // comments  metabox 
   //remove_meta_box('postexcerpt','post','normal'); // post excerpts metabox 
-  remove_meta_box('authordiv','post','normal'); // author metabox 
-  remove_meta_box('revisionsdiv','post','normal'); // revisions  metabox 
-  remove_meta_box('tagsdiv-post_tag','post','normal'); // tags
-  remove_meta_box('slugdiv','post','normal'); // slug metabox 
+  //remove_meta_box('authordiv','post','normal'); // author metabox 
+  //remove_meta_box('revisionsdiv','post','normal'); // revisions  metabox 
+  //remove_meta_box('tagsdiv-post_tag','post','normal'); // tags
+  //remove_meta_box('slugdiv','post','normal'); // slug metabox 
   //remove_meta_box('categorydiv','post','normal'); // comments metabox
   //remove_meta_box('postimagediv','post','normal'); // featured image metabox
-  remove_meta_box('formatdiv','post','normal'); // format metabox 
+  //remove_meta_box('formatdiv','post','normal'); // format metabox 
   
   
   /* Removes meta boxes from pages */   
-  remove_meta_box('postcustom','page','normal'); // custom fields metabox
-  remove_meta_box('trackbacksdiv','page','normal'); // trackbacks metabox
-  remove_meta_box('commentstatusdiv','page','normal'); // comment status metabox 
-  remove_meta_box('commentsdiv','page','normal'); // comments  metabox 
-  remove_meta_box('authordiv','page','normal'); // author metabox 
-  remove_meta_box('revisionsdiv','page','normal'); // revisions  metabox 
+  //remove_meta_box('postcustom','page','normal'); // custom fields metabox
+  //remove_meta_box('trackbacksdiv','page','normal'); // trackbacks metabox
+  //remove_meta_box('commentstatusdiv','page','normal'); // comment status metabox 
+  //remove_meta_box('commentsdiv','page','normal'); // comments  metabox 
+  //remove_meta_box('authordiv','page','normal'); // author metabox 
+  //remove_meta_box('revisionsdiv','page','normal'); // revisions  metabox 
   //remove_meta_box('postimagediv','page','side'); // featured image metabox
-  remove_meta_box('slugdiv','page','normal'); // slug metabox 
+  //remove_meta_box('slugdiv','page','normal'); // slug metabox 
  
   
   
@@ -224,7 +224,7 @@ function rynonuke_update_notification_nonadmins() {
 // disable self-trackbacking
 function rynonuke_self_pings( &$links ) {
     foreach ( $links as $l => $link )
-        if ( 0 === strpos( $link, get_option( 'home' ) ) )
+        if ( 0 === strpos( $link, home_url() ) )
             unset($links[$l]);
 }
 

@@ -106,13 +106,13 @@ $req = get_option('require_name_email');
 
 $fields =  array(
 'author' => '<p>' . '<label for="author">' . __( 'Name','themename' ) . '</label> ' . ( $req ? '<span>*</span>' : '' ) .
-'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' placeholder ='.__( '"What shall we call you?"', 'themename' ) . ( $req ? ' required' : '' ) . '/></p>',
+'<input id="author" name="author" type="text" value="' . '" size="30"' . ' placeholder ='.__( '"What shall we call you?"', 'themename' ) . ( $req ? ' required' : '' ) . '/></p>',
 
 'email'  => '<p><label for="email">' . __( 'Email','themename' ) . '</label> ' . ( $req ? '<span>*</span>' : '' ) .
-'<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' placeholder ='.__( '"Leave us a valid email adress"', 'themename' ) . ( $req ? ' required' : '' ) . ' /></p>',
+'<input id="email" name="email" type="email" value="' .'" size="30"' . ' placeholder ='.__( '"Leave us a valid email adress"', 'themename' ) . ( $req ? ' required' : '' ) . ' /></p>',
 
 'url'    => '<p><label for="url">' . __( 'Website','themename' ) . '</label>' .
-'<input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" placeholder='.__( '"Have you got a nice website ?"', 'themename' ) . '/></p>'
+'<input id="url" name="url" type="url" value="' . '" size="30" placeholder='.__( '"Have you got a nice website ?"', 'themename' ) . '/></p>'
 
 );
 return $fields;

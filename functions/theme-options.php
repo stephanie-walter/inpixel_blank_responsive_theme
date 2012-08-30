@@ -22,6 +22,7 @@ function theme_options_add_page() {
  */
 
 function theme_options_do_page() { 
+if (isset($_GET['settings-updated'])){
 $is_updated= $_GET['settings-updated'];
 if ($is_updated == 'true'){ ?>
 	<div id="message" class="updated">
@@ -29,6 +30,7 @@ if ($is_updated == 'true'){ ?>
 	</div>
 
 <?php }
+}
 ?>
 
 <div class="wrap">
