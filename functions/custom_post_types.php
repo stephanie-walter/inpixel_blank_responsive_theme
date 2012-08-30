@@ -1,21 +1,19 @@
 <?php
-
-
 /********************  custom post type ************************/     
 /** We are going to create a custom post type for **** !!! **/
-add_action( 'init', 'ajouter_CPT' );
-function ajouter_CPT() {
+add_action( 'init', 'add_cpt' );
+function add_cpt() {
   $labels = array(
-    'name' => _('Nom', 'themename'),
-    'singular_name' => _('Nom', 'themename'),
-    'add_new' => _('Ajouter un ', 'themename'),
-    'add_new_item' => __('Ajouter un nouveau ', 'themename'),
-    'edit_item' => __('Editer le ', 'themename'),
-    'new_item' => __('Nouveau ', 'themename'),
-    'view_item' => __('Voir le ', 'themename'),
-    'search_items' => __('Rechercher un ', 'themename'),
-    'not_found' =>  __('Aucun de trouv&eacute', 'themename'),
-    'not_found_in_trash' => __('Aucun  de trouv&eacute dans la poubelle', 'themename'),
+    'name' => _('Name', 'themename'),
+    'singular_name' => _('Name', 'themename'),
+    'add_new' => _('Add a ... ', 'themename'),
+    'add_new_item' => __('Add a new ... ', 'themename'),
+    'edit_item' => __('Edit the ... ', 'themename'),
+    'new_item' => __('New ', 'themename'),
+    'view_item' => __('See the', 'themename'),
+    'search_items' => __('Find a ... ', 'themename'),
+    'not_found' =>  __('No ... found', 'themename'),
+    'not_found_in_trash' => __('No ... found in trash', 'themename'),
     'parent_item_colon' => ''
   );
 
@@ -24,7 +22,7 @@ function ajouter_CPT() {
   register_post_type( 'nom',
     array(
       'labels' => $labels,
-      'description' => 'Cr&eacuteer et ajouter des produits, et les classer en utilisant les types de produits',
+      'description' => ' description goes here',
       'public' => true,
       'supports' => $supports,
       'capability_type' => 'page',
@@ -44,17 +42,17 @@ function create_type_taxonomies()
 {
   // Add new taxonomy, make it hierarchical (like categories)
   $labels = array(
-    'name' => _x( 'Types de  ', 'taxonomy general name' ),
-    'singular_name' => _x( 'Type de  ', 'taxonomy singular name' , 'themename'),
-    'search_items' =>  __( 'Chercher un type de  ' , 'themename'),
-    'all_items' => __( 'Tous les types de  ', 'themename' ),
-    'parent_item' => __( 'Parent du type de ', 'themename' ),
-    'parent_item_colon' => __( 'Parent type:' , 'themename'),
-    'edit_item' => __( 'Editer le type' , 'themename'), 
-    'update_item' => __( 'Mettre &agrev; jour le type', 'themename' ),
-    'add_new_item' => __( 'Ajouter un nouveau type' , 'themename'),
-    'new_item_name' => __( 'Nom du nouveau type', 'themename' ),
-    'menu_name' => __( 'Type de  ' ),
+    'name' => _x( 'Name  ', 'taxonomy general name' ),
+    'singular_name' => _x( 'Name ', 'taxonomy singular name' , 'themename'),
+    'search_items' =>  __( 'Search item  ' , 'themename'),
+    'all_items' => __( ' All items  ', 'themename' ),
+    'parent_item' => __( 'Parent item ', 'themename' ),
+    'parent_item_colon' => __( 'Parent item colon ' , 'themename'),
+    'edit_item' => __( 'Edit item ' , 'themename'), 
+    'update_item' => __( 'Update item', 'themename' ),
+    'add_new_item' => __( 'Add new item' , 'themename'),
+    'new_item_name' => __( 'New item name', 'themename' ),
+    'menu_name' => __( 'Menu name', 'themename' ),
   ); 	
 
   register_taxonomy('type',array('nom'), 

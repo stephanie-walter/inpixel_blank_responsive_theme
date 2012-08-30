@@ -10,7 +10,7 @@ get_header(); ?>
 				<nav class="nav-single">
 						<p class="assistive-text"><?php _e( 'Post navigation', 'themename' ); ?></p>
 						<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'themename' ) ); ?></span>
-						<span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?></span>
+						<span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'themename' ) ); ?></span>
 				</nav><!-- #nav-single -->
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">

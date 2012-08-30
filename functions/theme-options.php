@@ -7,8 +7,8 @@ add_action( 'admin_menu', 'theme_options_add_page' );
  */
 function theme_options_add_page() {
 	add_theme_page( 
-		__( 'Theme Options', 'sampletheme' ), // Title for the page
-		__( 'Theme Options', 'sampletheme' ), //  Page name in admin menu
+		__( 'Theme Options', 'themename' ), // Title for the page
+		__( 'Theme Options', 'themename' ), //  Page name in admin menu
 		'edit_theme_options', //  Minimum role required to see the page
 		'theme_options_page', // unique identifier
 		'theme_options_do_page'  // name of function to display the page
@@ -26,7 +26,7 @@ if (isset($_GET['settings-updated'])){
 $is_updated= $_GET['settings-updated'];
 if ($is_updated == 'true'){ ?>
 	<div id="message" class="updated">
-	<p><?php _e('Theme options were successfully updated','sampletheme') ?></p>
+	<p><?php _e('Theme options were successfully updated','themename') ?></p>
 	</div>
 
 <?php }
@@ -35,7 +35,7 @@ if ($is_updated == 'true'){ ?>
 
 <div class="wrap">
 
-      <h2><?php _e( 'Theme Options', 'sampletheme' ) ?></h2>  
+      <h2><?php _e( 'Theme Options', 'themename' ) ?></h2>  
       
       <?php 
       /*** To debug, use this to print the theme options **/
@@ -50,7 +50,7 @@ if ($is_updated == 'true'){ ?>
       <form method="post" action="options.php">
       		<?php settings_fields( 'inpixel_theme_settings_options' ); ?>
 			<?php do_settings_sections('setting_section'); ?>
-			<p><input class="button-primary"  name="Submit" type="submit" value="<?php esc_attr_e(__('Save Changes','sampletheme')); ?>" /></p>		
+			<p><input class="button-primary"  name="Submit" type="submit" value="<?php esc_attr_e(__('Save Changes','themename')); ?>" /></p>		
       </form>
    </div>
 
@@ -72,7 +72,7 @@ function theme_options_settings(){
 	/** Add a section, you can as many as you like **/
 	add_settings_section(
 		'theme_option_main', //  section name unique ID
-		__( 'Section Title', 'sampletheme' ), // Title or name of the section (to be output on the page), you can leave nbsp here if not wished to display
+		__( 'Section Title', 'themename' ), // Title or name of the section (to be output on the page), you can leave nbsp here if not wished to display
 		'theme_option_section_text',  // callback to display the content of the section itself
 		'setting_section' // The page name. This needs to match the text we gave to the do_settings_sections function call 
 		);
@@ -80,7 +80,7 @@ function theme_options_settings(){
 	/* Register each option **/
 	add_settings_field(
 	 	'textfield_option',  //$id a unique id for the field 
-	 	__( 'Text field', 'sampletheme' ), // the title for the field
+	 	__( 'Text field', 'themename' ), // the title for the field
 	 	'func_textfield_option',  // the function callback, to display the input box
 	 	'setting_section',  // the page name that this is attached to (same as the do_settings_sections function call).
 	 	'theme_option_main' // the id of the settings section that this goes into (same as the first argument to add_settings_section).
@@ -88,7 +88,7 @@ function theme_options_settings(){
 
 	 add_settings_field(
 	 	'numeric_option', 
-	 	__( 'Numeric field', 'sampletheme' ), 
+	 	__( 'Numeric field', 'themename' ), 
 	 	'func_numeric_option', 
 	 	'setting_section',  
 	 	'theme_option_main' 
@@ -96,7 +96,7 @@ function theme_options_settings(){
 
 	  add_settings_field(
 	 	'radio_option', 
-	 	__( 'Radio button field', 'sampletheme' ), 
+	 	__( 'Radio button field', 'themename' ), 
 	 	'func_radio_option', 
 	 	'setting_section',  
 	 	'theme_option_main' 
@@ -104,14 +104,14 @@ function theme_options_settings(){
 
 	  add_settings_field(
 	 	'textarea_option', 
-	 	__( 'Textarea button field', 'sampletheme' ), 
+	 	__( 'Textarea button field', 'themename' ), 
 	 	'func_textarea_option', 
 	 	'setting_section',  
 	 	'theme_option_main' 
 	 	); 
 	  add_settings_field(
 	 	'checkbox_option', 
-	 	__( 'Checkbox field', 'sampletheme' ), 
+	 	__( 'Checkbox field', 'themename' ), 
 	 	'func_checkbox_option', 
 	 	'setting_section',  
 	 	'theme_option_main' 
@@ -121,7 +121,7 @@ function theme_options_settings(){
 
 /** the theme section output**/
 function theme_option_section_text(){
-echo '<p>'.__( ' Echo some texte section description here !', 'sampletheme' ).'</p>';
+echo '<p>'.__( ' Echo some texte section description here !', 'themename' ).'</p>';
 }
 
 /** Output for all the settings fields added **/
@@ -147,9 +147,9 @@ function func_radio_option() {
 	$options = get_option( 'inpixel_theme_settings_options' );
 	$radio_option = $options['radio_option'];	
 	/* Echo the field. */ ?>
-	<label for="radio_true" > <?php _e( 'Yes', 'flexi-slides' ); ?></label>
+	<label for="radio_true" > <?php _e( 'Yes', 'themename' ); ?></label>
 	<input type="radio" <?php if ($radio_option == "true") echo'checked="checked"' ; ?> id="radio_true" name="inpixel_theme_settings_options[radio_option]" value="true" /> 
-	<label for="radio_false" > <?php _e( 'False', 'flexi-slides' ); ?></label>
+	<label for="radio_false" > <?php _e( 'False', 'themename' ); ?></label>
 	<input type="radio" id="radio_false" <?php if ($radio_option == "false") echo'checked="checked"' ; ?> name="inpixel_theme_settings_options[radio_option]" value="false" /> 
 	<?php
 }
@@ -169,7 +169,7 @@ function func_checkbox_option(){
 	$options = get_option( 'inpixel_theme_settings_options' );
 	$checkbox_option = $options['checkbox_option'];	
 	/* Echo the field. */ ?>
-	<label class="description" for="checkbox_one"><?php _e( 'Sample checkbox', 'sampletheme' ); ?></label>
+	<label class="description" for="checkbox_one"><?php _e( 'Sample checkbox', 'themename' ); ?></label>
 	<input id="checkbox_one" name="inpixel_theme_settings_options[checkbox_option]" type="checkbox" value="1" <?php if ($checkbox_option == "1") echo'checked="checked"' ; ?> />
 <?php }
 

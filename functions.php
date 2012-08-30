@@ -143,7 +143,7 @@ function get_search_form_HTML5_bis() {
     echo '<form role="search" method="get" id="searchform_bis" action="' . home_url( '/' ) . '" >
     <p><label class="screen-reader-text" for="s2">' . __('Search for:','themename') . '</label>
     <input type="search" value="' . get_search_query() . '" name="s" id="s2"  autocomplete="on" placeholder ='.__( '"What are you looking for?"', 'themename' ) . ' />
-    <input type="submit" id="searchsubmit_bis" value="'. esc_attr__('Search') .'" />
+    <input type="submit" id="searchsubmit_bis" value="'. esc_attr__('Search','themename') .'" />
     </p>
     </form>';
 }
