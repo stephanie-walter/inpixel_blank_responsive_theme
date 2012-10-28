@@ -124,6 +124,7 @@ endif; // ends check for handcraftedwp_comment()
 	     array(
 		     'cancel_reply_link' => __( 'Cancel reply', 'themename' ),
 		     'title_reply' => __( 'Leave a Reply', 'themename' ),
+		     'comment_notes_before' =>  __( 'Your email address will not be published. Required fields are marked *', 'themename' ),
 		     'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ,'themename'), admin_url( 'profile.php' ), $user_identity, wp_logout_url( get_permalink() ) ) . '</p>',
 		     'label_submit' => __( 'Post a comment', 'themename' )
 		)
