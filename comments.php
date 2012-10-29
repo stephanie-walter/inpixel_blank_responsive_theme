@@ -41,9 +41,9 @@ function handcraftedwp_comment( $comment, $args, $depth ) {
 			</footer>
 
 			<div class="comment-body"><?php comment_text(); ?></div>
-
-			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+  	
+	         	 <div class="reply">
+				<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'], 'reply_text' => __('Reply','themename') ) ) ); ?>
 			</div><!-- .reply -->
 		</article><!-- #comment-##  -->
 
@@ -120,6 +120,14 @@ endif; // ends check for handcraftedwp_comment()
 
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php comment_form(
+	     array(
+		     'cancel_reply_link' => __( 'Cancel reply', 'themename' ),
+		     'title_reply' => __( 'Leave a Reply', 'themename' ),
+		     'comment_notes_before' =>  __( 'Your email address will not be published. Required fields are marked *', 'themename' ),
+		     'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ,'themename'), admin_url( 'profile.php' ), $user_identity, wp_logout_url( get_permalink() ) ) . '</p>',
+		     'label_submit' => __( 'Post a comment', 'themename' )
+		)
+	); ?>
 
 </div><!-- #comments -->
