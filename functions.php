@@ -120,7 +120,7 @@ return $fields;
 add_filter('comment_form_field_comment', 'twentytenfive_commentfield');
 
 function twentytenfive_commentfield() {
-$commentArea = '<p><label for="comment">' . _x( 'Comment', 'themename') . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required placeholder ='.__( '"What\'s in your mind ?"', 'themename').'  ></textarea></p>';
+$commentArea = '<p><label for="comment">' . __( 'Comment', 'themename') . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required placeholder ='.__( '"What\'s in your mind ?"', 'themename').'  ></textarea></p>';
 return $commentArea;
 }
 
