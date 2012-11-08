@@ -18,3 +18,5 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 * Embeds a starting template for custom post types functions/custom_post_types.php
 * Embeds a version of modernizr, you can change the script in js/modernizr.custom.js
 * Embeds functions, CSS, and images for the customisation of the admin area (css/custom_admin.css) and the login page (css/custom_login.css)
+
+*Big Thanks to <a href="http://jmperso.eu/howdy">JM for the French translations !</a> *
