@@ -8,6 +8,8 @@ Version: beta 1.0
 License: GPL
 License URI: http://codex.wordpress.org/License
 */
+
+
 /* ----------------------------- */
 /* summary */
 /* ----------------------------- */
@@ -41,8 +43,9 @@ License URI: http://codex.wordpress.org/License
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
-/*** Uncomment for a hard reset **/
-/*html, body, div, span, applet, object, iframe,
+/*  Uncomment for a hard reset  */
+/*
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
@@ -56,7 +59,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	margin: 0;	
 	padding: 0;	
 	vertical-align: baseline;
-}*/
+}
+*/
 
 /* A softer reset */
 html,
@@ -275,6 +279,7 @@ video {
 iframe {
     max-width: 100%;
 }
+
 /* you shall not pass */
 textarea,
 table,
@@ -319,10 +324,7 @@ pre {
     word-wrap: break-word;
 }
 
-
 /* Links */
-
-
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a,
 a:active,
@@ -344,30 +346,34 @@ a img {
 /* == Layout and modules */
 /* ----------------------------- */
 
-
 /* switching box model for all elements */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 /* float layout */
 /* ----------- */
 /* block that can contains several .mod , can contains floats */
 .line {
 
 }
+
 /* module, contains floats */
 .mod {
     padding: 1em;
 }
+
 /* generaly inside .mod, can contains .item */
 .items {
 }
+
 /* fluid, contains floats, can be placed next to a float */
 .item {
     overflow: hidden;
 }
+
 /* table layout */
 /* ------------------ */
 .row {
@@ -380,6 +386,7 @@ a img {
     display: table-cell;
     padding: 1em;
 }
+
 /* 1em gutter between elements if parent is .gut */
 .line.gut > * + * {
     margin-left: 1em;
@@ -387,12 +394,14 @@ a img {
 .row.gut > * + * {
     border-left: 1em solid #fff;
 }
+
 /* blocks that needs to be placed under floats */
 .clear,
 .line,
 .row {
     clear: both;
 }
+
 /* blocks that can contains floats */
 .clearfix:after,
 .line:after,
@@ -403,24 +412,20 @@ a img {
 }
 
 /* alignments (blocks and inline) */
-
 /* left and 1em gutter */
-
 .left {
     float: left; margin-right: 1em
 }
-/* right and 1em gutter */
 
+/* right and 1em gutter */
 .right {
     float: right; margin-left: 1em
 }
 
 /* juste inline-block */
-
 .inbl {display: inline-block;}
 
 /* blocks widths (percentage and pixels) */
-
 .w10 {width: 10%}
 .w20 {width: 20%}
 .w25 {width: 25%}
@@ -440,9 +445,7 @@ a img {
 /* == Hidding / unhidding content */
 /* ----------------------------- */
 
-
 /* for image replacement */
-
 .ir { 
 display: block; 
 text-indent: -999em; 
@@ -451,18 +454,16 @@ background-repeat: no-repeat;
 text-align: left; 
 direction: ltr; 
 }
+
 /* Hide for both screenreaders and browsers 
    css-discuss.incutio.com/wiki/Screenreader_Visibility */
-
 .hidden { display: none; visibility: hidden; } 
 
 /* Hide visually and from screenreaders, but maintain layout */
-
 .invisible { visibility: hidden; }
 
 /* Hide only visually, but have it available for screenreaders 
    www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
-
 .assistive-text, 
 .visuallyhidden{
 	position: absolute !important;
@@ -483,7 +484,6 @@ a.assistive-text:focus {
 }
 
 /* hiding content */
-
 .desktop-hidden {display: none;} /* hidden on desktop */
 
 .mobile-hidden {} /* hidden on mobile */
@@ -519,8 +519,7 @@ input:invalid, textarea:invalid {
  -webkit-box-shadow: 0px 0px 5px red; 
          box-shadow: 0px 0px 5px red;
 }
-* */
-
+*/
 button, input, select {
 	font-size: 100%;
 	margin: 0;
@@ -554,15 +553,14 @@ vertical-align: baseline;
 vertical-align: text-bottom; 
 }
 /* 'x' appears on right of search input when text is entered. This removes it */
-
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
 	display: none;
 }
-/* Removes inner padding and border in FF3+ */
 
+/* Removes inner padding and border in FF3+ */
 button::-moz-focus-inner,
 input[type='button']::-moz-focus-inner,
 input[type='reset']::-moz-focus-inner,
@@ -570,7 +568,7 @@ input[type='submit']::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
-/** style the placeholder **/
+/* style the placeholder */
 
 ::-webkit-input-placeholder {color: #777;}
 input:-moz-placeholder, textarea:-moz-placeholder {color: #777;}
@@ -581,7 +579,6 @@ margin-left: -7px;
 } /* thnx ivannikolic! */
 
 /* haslayout for IE6/IE7 */
-
 .ie7 .clearfix,.ie7 .line, .ie7 .mod, .ie7 .row, .ie7 .col {
     zoom: 1;
 }
@@ -660,10 +657,7 @@ img.alignright {
 
 
 
-
-
-
-/*************************** Template structure here **************************/
+/* Template structure here */
 
 
 /* ----------------------------- */
@@ -747,7 +741,6 @@ header .menu ul li:hover > ul {
 	display: block;
 }
 
-
 /* ----------------------------- */
 /* == Content */
 /* ----------------------------- */
@@ -791,12 +784,8 @@ header .menu ul li:hover > ul {
 /* == Media queries */
 /* ----------------------------- */
 
-
-/*
- *
- * Media queries for responsive design
- * These follow after primary styles so they will successfully override. 
- *
+/* Media queries for responsive design
+ These follow after primary styles so they will successfully override. 
  */
 
 @media all and (orientation:portrait) {
