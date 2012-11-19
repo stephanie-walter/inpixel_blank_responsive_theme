@@ -167,15 +167,15 @@ add_action('admin_head', 'gk_ui_wp32_admin');
 
 
 /*----------------------------------------------------------------------- **/
-add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+
+/*  please don't but if you need to remove width/height on template use this */
+/* add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
 function remove_thumbnail_dimensions( $html ) {
     $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
     return $html;
-}
+} */
 
-
-?>
-<?php // asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
+ // asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
 //	 change the UA-XXXXX-X to be your site's ID
 /*add_action('wp_footer', 'async_google_analytics');
 function async_google_analytics() { ?>

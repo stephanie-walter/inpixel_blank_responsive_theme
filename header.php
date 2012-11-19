@@ -54,17 +54,17 @@
 	
 	<?php wp_head(); ?>
 	</head>
-	
-	<body <?php body_class(); ?>>
-	<div id="page" class="hfeed">
-		<header id="branding" role="banner">
-				<hgroup>
+
+<body <?php body_class(); ?>
+	>
+	<div class="hfeed container">
+		<header role="banner">
+			<hgroup>
 					<h1 id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
 					<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</hgroup>
-				
-				
-			<nav id="access" role="navigation">
+
+			<nav role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'themename' ); ?></h3>
 				<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
 				
@@ -72,14 +72,13 @@
 				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'themename' ); ?>"><?php _e( 'Skip to secondary content', 'themename' ); ?></a></div>
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #access -->
-		</header><!-- #branding -->
-	
-	
-		<div id="main" class="line gut">
+			</nav>
+		</header>
+
+		<div class="line gut">
 			<?php if ( !(
 			is_page_template('left-sidebar-page.php') || 
 			is_page_template('full-width-page.php'))
 			){?>
-			<section id="primary" role="region" class="mod left w70">
-			<?php } ?>
+			<section role="region" class="content mod left w70">
+				<?php } ?>

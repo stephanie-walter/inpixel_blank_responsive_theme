@@ -3,9 +3,8 @@
 
 get_header(); ?>
 
-			<div id="content">
 
-			<?php if ( have_posts() ) : ?>
+<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
 					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'themename' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
@@ -27,9 +26,7 @@ get_header(); ?>
 				</article><!-- #post-0 -->
 
 			<?php endif; ?>
-
-			</div><!-- #content -->
-		</section><!-- #primary -->
+</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

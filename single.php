@@ -1,11 +1,7 @@
 <?php
 
 get_header(); ?>
-
-		
-			<div id="content">
-
-			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 				<nav class="nav-single">
 						<p class="assistive-text"><?php _e( 'Post navigation', 'themename' ); ?></p>
@@ -67,8 +63,7 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
-			</div><!-- #content -->
-	</section><!-- #primary -->
+</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

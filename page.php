@@ -2,10 +2,7 @@
   
 
 get_header(); ?>
-
-			<div id="content">
-
-				<?php the_post(); ?>
+<?php the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 					<header class="entry-header">
@@ -20,9 +17,7 @@ get_header(); ?>
 				</article><!-- #post-<?php the_ID(); ?> -->
 
 				<?php comments_template( '', true ); ?>
-
-			</div><!-- #content -->
-		</section><!-- #primary -->
+</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

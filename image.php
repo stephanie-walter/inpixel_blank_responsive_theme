@@ -1,11 +1,9 @@
 <?php
   
-
 get_header(); ?>
 
-		<div id="content" class="image-attachment">
 
-			<?php the_post(); ?>
+<?php the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 					<header class="entry-header">
@@ -94,8 +92,6 @@ get_header(); ?>
 				</article><!-- #post-<?php the_ID(); ?> -->
 
 				<?php comments_template(); ?>
-
-			</div><!-- #content -->
-		</section><!-- #primary -->
+			</section>
 
 <?php get_footer(); ?>

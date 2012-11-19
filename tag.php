@@ -2,11 +2,8 @@
 
 get_header(); ?>
 
-			<div id="content">
-
-				<?php the_post(); ?>
-
-				<header class="page-header">
+<?php the_post(); ?>
+<header class="page-header">
 					<h1 class="page-title"><?php
 						printf( __( 'Tag Archives: %s', 'themename' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 					?></h1>
@@ -15,9 +12,7 @@ get_header(); ?>
 				<?php rewind_posts(); ?>
 
 				<?php get_template_part( 'loop', 'tag' ); ?>
-
-			</div><!-- #content -->
-		</section><!-- #primary -->
+</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

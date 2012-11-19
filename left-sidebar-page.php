@@ -8,13 +8,11 @@
 
 get_header(); ?>
 
-		<?php get_sidebar(); ?>
-		
-			
-		<section id="primary" class=" content mod item ">
-			<div id="content">
+<?php get_sidebar(); ?>
 
-				<?php the_post(); ?>
+<section class="content mod item ">
+
+	<?php the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 					<header class="entry-header">
@@ -29,9 +27,6 @@ get_header(); ?>
 				</article><!-- #post-<?php the_ID(); ?> -->
 
 				<?php comments_template( '', true ); ?>
-
-			</div><!-- #content -->
-		</section><!-- #primary -->
-
+			</section>
 
 <?php get_footer(); ?>

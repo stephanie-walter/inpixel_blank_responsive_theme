@@ -3,10 +3,7 @@
 
 get_header(); ?>
 
-	
-		<div id="content">
-
-			<article id="post-0" class="post error404 not-found" role="article">
+<article id="post-0" class="post error404 not-found" role="article">
 				<header class="entry-header">
 					<h1 class="entry-title"><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'themename' ); ?></h1>
 				</header>
@@ -31,12 +28,9 @@ get_header(); ?>
 					?>
 
 					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-
-				</div><!-- .entry-content -->
-			</article><!-- #post-0 -->
-
-		</div><!-- #content -->
-	</section><!-- #primary -->
+<!-- .entry-content -->
+</article>
+</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
