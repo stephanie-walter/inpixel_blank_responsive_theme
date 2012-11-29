@@ -715,46 +715,46 @@ header .menu li {
 	float: left;
 	position: relative;
 }
-header .menu a {
+header .menu a {	
 	display: block;
-	line-height: 2em;
+    line-height: 2em;
 	padding: 0 1em;
 	text-decoration: none;
 }
-header .menu ul ul {
+ header .menu a:hover,
+ header .menu ul > .current-menu-item a {
+    background: rgb(51, 51, 51);
+    color: #fff;
+    text-decoration: none;
+}
+header .sub-menu {
 	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	display: none;
-	float: left;
-	position: absolute;
-	top: 2em;
-	left: 0;
-	z-index: 99999;
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);*/	
+    background: rgb(51, 51, 51);
+    left: -9999px;
+    list-style: none outside none;
+    position: absolute;
 }
-header .menu ul ul ul {
-	left: 100%;
-	top: 0;
+header .sub-menu li{   
+    float:none;
 }
-header .menu ul ul a {
-	background: #333;
-	color: #fff;
-	line-height: 1em;
-	padding: .5em .5em .5em 1em;
-	width: 10em;
-	height: auto;
+header .sub-menu a{
+    white-space:nowrap; 
 }
-header .menu li:hover > a,
-header .menu ul ul :hover > a {
-	background: #333;
-	color: #fff;
+/* unhide the 2nd level */
+header li:hover .sub-menu{ 
+    left:0; 
 }
-header .menu ul ul a:hover {
-	background: #000;
+header li:hover a{ 
+    background:rgb(51, 51, 51);
+    color:#fff;
 }
-header .menu ul li:hover > ul {
-	display: block;
+header li:hover ul li a:hover{ 
+    background:rgb(0, 0, 0);
 }
+
+
 
 /* ----------------------------- */
 /* == Content */
