@@ -1,6 +1,9 @@
 Inpixelitrust Responsive blank theme for WordPress
 ==============================
 
+Demo link : <a href="http://www.inpixelitrust.fr/blank-responsive"> demo </a>
+==============================
+
 *Description:*
 Inpixelitrust blank theme for starting a WordPress project based on <a href="http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/">Randy Jensen & Randy Hoyt HTML5 starter theme </a>  with other goodies added plus chunks of Paul Irish's <a href="http://html5boilerplate.com/">HTML5 Boilerplate </a>  and pieces of <a href="http://knacss.com/">Raphael Goetter's knacss in it</a>
 <a href="http://www.inpixelitrust.fr/blog/en/inpixelitrust-responsive-blank-theme-wordpress/">More details about the theme can be found here</a>
