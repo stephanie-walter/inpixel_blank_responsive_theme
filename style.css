@@ -83,10 +83,16 @@ ol {
 }
 blockquote {
     quotes: none;
+    border-left: 4px solid #666;
+    padding: 5px 5px 5px 20px;
+    margin: 8px 0 8px 30px;
+    font-style: italic;
+    background: rgb(234, 233, 233);
+    position: relative;
 }
 blockquote:before,
 blockquote:after {
-    content: '';
+    content: ' "';
     content: none;
 }
 del {
@@ -405,7 +411,8 @@ a img {
 /* blocks that can contains floats */
 .clearfix:after,
 .line:after,
-.mod:after {
+.mod:after, 
+.gallery:after{
     content: "";
     display: table;
     clear: both;
@@ -627,6 +634,14 @@ img.alignright {
 }
 .gallery-caption{
 }
+
+.gallery-item {
+float: left;
+margin-top: 10px;
+text-align: center;
+width: 33%;
+}
+
 /* bicubic resizing for non-native sized IMG: 
    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 
@@ -745,6 +760,8 @@ header .menu ul li:hover > ul {
 /* == Content */
 /* ----------------------------- */
 
+
+/* nav */
 .content nav {
 	display: block;
 	overflow: hidden;
@@ -770,6 +787,16 @@ header .menu ul li:hover > ul {
 }
 .page-link {
 	margin: 0 0 1em;
+}
+
+/* table styling */
+.content table,
+.content td,
+.content th{
+    border: 1px solid rgb(191, 191, 190);
+}
+.content tbody tr:nth-child(odd){
+    background:#eee
 }
 
 
