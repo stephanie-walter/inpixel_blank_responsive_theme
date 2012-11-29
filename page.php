@@ -16,7 +16,7 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 
-				<?php comments_template( '', true ); ?>
+				<?php // comments_template( '', true ); ?>
 </section>
 
 <?php get_sidebar(); ?>
