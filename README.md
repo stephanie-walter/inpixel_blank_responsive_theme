@@ -21,7 +21,7 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 * Embeds a starting template for custom post types functions/custom_post_types.php
 * Embeds a version of modernizr, you can change the script in js/modernizr.custom.js
 * Embeds functions, CSS, and images for the customisation of the admin area (css/custom_admin.css) and the login page (css/custom_login.css)
-* Enables now updates from WordPress directly, you'll have to <a href="http://wordpress.org/extend/plugins/theme-updater/">install Theme Updater</a>. For more information <a href="http://www.disruptiveconversations.com/2012/02/how-to-auto-update-wordpress-custom-themes-using-github.html">see tut hier/</a>
+* Enables now updates from WordPress directly, you'll have to <a href="http://wordpress.org/extend/plugins/theme-updater/">install Theme Updater</a>. For more information <a href="http://www.disruptiveconversations.com/2012/02/how-to-auto-update-wordpress-custom-themes-using-github.html">see tutorial hier </a>
 
 *Big Thanks to <a href="http://jmperso.eu/howdy">JM for the French translations !</a>*
 * Big Thanks to  for many little updates *<a href="http://www.creativejuiz.fr/blog/">Geoffrey C.</a>*
