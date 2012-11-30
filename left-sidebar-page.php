@@ -10,7 +10,7 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 
-<section class="content mod item ">
+<section id="content" class="content mod item ">
 
 	<?php the_post(); ?>
 
