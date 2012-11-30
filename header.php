@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html <?php language_attributes(); ?> class="ie6 no-js"> <![endif]-->
-<!--[if IE 7 ]>    <html <?php language_attributes(); ?> class="lteie7 ie7 no-js"> <![endif]-->
-<!--[if IE 8 ]>    <html <?php language_attributes(); ?> class="lteie8 ie8 no-js"> <![endif]-->
-<!--[if IE 9 ]>    <html <?php language_attributes(); ?> class="ie9 no-js"> <![endif]-->
+<!--[if lt IE 7 ]> <html <?php language_attributes(); ?> class="lteie9 lteie8 lteie7 lteie6 ie6 no-js"> <![endif]-->
+<!--[if IE 7 ]>    <html <?php language_attributes(); ?> class="lteie9 lteie8 lteie7 ie7 no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html <?php language_attributes(); ?> class="lteie9 lteie8 ie8 no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html <?php language_attributes(); ?> class="lteie9 ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
