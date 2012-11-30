@@ -4,10 +4,10 @@
 		<?php 
 		/* Change the sidebar position given to specific layout **/
 		if (is_page_template('left-sidebar-page.php')){ ?>
-		<div class="widget-area sidebar mod left w30">
+		<div id="secondary" class="widget-area sidebar mod left w30">
 		<?php }
 		else { ?>
-		<div class="widget-area sidebar content mod item">
+		<div id="secondary" class="widget-area sidebar content mod item">
 		<?php }
 
 		/* now comes the sidebar **/ 

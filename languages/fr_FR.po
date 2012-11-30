@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Julien Maury <jmlapam@gmail.com>\n"
+"Last-Translator: Geoffrey <g.crofte@creativejuiz.fr>\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,15 +17,15 @@ msgstr "Menu Principal"
 
 #: Text in functions.php:75
 msgid "Sidebar"
-msgstr "Sidebar"
+msgstr "Barre latérale"
 
 #: Text in functions.php:85
 msgid "Footer"
-msgstr "Footer"
+msgstr "Pied de page"
 
 #: Text in functions.php:87
 msgid "The footer area"
-msgstr "Zone du Footer"
+msgstr "Zone du pied de page"
 
 #: Text in functions.php:108
 msgid "Name"
@@ -37,19 +37,19 @@ msgstr "\"Comment devons-nous vous appeler?\""
 
 #: Text in functions.php:111
 msgid "Email"
-msgstr "Email"
+msgstr "E-mail"
 
 #: Text in functions.php:112
 msgid "\"Leave us a valid email adress\""
-msgstr "\"Laissez-nous une adresse email valide\""
+msgstr "\"Laissez-nous une adresse e-mail valide\""
 
 #: Text in functions.php:114
 msgid "Website"
-msgstr "Site web"
+msgstr "Site Web"
 
 #: Text in functions.php:115
 msgid "\"Have you got a nice website ?\""
-msgstr "\"Avez-vous un site web sympa?\""
+msgstr "\"Avez-vous un site Web sympa&nbsp;?\""
 
 #: Text in functions.php:123
 msgid "Comment"
@@ -57,7 +57,7 @@ msgstr "Commentaire"
 
 #: Text in functions.php:123
 msgid "\"What's in your mind ?\""
-msgstr "\"Qu'avez-vous en tête ?\""
+msgstr "\"Qu'avez-vous en tête&nbsp;?\""
 
 #: Text in functions.php:130
 #: Text in functions.php:144
@@ -67,11 +67,11 @@ msgstr "Objet de la recheche:"
 #: Text in functions.php:131
 #: Text in functions.php:145
 msgid "\"What are you looking for?\""
-msgstr "\"Que recherchez-vous?\""
+msgstr "\"Que recherchez-vous&nbsp;?\""
 
 #: Text in 404.php:11
 msgid "This is somewhat embarrassing, isn&rsquo;t it?"
-msgstr "C&rsquo;est assez embarrassant, n'est-ce pas?"
+msgstr "C&rsquo;est assez embarrassant, n'est-ce pas&nbsp;?"
 
 #: Text in 404.php:15
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
@@ -106,12 +106,12 @@ msgstr "Aller directement au contenu secondaire"
 #: Text in author.php:12
 #, php-format
 msgid "Author Archives: <span class=\"vcard\">%s</span>"
-msgstr "Archives classées par auteur: <span class=\"vcard\">%s</span>"
+msgstr "Archives classées par auteur&nbsp;: <span class=\"vcard\">%s</span>"
 
 #: Text in search.php:11
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Résultats de la recherche pour: %s"
+msgstr "Résultats de la recherche pour&nbsp;: %s"
 
 #: Text in search.php:20
 msgid "Nothing Found"
@@ -119,22 +119,22 @@ msgstr "Aucun résultat"
 
 #: Text in search.php:24
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Désolé, mais rien ne correspond à vos critères de recherche. Essayez avec d'autres mots-clés SVP."
+msgstr "Désolé, mais rien ne correspond à vos critères de recherche. Merci d'essayez avec d'autres mots-clés."
 
 #: Text in archive.php:14
 #, php-format
 msgid "Daily Archives: <span>%s</span>"
-msgstr "Archives du jour: <span>%s</span>"
+msgstr "Archives du jour&nbsp;: <span>%s</span>"
 
 #: Text in archive.php:16
 #, php-format
 msgid "Monthly Archives: <span>%s</span>"
-msgstr "Archives du mois: <span>%s</span>"
+msgstr "Archives du mois&nbsp;: <span>%s</span>"
 
 #: Text in archive.php:18
 #, php-format
 msgid "Yearly Archives: <span>%s</span>"
-msgstr " Archives de l'année: <span>%s</span>"
+msgstr "Archives de l'année&nbsp;: <span>%s</span>"
 
 #: Text in archive.php:20
 msgid "Blog Archives"
@@ -152,7 +152,7 @@ msgstr "Fièrement propulsé par %s."
 #: Text in image.php:78
 #: Text in single.php:36
 msgid "Pages:"
-msgstr "Pages:"
+msgstr "Pages&nbsp;:"
 
 #: Text in left-sidebar-page.php:27
 #: Text in page.php:18
@@ -204,16 +204,16 @@ msgstr "Laisser un commentaire"
 
 #: Text in loop.php:50
 msgid "1 Comment"
-msgstr "1 Commentaire"
+msgstr "1 commentaire"
 
 #: Text in loop.php:50
 msgid "% Comments"
-msgstr "% Commentaires"
+msgstr "% commentaires"
 
 #: Text in comments.php:25
 #, php-format
 msgid "%s <span class=\"says\">says:</span>"
-msgstr "%s <span class=\"says\">ajoute:</span>"
+msgstr "%s <span class=\"says\">ajoute&nbsp;:</span>"
 
 #: Text in comments.php:28
 msgid "Your comment is awaiting moderation."
@@ -235,7 +235,7 @@ msgstr "&larr; Répondre"
 
 #: Text in comments.php:56
 msgid "Pingback:"
-msgstr "Pingback:"
+msgstr "Pingback&nbsp;:"
 
 #: Text in comments.php:67
 msgid "This post is password protected. Enter the password to view any comments."
@@ -278,16 +278,16 @@ msgstr "Laisser une réponse"
 #: Text in comments.php:127
 #, php-format
 msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
-msgstr "Connecté(e) en tant que <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Se déconnecter de ce compte\">Déconnecter?</a>"
+msgstr "Connecté(e) en tant que <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Se déconnecter de ce compte\">Déconnecter&nbsp;?</a>"
 
 #: Text in comments.php:128
 msgid "Post a comment"
-msgstr "Poster le commentaire"
+msgstr "Poster un commentaire"
 
 #: Text in category.php:10
 #, php-format
 msgid "Category Archives: %s"
-msgstr "Archives de la catégorie: %s"
+msgstr "Archives de la catégorie&nbsp;: %s"
 
 #: Text in sidebar.php:24
 msgid "Archives"
@@ -313,12 +313,12 @@ msgstr "Suivant &rarr;"
 #: Text in image.php:84
 #, php-format
 msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Poster un commentaire\">Poster un commentaire</a> ou faire un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL du Trackback pour cet article\" rel=\"trackback\">URL du Trackback pour cet article</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Poster un commentaire\">Poster un commentaire</a> ou faire un trackback&nbsp;: <a class=\"trackback-link\" href=\"%s\" title=\"URL du Trackback pour cet article\" rel=\"trackback\">URL du Trackback pour cet article</a>."
 
 #: Text in image.php:86
 #, php-format
 msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr "Les commentaires sont fermés mais vous pouvez faire un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL du Trackback pour cet article\" rel=\"trackback\">URL du trackback </a>."
+msgstr "Les commentaires sont fermés mais vous pouvez faire un trackback&nbsp;: <a class=\"trackback-link\" href=\"%s\" title=\"URL du Trackback pour cet article\" rel=\"trackback\">URL du trackback </a>."
 
 #: Text in image.php:88
 msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
@@ -356,7 +356,7 @@ msgstr "Cet article a été publié dans %1$s. Ajouter le  <a href=\"%3$s\" titl
 #: Text in tag.php:11
 #, php-format
 msgid "Tag Archives: %s"
-msgstr "Archives du tag: %s"
+msgstr "Archives du tag&nbsp;: %s"
 
 #: Text in functions/theme-options.php:10
 #: Text in functions/theme-options.php:11
@@ -394,7 +394,7 @@ msgstr "Champ de la zone de texte du bouton"
 
 #: Text in functions/theme-options.php:114
 msgid "Checkbox field"
-msgstr "Champ de la checkbox"
+msgstr "Champ de la case à cocher"
 
 #: Text in functions/theme-options.php:124
 msgid " Echo some texte section description here !"
@@ -418,7 +418,7 @@ msgstr "Ajouter un(e)..."
 
 #: Text in functions/custom_post_types.php:10
 msgid "Add a new ... "
-msgstr "Ajouter un(e) nouveau (elle) ..."
+msgstr "Ajouter un(e) nouveau(elle) ..."
 
 #: Text in functions/custom_post_types.php:11
 msgid "Edit the ... "
@@ -454,7 +454,7 @@ msgstr "Rechecher l'item"
 
 #: Text in functions/custom_post_types.php:48
 msgid " All items  "
-msgstr "Toutes les items"
+msgstr "Tous les items"
 
 #: Text in functions/custom_post_types.php:49
 msgid "Parent item "
@@ -474,11 +474,11 @@ msgstr "Mettre à jour l'item"
 
 #: Text in functions/custom_post_types.php:53
 msgid "Add new item"
-msgstr "Ajouter une nouvelle item"
+msgstr "Ajouter un nouvel item"
 
 #: Text in functions/custom_post_types.php:54
 msgid "New item name"
-msgstr "Nom de la nouvelle"
+msgstr "Nom du nouvel item"
 
 #: Text in functions/custom_post_types.php:55
 msgid "Menu name"
