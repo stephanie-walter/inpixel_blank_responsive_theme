@@ -12,7 +12,7 @@
 			</div>
 		
 			<div class="copyright">
-				<small>&copy; Copyright <?php echo date('Y') . " " . esc_attr( get_bloginfo( 'name', 'display' ) ); ?> <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'themename' ); ?>"   ><?php printf( __( 'Proudly powered by %s.', 'themename' ), 'WordPress' ); ?></a></small>
+				<small> This theme is under <a href="http://wordpress.org/about/gpl/"> GPL V2 Licence </a> - <?php echo  esc_attr( get_bloginfo( 'name', 'display' ) ); ?>  - <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'themename' ); ?>"   ><?php printf( __( 'Proudly powered by %s.', 'themename' ), 'WordPress' ); ?></a></small>
 			</div>
 	</footer>
 </div>
