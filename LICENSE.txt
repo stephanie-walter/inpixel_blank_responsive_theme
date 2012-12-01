@@ -1,4 +1,4 @@
-The GPLv2 (or later) from the Free Software Foundation is the license that the WordPress software is under. Its text follows.
+﻿The GPLv2 (or later) from the Free Software Foundation is the license that the WordPress software is under. Its text follows.
 
 Version 2, June 1991
 
