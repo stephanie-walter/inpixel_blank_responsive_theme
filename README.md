@@ -25,4 +25,4 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 * Under <a href="http://wordpress.org/about/gpl/">GPL V2 Licence</a>
 
 *Big Thanks to <a href="http://jmperso.eu/howdy">JM for the French translations !</a>*
-*Big Thanks to  for many little updates *<a href="http://www.creativejuiz.fr/blog/">Geoffrey C.</a>*
+*Big Thanks to  for many little updates  <a href="http://www.creativejuiz.fr/blog/">Geoffrey C.</a>*
