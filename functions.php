@@ -39,7 +39,7 @@ register_nav_menus( array(
  *	This theme supports editor styles
  */
 
-add_editor_style("/css/layout-style.css");
+add_editor_style("/css/editor-style.css");
 
 
 
