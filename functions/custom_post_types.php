@@ -4,9 +4,9 @@
 add_action( 'init', 'add_cpt' );
 function add_cpt() {
   $labels = array(
-    'name' => _('Name', 'themename'),
-    'singular_name' => _('Name', 'themename'),
-    'add_new' => _('Add a ... ', 'themename'),
+    'name' => __('Name', 'themename'),
+    'singular_name' => __('Name', 'themename'),
+    'add_new' => __('Add a ... ', 'themename'),
     'add_new_item' => __('Add a new ... ', 'themename'),
     'edit_item' => __('Edit the ... ', 'themename'),
     'new_item' => __('New ', 'themename'),
