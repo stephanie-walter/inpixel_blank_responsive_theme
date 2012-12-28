@@ -234,6 +234,19 @@ function rynonuke_dolly() {
   @unlink(WP_PLUGIN_DIR.'/hello.php');
 
 }
+/*----------------------------------------------------------------------- **/
+
+
+
+/** WordPress user profil cleanups  ------------------------------------*/
+  
+/* remove the color scheme options */
+  function admin_color_scheme() {
+   global $_wp_admin_css_colors;
+   $_wp_admin_css_colors = 0;
+}
+
+// add_action('admin_head', 'admin_color_scheme');
 
 // rem/add user profile fields
 function rynonuke_contactmethods($contactmethods) {
@@ -244,6 +257,7 @@ function rynonuke_contactmethods($contactmethods) {
   $contactmethods['rynonuke_facebook']='Facebook';
   return $contactmethods;
 }
+
 
 /*----------------------------------------------------------------------- **/
 
