@@ -5,12 +5,10 @@ Github Theme URI: https://github.com/inpixelitrust/inpixel_blank_responsive_them
 Author: Stephanie Walter
 Author URI: http://www.inpixelitrust.fr
 Description: Inpixelitrust blank theme for starting a WordPress project based on <a href="http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/">Randy Jensen & Randy Hoyt HTML5 starter theme </a> with other goodies added plus chunks of Paul Irish's <a href="http://html5boilerplate.com/">HTML5 Boilerplate </a> and some final pieces of <a href="http://knacss.com/">Raphael Goetter's knacss in it</a>. Enjoy and Share the love :)
-Version: v1.1.3
+Version: v1.1.4
 License: GPL
 License URI: http://codex.wordpress.org/License
 */
-
-
 /* ----------------------------- */
 /* summary */
 /* ----------------------------- */
@@ -21,9 +19,10 @@ License URI: http://codex.wordpress.org/License
 3- Base Typography
 4- Layout and modules
 5- Hidding / unhidding content
-6- Forms
-7- Images
-8- WordPress alignement
+6- iefix
+7- Forms
+8- Images
+9- WordPress alignement
 
 /* B. WordPress template structure
 1-  General
@@ -33,6 +32,8 @@ License URI: http://codex.wordpress.org/License
 5-  Footer
 
 /* C. Media queries
+1- desktop medias
+2- mobile
 
 /* D. Print style
 */
@@ -44,6 +45,7 @@ License URI: http://codex.wordpress.org/License
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
+
 /*  Uncomment for a hard reset  */
 /*
 html, body, div, span, applet, object, iframe,
@@ -55,11 +57,11 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-	background: transparent;	
-	border: 0;	
-	margin: 0;	
-	padding: 0;	
-	vertical-align: baseline;
+    background: transparent;    
+    border: 0;  
+    margin: 0;  
+    padding: 0; 
+    vertical-align: baseline;
 }
 */
 
@@ -84,12 +86,12 @@ ol {
 }
 blockquote {
     quotes: none;
-    border-left: 4px solid #666;
-    padding: 5px 5px 5px 20px;
-    margin: 8px 0 8px 30px;
-    font-style: italic;
-    background: rgb(234, 233, 233);
     position: relative;
+    margin: 8px 0 8px 30px;
+    padding: 5px 5px 5px 20px;
+    border-left: 4px solid #666;
+    font-style: italic;
+    background: rgb(234,233,233);
 }
 blockquote:before,
 blockquote:after {
@@ -99,6 +101,7 @@ blockquote:after {
 del {
     text-decoration: line-through;
 }
+
 /* tables still need 'cellspacing="0"' in the markup */
 table {
     border-collapse: collapse;
@@ -121,6 +124,7 @@ samp {
     font-family: monospace,sans-serif;
 }
 /* HTML 5 elements */
+
 header,
 nav,
 section,
@@ -134,9 +138,10 @@ footer {
     padding: 0;
 }
 
+
 /* ----------------------------- */
 /* == Baseline for elements */
-/* ----------------------------- */
+/* ---------------------------- */
 
 /* base font-size corresponds to 10px */
 html {
@@ -145,7 +150,8 @@ html {
 }
 body {
     font-family: Arial,Helvetica,sans-serif;
-    line-height: 1.4;
+    font-size: 1.4em;
+    line-height: 1.5;  
     color: #444;
     background-color: #fff;
 }
@@ -165,107 +171,108 @@ body {
 /* == Base Typography */
 /* ----------------------------- */
 
-/* font-sizing for content */
+/* preserve vertical-rythm, thanks to http://soqr.fr/vertical-rhythm/ */
 p,
-li,
+ul,
+ol,
+dl,
+blockquote,
+pre,
 td,
 th,
+label,
 textarea {
-    font-size: 1.4em;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 21px 0;
 }
-li li,
-li p,
-td p,
-th p,
-li h1,
-li h2,
-li h3,
-li h4,
-li h5,
-li h6,
-button,
-input,
-select {
-    font-size: 100%;
+h1, .h1-like {
+    font-size: 1.8571em;
+    font-weight: normal;
+    line-height: 1.6154;
+    margin: 42px 0 21px 0;
 }
-h1,
-.h1-like {
-    font-size: 2.4em;
+h2, .h2-like {
+    font-size: 1.7143em;
+    font-weight: normal;
+    line-height: 1.75;
+    margin: 42px 0 21px 0;
 }
-/* 24 pixels */
-h2,
-.h2-like {
-    font-size: 2em;
+h3, .h3-like {
+    font-size: 1.5714em;
+    font-weight: normal;
+    line-height: 1.909;
+    margin: 42px 0 21px 0;
 }
-/* 20 pixels */
-h3,
-.h3-like {
-    font-size: 1.8em;
+h4, .h4-like {
+    font-size: 1.4286em;
+    font-weight: normal;
+    line-height: 1.05;
+    margin: 42px 0 21px 0;
 }
-/* 18 pixels */
-h4,
-.h4-like {
-    font-size: 1.6em;
+h5, .h5-like {
+    font-size: 1.2857em;
+    font-weight: normal;
+    line-height: 1.1667;
+    margin: 42px 0 21px 0;
 }
-/* 16 pixels */
-h5,
-.h5-like {
-    font-size: 1.4em;
+h6, .h6-like {
+    font-size: 1.1429em;
+    font-weight: normal;
+    line-height: 1.3125;
+    margin: 42px 0 21px 0;
 }
-/* 14 pixels */
+
 /* alternate font-sizing */
-.smallest {
-    font-size: .7em;
-}
 .smaller {
-    font-size: .8em;
+    font-size: .7143em;
+    line-height: 2.1;
 }
 .small {
-    font-size: .9em;
+    font-size: .8571em;
+    line-height: 1.75;
 }
 .big {
-    font-size: 1.07em;
+    font-size: 1.1429em;
+    line-height: 1.3125;
 }
-/* 15 pixels */
 .bigger {
-    font-size: 1.14em;
+    font-size: 1.2857em;
+    line-height: 1.1667;
 }
-/* 16 pixels */
 .biggest {
-    font-size: 1.28em;
+    font-size: 1.4286em;
+    line-height: 1.05;
 }
-/* 18 pixels */
-/* avoid collapsing margins */
+
+/* soft reset */
+code,
+pre,
+samp {
+    white-space: pre-wrap;
+    font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
+}
+code { line-height: 1em; }
+table { margin-bottom: 1.5em; }
+.m-reset { margin: 0 !important; }
+.p-reset { padding: 0 !important; }
+
+/* avoid collapsing margins on headings */
 h1:first-child,
 h2:first-child,
 h3:first-child,
 h4:first-child,
 h5:first-child,
-p:first-child {
+h6:first-child {
     margin-top: 0;
 }
-/* avoid last paragraph bottom margin */
-p:last-child {
+
+/* avoid margins on nested elements */
+li p,
+li ul,
+li ol {
+    margin-top: 0;
     margin-bottom: 0;
-}
-/* styling headings */
-h1,
-.h1-like {
-}
-h2,
-.h2-like {
-}
-h3,
-.h3-like {
-}
-h4,
-.h4-like {
-}
-h5,
-.h5-like {
-}
-h6,
-.h6-like {
 }
 
 /* max values */
@@ -280,30 +287,32 @@ input,
 object,
 embed,
 video {
-    height: auto;
-    max-width: 100%;
+     max-width: 100%;
+     height: auto;   
 }
 iframe {
     max-width: 100%;
 }
 
 /* you shall not pass */
-textarea,
-table,
-td,
-th,
-code,
-pre,
-samp,
-div,
-p {
+textarea, table, td, th, code, pre, samp, p {
     word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
 }
-code,
-pre,
-samp {
-    white-space: pre-wrap;
+
+/* pictures */
+img {
+    width: auto;
+    vertical-align: middle;
 }
+a img { border: 0; }
+
+
+/* other typo */
 small {
     font-size: 85%;
 }
@@ -332,7 +341,9 @@ pre {
 }
 
 /* Links */
+
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+
 a,
 a:active,
 a:visited {
@@ -353,6 +364,7 @@ a img {
 /* == Layout and modules */
 /* ----------------------------- */
 
+
 /* switching box model for all elements */
 * {
     -webkit-box-sizing: border-box;
@@ -362,44 +374,29 @@ a img {
 
 /* float layout */
 /* ----------- */
-/* block that can contains several .mod , can contains floats */
-.line {
-
-}
+/* tutorial : http://knacss.com/demos/tutoriel.html; */
 
 /* module, contains floats */
-.mod {
+
+.mod { 
     padding: 1em;
-}
-
-/* generaly inside .mod, can contains .item */
-.items {
-}
-
-/* fluid, contains floats, can be placed next to a float */
-.item {
     overflow: hidden;
 }
+/* same as .mod, no paddings */
+.item { overflow: hidden; }
 
 /* table layout */
 /* ------------------ */
 .row {
     display: table;
-    width: 100%;
     table-layout: fixed;
+    width: 100%;
 }
 .row > *,
 .col {
     display: table-cell;
+    vertical-align: top;
     padding: 1em;
-}
-
-/* 1em gutter between elements if parent is .gut */
-.line.gut > * + * {
-    margin-left: 1em;
-}
-.row.gut > * + * {
-    border-left: 1em solid #fff;
 }
 
 /* blocks that needs to be placed under floats */
@@ -409,44 +406,145 @@ a img {
     clear: both;
 }
 
-/* blocks that can contains floats */
-.clearfix:after,
-.line:after,
-.mod:after, 
-.gallery:after{
+/* blocks that must contain floats */
+.clearfix:before, .clearfix:after,
+.line:before, .line:after,
+.mod:before, .mod:after {
     content: "";
     display: table;
+}
+.clearfix:after,
+.line:after,
+.mod:after {
     clear: both;
 }
 
 /* alignments (blocks and inline) */
-/* left and 1em gutter */
+/* ------------------------------ */
+
+/* left elements */
 .left {
-    float: left; margin-right: 1em
+    float: left;
+    margin-right: 1em;
+}
+.mod.left,
+.col.left {
+    margin-right: 0;
 }
 
-/* right and 1em gutter */
+/* right elements */
 .right {
-    float: right; margin-left: 1em
+    float: right;
+    margin-left: 1em;
+}
+.mod.right,
+.col.right {
+    margin-left: 0;
+}
+img.left, img.right {
+    margin-bottom: 5px;
 }
 
-/* juste inline-block */
-.inbl {display: inline-block;}
+.center    { margin: auto; }
+.txtleft   { text-align: left; }
+.txtright  { text-align: right; }
+.txtcenter { text-align: center; }
+
+/* gutters (for row and lines)    */
+/* ------------------------------ */
+
+/* 1em gutter between elements if parent is .gut */
+
+.row.gut > * + * {
+    border-left: 1em solid #fff; }
+.line.gut > .left  { margin-right: 1em; }
+.line.gut > .right { margin-left: 1em; }
+
+/* "multicolumns" with % gutter */
+.line.gut2 > *     { width: 49%; }
+.line.gut2 > * + * { margin-left: 2%; }
+.line.gut3 > *     { width: 32.333%; }
+.line.gut3 > * + * { margin-left: 1.5%; }
+.line.gut4 > *     { width: 24%; }
+.line.gut4 > * + * { margin-left: 1.333%; }
+
+/* just inline-block */
+.inbl {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -.25em;
+}
 
 /* blocks widths (percentage and pixels) */
-.w10 {width: 10%}
-.w20 {width: 20%}
-.w25 {width: 25%}
-.w30 {width: 30%}
-.w33 {width: 33.33%}
-.w40 {width: 40%}
-.w50 {width: 50%}
-.w60 {width: 60%}
-.w70 {width: 70%}
-.w80 {width: 80%}
-.w90 {width: 90%}
-.w100 {width: 100%}
+.w10    { width: 10%; }
+.w20    { width: 20%; }
+.w25    { width: 25%; }
+.w30    { width: 30%; }
+.w33    { width: 33.333%; }
+.w40    { width: 40%; }
+.w50    { width: 50%; }
+.w60    { width: 60%; }
+.w66    { width: 66.666%; }
+.w70    { width: 70%; }
+.w75    { width: 75%; }
+.w80    { width: 80%; }
+.w90    { width: 90%; }
+.w100   { width: 100%; }
 
+
+.w50p   { width: 50px; }
+.w100p  { width: 100px; }
+.w150p  { width: 150px; }
+.w200p  { width: 200px; }
+.w300p  { width: 300px; }
+.w400p  { width: 400px; }
+.w500p  { width: 500px; }
+.w600p  { width: 600px; }
+.w700p  { width: 700px; }
+.w800p  { width: 800px; }
+.w960p  { width: 960px; }
+.mw960p { max-width: 960px; }
+
+/* spacing helpers
+p,m = padding,margin
+a,t,r,b,l = all,top,right,bottom,left
+s,m,l,n = small(10px),medium(20px),large(30px),none(0)
+source https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
+*/
+
+.mt0, .mtn { margin-top: 0; }
+.mt1, .mts { margin-top: 10px; }
+.mt2, .mtm { margin-top: 20px; }
+.mt3, .mtl { margin-top: 30px; }
+.mr0, .mrn { margin-right: 0; }
+.mr1, .mrs { margin-right: 10px; }
+.mr2, .mrm { margin-right: 20px; }
+.mr3, .mrl { margin-right: 30px; }
+.mb0, .mbn { margin-bottom: 0; }
+.mb1, .mbs { margin-bottom: 10px; }
+.mb2, .mbm { margin-bottom: 20px; }
+.mb3, .mbl { margin-bottom: 30px; }
+.ml0, .mln { margin-left: 0; }
+.ml1, .mls { margin-left: 10px; }
+.ml2, .mlm { margin-left: 20px; }
+.ml3, .mll { margin-left: 30px; }
+
+.pt0, .ptn { padding-top: 0; }
+.pt1, .pts { padding-top: 10px; }
+.pt2, .ptm { padding-top: 20px; }
+.pt3, .ptl { padding-top: 30px; }
+.pr0, .prn { padding-right: 0; }
+.pr1, .prs { padding-right: 10px; }
+.pr2, .prm { padding-right: 20px; }
+.pr3, .prl { padding-right: 30px; }
+.pb0, .pbn { padding-bottom: 0; }
+.pb1, .pbs { padding-bottom: 10px; }
+.pb2, .pbm { padding-bottom: 20px; }
+.pb3, .pbl { padding-bottom: 30px; }
+.pl0, .pln { padding-left: 0; }
+.pl1, .pls { padding-left: 10px; }
+.pl2, .plm { padding-left: 20px; }
+.pl3, .pll { padding-left: 30px; }
 
 
 /* ----------------------------- */
@@ -454,6 +552,7 @@ a img {
 /* ----------------------------- */
 
 /* for image replacement */
+
 .ir { 
 display: block; 
 text-indent: -999em; 
@@ -473,35 +572,56 @@ direction: ltr;
 /* Hide only visually, but have it available for screenreaders 
    www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
 .assistive-text, 
-.visuallyhidden{
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
+.visually-hidden{
+    position: absolute !important;
+    left: -7000px;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
 }
 a.assistive-text:active,
 a.assistive-text:focus {
-	background: #eee;
-	border-bottom: 1px solid #ddd;
-	color: #1982d1;
-	clip: auto !important;
-	font-size: 12px;
-	position: absolute;
-	text-decoration: underline;
-	top: 0;
-	left: 7.6%;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    color: #1982d1;
+    clip: auto !important;
+    font-size: 12px;
+    position: absolute;
+    text-decoration: underline;
+    top: 0;
+    left: 7.6%;
 }
 
 /* hiding content */
 .desktop-hidden {display: none;} /* hidden on desktop */
-
 .mobile-hidden {} /* hidden on mobile */
-
 .tablet-hidden {} /* hidden on tablets */
-
 .phone-hidden {} /* hidden on smartphones */
 
 
 
+/* ----------------------------- */
+/* ==iefix */
+/* ----------------------------- */
+
+/* haslayout for IE6/IE7 */
+.ie67 .clearfix,
+.ie67 .line,
+.ie67 .mod,
+.ie67 .row,
+.ie67 .col {
+    zoom: 1;
+}
+
+/* inline-block and table-cell for IE6/IE7 */
+/* warning: .col needs width on IE6/IE7 */
+.ie67 .btn,
+.ie67 .col,
+.ie67 .inbl {
+    display: inline;
+    zoom: 1;
+}
+.ie8 img {
+    width: auto; }
 
 /* ----------------------------- */
 /* ==  Forms */
@@ -511,13 +631,13 @@ legend {border: 0; white-space: normal;}
 form, fieldset { border: none;}
 label{ cursor: pointer; } /* hand cursor on clickable input elements */
 
-/* webkit browsers add a 2px margin outside the chrome of form elements */
-  
+
+/* webkit browsers add a 2px margin outside the chrome of form elements */  
 button, 
 input, 
 select, 
 textarea { 
-margin: 0; 
+    margin: 0; 
 }
 /* colors for form validity 
 input:valid, textarea:valid   {  }
@@ -528,44 +648,48 @@ input:invalid, textarea:invalid {
          box-shadow: 0px 0px 5px red;
 }
 */
+
 button, input, select {
-	font-size: 100%;
-	margin: 0;
-	vertical-align: baseline;
-	*vertical-align: middle;   }
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;   }
 textarea { 
-	overflow: auto; 
-	min-height: 5em;
-	vertical-align: top;
+    overflow: auto; 
+    min-height: 5em;
+    vertical-align: top;
     resize: vertical;
     font-size: 1em;
 } 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
-	cursor: pointer;
-	-webkit-appearance: button;
-	*overflow: visible; }
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible; 
+}
 input[type="checkbox"], input[type="radio"] {
-	padding: 0;
-	*width: 13px; *height: 13px; }
+    padding: 0;
+    *width: 13px; *height: 13px; 
+}
 input[type="search"] {-webkit-appearance: textfield;}
 input[type="radio"] { 
-vertical-align: text-bottom; 
+    vertical-align: text-bottom; 
 }
 input[type="checkbox"] { 
-vertical-align: bottom; 
+    vertical-align: bottom; 
 }
 .ie7 input[type="checkbox"] { 
-vertical-align: baseline; 
+    vertical-align: baseline; 
 }
 .ie6 input { 
-vertical-align: text-bottom; 
+    vertical-align: text-bottom; 
 }
 /* 'x' appears on right of search input when text is entered. This removes it */
+
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
-	display: none;
+    display: none;
 }
 
 /* Removes inner padding and border in FF3+ */
@@ -573,18 +697,19 @@ button::-moz-focus-inner,
 input[type='button']::-moz-focus-inner,
 input[type='reset']::-moz-focus-inner,
 input[type='submit']::-moz-focus-inner {
-	border: 0;
-	padding: 0;
+    border: 0;
+    padding: 0;
 }
-/* style the placeholder */
 
+/* style the placeholder */
 ::-webkit-input-placeholder {color: #777;}
 input:-moz-placeholder, textarea:-moz-placeholder {color: #777;}
 
 .ie6 legend, 
 .ie7 legend { 
-margin-left: -7px; 
+    margin-left: -7px; 
 } /* thnx ivannikolic! */
+
 
 /* haslayout for IE6/IE7 */
 .ie7 .clearfix,.ie7 .line, .ie7 .mod, .ie7 .row, .ie7 .col {
@@ -592,11 +717,12 @@ margin-left: -7px;
 }
 .no-boxshadow input:invalid, 
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }
-/* Forms - Class for labelling required form items */
 
+/* Forms - Class for labelling required form items */
 .required {
-	color: #cc0033;
+    color: #cc0033;
 }
+
 
 /* ----------------------------- */
 /* == Images */
@@ -607,40 +733,38 @@ Resize images to fit the main content area.
 - Applies only to images uploaded via WordPress by targeting size-* classes.
 - Other images will be left alone. Use "size-auto" class to apply to other images.
 */
-
 img.size-auto,
 img.size-full,
 img.size-large,
 img.size-medium,
 .attachment img,
 .widget-area img {
-	max-width: 100%;
-	height: auto; 
+    max-width: 100%;
+    height: auto; 
 }
 img.alignleft {
-	margin-right: 1em;
+    margin-right: 1em;
 }
 img.alignright {
-	margin-left: 1em;
+    margin-left: 1em;
 }
 .wp-caption {
-	padding: .5em;
-	text-align: center;
+    padding: .5em;
+    text-align: center;
 }
 .wp-caption img {
-	margin: .25em;
+    margin: .25em;
 }
 .wp-caption .wp-caption-text {
-	margin: .5em;
+    margin: .5em;
 }
 .gallery-caption{
 }
-
 .gallery-item {
-float: left;
-margin-top: 10px;
-text-align: center;
-width: 33%;
+    float: left;
+    width: 33%;
+    margin-top: 10px;
+    text-align: center;    
 }
 
 /* bicubic resizing for non-native sized IMG: 
@@ -654,23 +778,22 @@ width: 33%;
 /* == WordPress alignement */
 /* ----------------------------- */
 
-/* Alignment */
 
+/* Alignment */
 .alignleft {
-	display: inline;
-	float: left;
+    display: inline;
+    float: left;
 }
 .alignright {
-	display: inline;
-	float: right;
+    display: inline;
+    float: right;
 }
 .aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 
 
 /* Template structure here */
@@ -687,12 +810,12 @@ width: 33%;
 /* ----------------------------- */
 
 .site-title {
-	font-weight: bold;
-	margin: .67em 0;
+    margin: .67em 0;
+    font-weight: bold;    
 }
 .site-description {
-	font-weight: normal;
-	margin: 0 0 1em;
+    margin: 0 0 1em;
+    font-weight: normal;    
 }
 
 
@@ -700,42 +823,40 @@ width: 33%;
 /* == Menu */
 /* ----------------------------- */
 
-header .menu {
-	background: #eee;
-	display: block;
-	float: left;
-	margin: 0 auto 1em;
-	width: 100%;
+header .menu {   
+    display: block;
+    float: left;
+    width: 100%;    
+    margin: 0 auto 1em;
+    background: #eee;   
 }
 header .menu ul {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;    
 }
 header .menu li {
-	float: left;
-	position: relative;
+    position: relative;
+    float: left;   
 }
-header .menu a {	
-	display: block;
-    line-height: 2em;
-	padding: 0 1em;
-	text-decoration: none;
+header .menu a {    
+    display: block;
+    padding: 0 1em; 
+    line-height: 2em;    
+    text-decoration: none;
 }
  header .menu a:hover,
  header .menu ul > .current-menu-item a {
-    background: rgb(51, 51, 51);
     color: #fff;
     text-decoration: none;
-}
-header .sub-menu {
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);*/	
     background: rgb(51, 51, 51);
+    }
+header .sub-menu {
+    position: absolute;    
     left: -9999px;
-    list-style: none outside none;
-    position: absolute;
+    list-style: none outside none;    
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    background: rgb(51, 51, 51);
 }
 header .sub-menu li{   
     float:none;
@@ -743,13 +864,14 @@ header .sub-menu li{
 header .sub-menu a{
     white-space:nowrap; 
 }
+
 /* unhide the 2nd level */
 header li:hover .sub-menu{ 
     left:0; 
 }
-header li:hover a{ 
-    background:rgb(51, 51, 51);
+header li:hover a{     
     color:#fff;
+    background:rgb(51, 51, 51);
 }
 header li:hover ul li a:hover{ 
     background:rgb(0, 0, 0);
@@ -764,33 +886,34 @@ header li:hover ul li a:hover{
 
 /* nav */
 .content nav {
-	display: block;
-	overflow: hidden;
+    display: block;
+    overflow: hidden;
 }
 .content nav .nav-previous {
-	float: left;
-	width: 50%;
+    float: left;
+    width: 50%;
 }
 .content nav .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+    float: right;    
+    width: 50%;
+    text-align: right;
 }
 .content #nav-above {
-	display: none;
+    display: none;
 }
 .paged .content #nav-above,
 .single .content #nav-above {
-	display: block;
+    display: block;
 }
 #nav-below {
-	margin: 1em 0 0;
+    margin: 1em 0 0;
 }
 .page-link {
-	margin: 0 0 1em;
+    margin: 0 0 1em;
 }
 
 /* table styling */
+
 .content table,
 .content td,
 .content th{
@@ -808,42 +931,99 @@ header li:hover ul li a:hover{
 
 
 
+
 /* ----------------------------- */
 /* == Media queries */
 /* ----------------------------- */
+
 
 /* Media queries for responsive design
  These follow after primary styles so they will successfully override. 
  */
 
+
 @media all and (orientation:portrait) {
+
 }
 @media all and (orientation:landscape) {
+
 }
+
 /* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
    Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
 
 
-/* quick smartphone reset */
 
-@media (max-width: 640px) {
-    .phone-hidden {display: none}
-    .mod, .col {
-     display: block !important;
-     margin: 0 !important;
-     border: 0 !important;
-     float: none !important;
-     width: auto !important;
-    }
-    [class*="mw"], [class*="w9"], [class*="w8"],
-    [class*="w7"], [class*="w6"], [class*="w5"],
-    [class*="w4"], [class*="w3"] {
+/* ----------------------------- */
+/* ==desktop medias */
+/* ----------------------------- */
+@media (min-width: 641px) {
+
+}
+
+
+/* ----------------------------- */
+/* ==mobile */
+/* ----------------------------- */
+
+/* quick tablet reset */
+@media (max-width: 768px) {
+    .tablet-hidden { display: none; }
+    .w60,
+    .w66,
+    .w70,
+    .w75,
+    .w80,
+    .w90,
+    .w100,
+    .w600p,
+    .w700p,
+    .w800p,
+    .w960p,
+    .mw960p {
         width: auto;
     }
 }
 
-@media screen and (max-device-width: 480px) {
-	
+/* quick smartphone reset */
+@media (max-width: 640px) {
+    .phone-hidden { display: none; }
+    .mod,
+    .col,
+    label,
+    fieldset {
+        display: block !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border: 0;
+        float: none !important;
+        width: auto !important;
+    }
+    .w30,
+    .w33, 
+    .w40,
+    .w50,
+    .w300p,
+    .w400p,
+    .w500p {
+        width: auto;
+    }
+    .row { 
+        display: block !important;
+        width: 100% !important;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+}
+
+/* orientation iOS font-size fix */
+
+@media (orientation: landscape) and (max-device-width: 768px) {
+    html,
+    body {
+        -webkit-text-size-adjust: 100%;
+    }
 }
 
 
@@ -851,8 +1031,9 @@ header li:hover ul li a:hover{
 /* == Print style */
 /* ----------------------------- */
 
+
 @media print {
-	p, blockquote {orphans: 2; widows: 2;}
+    p, blockquote {orphans: 2; widows: 2;}
     blockquote, ul, ol {page-break-inside: avoid;}
     h1, h2, h3, caption { page-break-after: avoid;}
   * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
@@ -871,7 +1052,7 @@ thead {
     display: table-header-group;
 }
 /* css-discuss.incutio.com/wiki/Printing_Tables */
-  tr,
+ tr,
 img {
     page-break-inside: avoid;
 }
