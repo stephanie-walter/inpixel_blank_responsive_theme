@@ -6,8 +6,6 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
