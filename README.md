@@ -26,3 +26,12 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 
 *Big Thanks to <a href="http://jmperso.eu/howdy">JM for the French translations !</a>*
 *Big Thanks to  for many little updates  <a href="http://www.creativejuiz.fr/blog/">Geoffrey C.</a>*
+
+----------------------------------------------------
+
+
+*Changelog*
+- v 1.2 : 
+* removed the full-page-template : now all pages are full page by default
+* added right-sidebar-page : if you need a right sidebar
+* made it work with single.php 

@@ -73,9 +73,8 @@
 		</header>
 
 		<div class="line gut">
-			<?php if ( !(
-			is_page_template('left-sidebar-page.php') || 
-			is_page_template('full-width-page.php'))
-			){?>
+			<?php if (!(is_page())){?>
 			<section id="content" role="region" class="content mod left w70">
-				<?php } ?>
+			<?php } 
+			
+

@@ -10,9 +10,8 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 
+<?php the_post(); ?>
 <section id="content" class="content mod item ">
-
-	<?php the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 					<header class="entry-header">

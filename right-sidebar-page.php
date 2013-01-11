@@ -1,9 +1,15 @@
 <?php
-  
+/**
+ * Template Name: Right Sidebar
+ * Description: A full-width template with no sidebar
+ *
+ *
+ */
 
 get_header(); ?>
 <?php the_post(); ?>
-<section class=" content mod item full-width ">
+
+<section id="content" role="region" class="content mod left w70">
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 					<header class="entry-header">
@@ -12,12 +18,13 @@ get_header(); ?>
 
 					<div class="entry-content">
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'themename' ), 'after' => '</div>' ) ); ?>
+						<?php wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'themename' ) . '&after=</div>' ); ?>
 						<?php edit_post_link( __( 'Edit', 'themename' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 
 				<?php // comments_template( '', true ); ?>
-</section>
+	</section>
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
