@@ -5,7 +5,7 @@ Demo link : <a href="http://www.inpixelitrust.fr/blank-responsive"> demo </a>
 ==============================
 
 *Description:*
-Inpixelitrust blank theme for starting a WordPress project based on <a href="http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/">Randy Jensen & Randy Hoyt HTML5 starter theme </a>  with other goodies added plus chunks of Paul Irish's <a href="http://html5boilerplate.com/">HTML5 Boilerplate </a>  and pieces of <a href="http://knacss.com/">Raphael Goetter's knacss in it</a>
+Inpixelitrust blank theme for starting a WordPress project based on <a href="http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/">Randy Jensen & Randy Hoyt HTML5 starter theme </a> with other goodies added plus chunks of Paul Irish's <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> and pieces of <a href="http://knacss.com/">Raphael Goetter's knacss in it</a>
 <a href="http://www.inpixelitrust.fr/blog/en/inpixelitrust-responsive-blank-theme-wordpress/">More details about the theme can be found here</a>
 
 *Specificities of the theme*
@@ -25,13 +25,13 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 * Under <a href="http://wordpress.org/about/gpl/">GPL V2 Licence</a>
 
 *Big Thanks to <a href="http://jmperso.eu/howdy">JM for the French translations !</a>*
-*Big Thanks to  for many little updates  <a href="http://www.creativejuiz.fr/blog/">Geoffrey C.</a>*
+*Big Thanks to for many little updates <a href="http://www.creativejuiz.fr/blog/">Geoffrey C.</a>*
 
 ----------------------------------------------------
 
 
 *Changelog*
 - v 1.2 : 
-* removed the full-page-template : now all pages are full page by default
-* added right-sidebar-page : if you need a right sidebar
-* made it work with single.php 
+* Removed the full-page-template : now all pages are full page by default
+* Added right-sidebar-page : if you need a right sidebar
+* Made it work with single.php 
