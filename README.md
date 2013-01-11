@@ -13,7 +13,7 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 * HTML5
 * Uses Paul Irish's conditionnal tags for IE
 * Uses <a href="http://knacss.com/">Raphael Goetter's knacss</a> for the basic layout
-* Default right sidebar, one full screen template with no sidebar and a left sidebar template 
+* Default full screen, one left sidebar template and a left sidebar template  for pages
 * Embeds the <a href="https://github.com/inpixelitrust/WP-cleanup-enhanced">Wp-cleanup-enhanced code </a> (you can't use both plugin version and in template, so if you use the plugin please comment the line that calls the functions/wordpress_cleanup.php in functions.php)
 * Embeds <a href="http://wpengineer.com/2230/removing-comments-absolutely-wordpress/">the Remove comments absolute plugin</a> (you can comment the line that calls unctions/remove-comments-absolute.php in functions.php to disable it)
 * Embeds ready to use script clean up functions functions/script_style_cleanups.php
