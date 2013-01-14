@@ -830,7 +830,6 @@ img.alignright {
     margin: 0 auto 1em;
     background: #eee;
 }
-
 header .menu ul {
     margin: 0;
     padding-left: 0;
@@ -884,6 +883,65 @@ header a.menu-link {
     float: right;
 }
 
+
+/* ----------------------------- */
+/* == Content */
+/* ----------------------------- */
+
+
+/* nav */
+.content nav {
+    display: block;
+    overflow: hidden;
+}
+.content nav .nav-previous {
+    float: left;
+    width: 50%;
+}
+.content nav .nav-next {
+    float: right;    
+    width: 50%;
+    text-align: right;
+}
+.content #nav-above {
+    display: none;
+}
+.paged .content #nav-above,
+.single .content #nav-above {
+    display: block;
+}
+#nav-below {
+    margin: 1em 0 0;
+}
+.page-link {
+    margin: 0 0 1em;
+}
+
+/* table styling */
+
+.content table,
+.content td,
+.content th{
+    border: 1px solid rgb(191, 191, 190);
+}
+.content tbody tr:nth-child(odd){
+    background:#eee
+}
+
+
+/* ----------------------------- */
+/* == Footer */
+/* ----------------------------- */
+
+
+
+
+
+/* ----------------------------- */
+/* == Media queries */
+/* ----------------------------- */
+
+/* Responsive Menu */
 
 @media screen and (max-width: 768px) {
     header a.menu-link{
@@ -954,70 +1012,7 @@ header a.menu-link {
     header .menu .has-subnav  > .toggle-link.active:after{
          content: "▲";
     }
-
-
-
-    /*open subnav on .has-subnav click */
 }
-
-
-
-/* ----------------------------- */
-/* == Content */
-/* ----------------------------- */
-
-
-/* nav */
-.content nav {
-    display: block;
-    overflow: hidden;
-}
-.content nav .nav-previous {
-    float: left;
-    width: 50%;
-}
-.content nav .nav-next {
-    float: right;    
-    width: 50%;
-    text-align: right;
-}
-.content #nav-above {
-    display: none;
-}
-.paged .content #nav-above,
-.single .content #nav-above {
-    display: block;
-}
-#nav-below {
-    margin: 1em 0 0;
-}
-.page-link {
-    margin: 0 0 1em;
-}
-
-/* table styling */
-
-.content table,
-.content td,
-.content th{
-    border: 1px solid rgb(191, 191, 190);
-}
-.content tbody tr:nth-child(odd){
-    background:#eee
-}
-
-
-/* ----------------------------- */
-/* == Footer */
-/* ----------------------------- */
-
-
-
-
-
-/* ----------------------------- */
-/* == Media queries */
-/* ----------------------------- */
 
 
 /* Media queries for responsive design
