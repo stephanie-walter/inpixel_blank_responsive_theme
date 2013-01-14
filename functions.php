@@ -34,6 +34,19 @@ register_nav_menus( array(
 	'primary' => __( 'Primary Menu', 'themename' )
 ) );
 
+/* walker to add "has-subnav" to top items of navigation */
+class Has_Subnav_Walker extends Walker_Nav_Menu{
+  public function display_element($el, &$children, $max_depth, $depth = 0, $args, &$output){
+    $id = $this->db_fields['id'];   
+
+    if(isset($children[$el->$id]))
+      $el->classes[] = 'has-subnav';   
+
+    parent::display_element($el, $children, $max_depth, $depth, $args, $output);
+  }
+}
+
+
 
 /**
  *	This theme supports editor styles

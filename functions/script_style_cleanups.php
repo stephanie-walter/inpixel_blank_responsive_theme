@@ -4,12 +4,10 @@
 /****** Unregister jquery and call google api jquery 
 from http://wpengineer.com/2028/small-tips-using-wordpress-and-jquery/
 ***********************/
-/* function my_scripts_method() {
+ function my_scripts_method() {
 	if ( !is_admin() ) {
-		wp_deregister_script( 'jquery' );
 		wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', false, '1.7.1', true ); // load in footer - true
 		wp_enqueue_script( 'jquery' );
-		// load js of Theme, requires jQuery
 	}
 }
 

@@ -17,8 +17,12 @@
 	</footer>
 </div>
 
-
 <?php wp_footer(); ?>
+<!-- The mains scripts you'll need for your site  -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+
+
+
 
 </body>
 </html>

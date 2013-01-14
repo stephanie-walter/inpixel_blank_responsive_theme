@@ -5,7 +5,7 @@ Github Theme URI: https://github.com/inpixelitrust/inpixel_blank_responsive_them
 Author: Stephanie Walter
 Author URI: http://www.inpixelitrust.fr
 Description: Inpixelitrust blank theme for starting a WordPress project based on <a href="http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/">Randy Jensen & Randy Hoyt HTML5 starter theme </a> with other goodies added plus chunks of Paul Irish's <a href="http://html5boilerplate.com/">HTML5 Boilerplate </a> and some final pieces of <a href="http://knacss.com/">Raphael Goetter's knacss in it</a>. Enjoy and Share the love :)
-Version: v1.2
+Version: v1.3
 License: GPL
 License URI: http://codex.wordpress.org/License
 */
@@ -823,13 +823,14 @@ img.alignright {
 /* == Menu */
 /* ----------------------------- */
 
-header .menu {   
+.menu-wrapper{
     display: block;
     float: left;
     width: 100%;    
     margin: 0 auto 1em;
-    background: #eee;   
+    background: #eee;
 }
+
 header .menu ul {
     margin: 0;
     padding-left: 0;
@@ -837,7 +838,7 @@ header .menu ul {
 }
 header .menu li {
     position: relative;
-    float: left;   
+    float: left;
 }
 header .menu a {    
     display: block;
@@ -850,11 +851,13 @@ header .menu a {
     color: #fff;
     text-decoration: none;
     background: rgb(51, 51, 51);
-    }
+}
 header .sub-menu {
     position: absolute;    
-    left: -9999px;
-    list-style: none outside none;    
+    max-height: 0px;
+    overflow: hidden;
+    list-style: none outside none;
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
     box-shadow: 0 3px 3px rgba(0,0,0,0.2);
     background: rgb(51, 51, 51);
 }
@@ -867,7 +870,7 @@ header .sub-menu a{
 
 /* unhide the 2nd level */
 header li:hover .sub-menu{ 
-    left:0; 
+    max-height: 30em;
 }
 header li:hover a{     
     color:#fff;
@@ -875,6 +878,86 @@ header li:hover a{
 }
 header li:hover ul li a:hover{ 
     background:rgb(0, 0, 0);
+}
+header a.menu-link {
+    display: none;
+    float: right;
+}
+
+
+@media screen and (max-width: 768px) {
+    header a.menu-link{
+        display:block;
+        padding: 4px ;
+    }   
+    header nav .menu  li {
+        float:none;
+        margin:0;
+    }
+    .js header nav[role=navigation] {
+        overflow:hidden;
+        max-height: 0em;
+    } 
+    .js header nav[role=navigation].active {
+       max-height: 30em;
+    }
+    header .menu .rightalign{
+         float:none;
+    }
+    header .sub-menu{
+        background:none;
+    }
+    header li:hover .sub-menu{
+        background: none repeat scroll 0 0 #333333;
+    }
+    header li:hover .sub-menu{
+        max-height: 0px;
+        overflow: hidden;
+    }
+    header .current-menu-item .sub-menu,
+    header .sub-menu.active{
+        background:rgb(51, 51, 51);
+    }
+    header .menu .has-subnav{
+        position:relative;
+    }    
+    header li .sub-menu.active{        
+        max-height: 30em;
+        overflow:visible;
+        position:relative;
+    }
+    header li .sub-menu.active li{
+        padding-left:20px;
+    }
+    /* styling the toggle menu */
+    .toggle-link{ 
+        position:absolute;
+        height:26px;
+        right:0px;
+        width:40px;
+        z-index:200;
+        font-size:0em;
+         background:rgba(255, 255, 255,0.1);       
+        cursor:pointer;
+    }
+    /* arrow to indicate that we have subnav*/
+    header .menu .has-subnav > .toggle-link:after{        
+        content: "▼";
+        font-size:16px;
+        position:absolute;
+        width:15px;
+        top:0px;
+        bottom:0px;
+        right:10px;
+        color: #607890;
+    }
+    header .menu .has-subnav  > .toggle-link.active:after{
+         content: "▲";
+    }
+
+
+
+    /*open subnav on .has-subnav click */
 }
 
 
