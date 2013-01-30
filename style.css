@@ -5,7 +5,7 @@ Github Theme URI: https://github.com/inpixelitrust/inpixel_blank_responsive_them
 Author: Stephanie Walter
 Author URI: http://www.inpixelitrust.fr
 Description: Inpixelitrust blank theme for starting a WordPress project based on <a href="http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/">Randy Jensen & Randy Hoyt HTML5 starter theme </a> with other goodies added plus chunks of Paul Irish's <a href="http://html5boilerplate.com/">HTML5 Boilerplate </a> and some final pieces of <a href="http://knacss.com/">Raphael Goetter's knacss in it</a>. Enjoy and Share the love :)
-Version: v1.3
+Version: v1.3.1
 License: GPL
 License URI: http://codex.wordpress.org/License
 */
@@ -43,29 +43,30 @@ License URI: http://codex.wordpress.org/License
 /* == Reset*/
 /* ----------------------------- */
 
-/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
--------------------------------------------------------------- */
-
-/*  Uncomment for a hard reset  */
-/*
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-    background: transparent;    
-    border: 0;  
-    margin: 0;  
-    padding: 0; 
-    vertical-align: baseline;
+/* soft reset */
+/* html,
+body,
+textarea,
+figure,
+label {
+    margin: 0;
+    padding: 0;
 }
-*/
+ul,
+ol {
+    padding-left: 2em;
+}
+code, 
+pre,
+samp {
+    white-space: pre-wrap;
+    font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
+}
+code { line-height: 1em; }
+table { margin-bottom: 1.5em; } */
 
-/* A softer reset */
+
+/* A hader reset */
 html,
 body,
 blockquote,
@@ -123,29 +124,13 @@ kbd,
 samp {
     font-family: monospace,sans-serif;
 }
-/* HTML 5 elements */
-
-header,
-nav,
-section,
-article,
-dialog,
-figure,
-aside,
-footer {
-    display: block;
-    margin: 0;
-    padding: 0;
-}
-
 
 /* ----------------------------- */
 /* == Baseline for elements */
 /* ---------------------------- */
 
-/* base font-size corresponds to 10px */
+/* base font-size corresponds to 10px and is adapted to rem unit */
 html {
-    overflow-y: scroll;
     font-size: 62.5%;
 }
 body {
@@ -171,6 +156,7 @@ body {
 /* == Base Typography */
 /* ----------------------------- */
 
+/* font-sizing for content */
 /* preserve vertical-rythm, thanks to http://soqr.fr/vertical-rhythm/ */
 p,
 ul,
@@ -181,83 +167,82 @@ pre,
 td,
 th,
 label,
-textarea {
-    font-size: 1em;
+textarea,
+caption,
+details, 
+figure, 
+hgroup {
+    font-size: 1em; /* equiv 14px */
     line-height: 1.5;
-    margin: 21px 0;
+    margin: 1.5em 0 0;
 }
 h1, .h1-like {
-    font-size: 1.8571em;
+    font-size: 1.8571em; /* equiv 26px */
     font-weight: normal;
-    line-height: 1.6154;
-    margin: 42px 0 21px 0;
+    line-height: 1.6154em;
+    margin: .8077em 0 0 0;
 }
 h2, .h2-like {
-    font-size: 1.7143em;
+    font-size: 1.7143em; /* equiv 24px */
     font-weight: normal;
-    line-height: 1.75;
-    margin: 42px 0 21px 0;
+    line-height: 1.75em;
+    margin: .875em 0 0 0;
 }
 h3, .h3-like {
-    font-size: 1.5714em;
+    font-size: 1.5714em; /* equiv 22px */
     font-weight: normal;
-    line-height: 1.909;
-    margin: 42px 0 21px 0;
+    line-height: 1.909em;
+    margin: .9545em 0 0 0;
 }
 h4, .h4-like {
-    font-size: 1.4286em;
+    font-size: 1.4286em; /* equiv 20px */
     font-weight: normal;
-    line-height: 1.05;
-    margin: 42px 0 21px 0;
+    line-height: 1.05em;
+    margin:  1.05em 0 0 0;
 }
 h5, .h5-like {
-    font-size: 1.2857em;
+    font-size: 1.2857em; /* equiv 18px */
     font-weight: normal;
-    line-height: 1.1667;
-    margin: 42px 0 21px 0;
+    line-height: 1.1667em;
+    margin:  1.1667em 0 0 0;
 }
 h6, .h6-like {
-    font-size: 1.1429em;
+    font-size: 1.1429em; /* equiv 16px */
     font-weight: normal;
-    line-height: 1.3125;
-    margin: 42px 0 21px 0;
+    line-height: 1.3125em;
+    margin:  1.3125em 0 0 0;
 }
 
 /* alternate font-sizing */
 .smaller {
-    font-size: .7143em;
-    line-height: 2.1;
+    font-size: .7143em; /* equiv 10px */
+    line-height: 2.1em;
 }
 .small {
-    font-size: .8571em;
-    line-height: 1.75;
+    font-size: .8571em; /* equiv 12px */
+    line-height: 1.75em;
 }
 .big {
-    font-size: 1.1429em;
-    line-height: 1.3125;
+    font-size: 1.1429em; /* equiv 16px */
+    line-height: 1.3125em;
 }
 .bigger {
-    font-size: 1.2857em;
-    line-height: 1.1667;
+    font-size: 1.2857em; /* equiv 18px */
+    line-height: 1.1667em;
 }
 .biggest {
-    font-size: 1.4286em;
-    line-height: 1.05;
+    font-size: 1.4286em; /* equiv 20px */
+    line-height: 1.05em;
 }
 
-/* soft reset */
-code,
-pre,
-samp {
-    white-space: pre-wrap;
-    font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
-}
-code { line-height: 1em; }
-table { margin-bottom: 1.5em; }
-.m-reset { margin: 0 !important; }
-.p-reset { padding: 0 !important; }
 
-/* avoid collapsing margins on headings */
+/* avoid top margins on first content element */
+p:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+blockquote:first-child,
+pre:first-child,
 h1:first-child,
 h2:first-child,
 h3:first-child,
@@ -275,27 +260,41 @@ li ol {
     margin-bottom: 0;
 }
 
+/* HTML5 tags */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
 /* max values */
-img,
-table,
-td,
-blockquote,
-code,
-pre,
-textarea,
-input,
-object,
-embed,
-video {
-     max-width: 100%;
-     height: auto;   
+img, table, td, blockquote, code, pre, textarea, input, video {
+    max-width: 100%;
+    height: auto; 
 }
 iframe {
     max-width: 100%;
 }
 
+/* iframe fix for responsive  http://amobil.se/2011/11/responsive-embeds/ */
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 /* you shall not pass */
-textarea, table, td, th, code, pre, samp, p {
+div, textarea, table, td, th, code, pre, samp {
     word-wrap: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -307,9 +306,13 @@ textarea, table, td, th, code, pre, samp, p {
 /* pictures */
 img {
     width: auto;
+    height: auto;
     vertical-align: middle;
 }
 a img { border: 0; }
+
+/* scripts */
+body > script {display: none !important;}
 
 
 /* other typo */
@@ -340,6 +343,7 @@ pre {
     word-wrap: break-word;
 }
 
+
 /* Links */
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
@@ -360,6 +364,7 @@ a img {
 }
 
 
+
 /* ----------------------------- */
 /* == Layout and modules */
 /* ----------------------------- */
@@ -376,14 +381,10 @@ a img {
 /* ----------- */
 /* tutorial : http://knacss.com/demos/tutoriel.html; */
 
-/* module, contains floats */
-
-.mod { 
-    padding: 1em;
+/* module, contains floats (.item is the same) */
+.mod, .item { 
     overflow: hidden;
 }
-/* same as .mod, no paddings */
-.item { overflow: hidden; }
 
 /* table layout */
 /* ------------------ */
@@ -396,7 +397,6 @@ a img {
 .col {
     display: table-cell;
     vertical-align: top;
-    padding: 1em;
 }
 
 /* blocks that needs to be placed under floats */
@@ -407,15 +407,11 @@ a img {
 }
 
 /* blocks that must contain floats */
-.clearfix:before, .clearfix:after,
-.line:before, .line:after,
-.mod:before, .mod:after {
-    content: "";
-    display: table;
-}
 .clearfix:after,
 .line:after,
 .mod:after {
+    content: "";
+    display: table;
     clear: both;
 }
 
@@ -425,22 +421,19 @@ a img {
 /* left elements */
 .left {
     float: left;
-    margin-right: 1em;
 }
-.mod.left,
-.col.left {
-    margin-right: 0;
+img.left {
+    margin-right: 1em;
 }
 
 /* right elements */
 .right {
     float: right;
+}
+img.right {
     margin-left: 1em;
 }
-.mod.right,
-.col.right {
-    margin-left: 0;
-}
+
 img.left, img.right {
     margin-bottom: 5px;
 }
@@ -450,30 +443,24 @@ img.left, img.right {
 .txtright  { text-align: right; }
 .txtcenter { text-align: center; }
 
-/* gutters (for row and lines)    */
-/* ------------------------------ */
-
-/* 1em gutter between elements if parent is .gut */
-
-.row.gut > * + * {
-    border-left: 1em solid #fff; }
-.line.gut > .left  { margin-right: 1em; }
-.line.gut > .right { margin-left: 1em; }
-
-/* "multicolumns" with % gutter */
-.line.gut2 > *     { width: 49%; }
-.line.gut2 > * + * { margin-left: 2%; }
-.line.gut3 > *     { width: 32.333%; }
-.line.gut3 > * + * { margin-left: 1.5%; }
-.line.gut4 > *     { width: 24%; }
-.line.gut4 > * + * { margin-left: 1.333%; }
-
 /* just inline-block */
 .inbl {
     display: inline-block;
     vertical-align: top;
     margin-right: -.25em;
 }
+
+/* grids    */
+/* ------------------------------ */
+
+/* grids with 2% gutter */
+[class*=grid] > * {float: left; } /* direct childrens are floating */
+[class*=grid] > * + * { margin-left: 2%; } /* that's the gutter */
+.grid2 > * { width: 49%; }
+.grid3 > * { width: 32%; }
+.grid4 > * { width: 23.5%; }
+.grid5 > * { width: 18.4%; }
+.grid6 > * { width: 15%; }
 
 /* blocks widths (percentage and pixels) */
 .w10    { width: 10%; }
@@ -490,7 +477,6 @@ img.left, img.right {
 .w80    { width: 80%; }
 .w90    { width: 90%; }
 .w100   { width: 100%; }
-
 
 .w50p   { width: 50px; }
 .w100p  { width: 100px; }
@@ -511,7 +497,6 @@ a,t,r,b,l = all,top,right,bottom,left
 s,m,l,n = small(10px),medium(20px),large(30px),none(0)
 source https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
 */
-
 .mt0, .mtn { margin-top: 0; }
 .mt1, .mts { margin-top: 10px; }
 .mt2, .mtm { margin-top: 20px; }
@@ -546,6 +531,15 @@ source https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
 .pl2, .plm { padding-left: 20px; }
 .pl3, .pll { padding-left: 30px; }
 
+.m-reset, .ma0 { margin: 0 !important; }
+.p-reset, .pa0 { padding: 0 !important; }
+.ma1, .mas { margin: 10px !important; }
+.ma2, .mam { margin: 20px !important; }
+.ma3, .mal { margin: 30px !important; }
+.pa1, .pas { padding: 10px !important; }
+.pa2, .pam { padding: 20px !important; }
+.pa3, .pal { padding: 30px !important; }
+
 
 /* ----------------------------- */
 /* == Hidding / unhidding content */
@@ -575,9 +569,15 @@ direction: ltr;
 .visually-hidden{
     position: absolute !important;
     left: -7000px;
+    overflow:hidden;
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
 }
+[dir=rtl] .visually-hidden {
+    left: auto;
+    right: -7000px;
+}
+
 a.assistive-text:active,
 a.assistive-text:focus {
     background: #eee;
@@ -589,6 +589,22 @@ a.assistive-text:focus {
     text-decoration: underline;
     top: 0;
     left: 7.6%;
+}
+
+/* skip-links */
+.skip-links {
+    position: absolute;
+}
+.skip-links a {
+    position: absolute;
+    left: -9999px;
+    padding: 0.5em;
+    background: #000;
+    color:#fff;
+    text-decoration: none;
+}
+.skip-links a:focus {
+    position: static;
 }
 
 /* hiding content */
@@ -621,15 +637,30 @@ a.assistive-text:focus {
     zoom: 1;
 }
 .ie8 img {
-    width: auto; }
+    width: auto; 
+}
 
 /* ----------------------------- */
 /* ==  Forms */
 /* ----------------------------- */
 
-legend {border: 0; white-space: normal;}
-form, fieldset { border: none;}
-label{ cursor: pointer; } /* hand cursor on clickable input elements */
+legend {
+    border: 0; 
+    white-space: normal;
+}
+form,
+fieldset {
+    border: none;
+}
+input,
+button,
+select,
+label {
+    vertical-align: middle; /* @bugfix alignment */
+}
+label{ 
+    cursor: pointer; 
+} /* hand cursor on clickable input elements */
 
 
 /* webkit browsers add a 2px margin outside the chrome of form elements */  
@@ -639,6 +670,7 @@ select,
 textarea { 
     margin: 0; 
 }
+
 /* colors for form validity 
 input:valid, textarea:valid   {  }
 input:invalid, textarea:invalid { 
@@ -771,7 +803,6 @@ img.alignright {
    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 
 .ie7 img {-ms-interpolation-mode: bicubic;}
-
 
 
 /* ----------------------------- */
@@ -941,7 +972,31 @@ header a.menu-link {
 /* == Media queries */
 /* ----------------------------- */
 
-/* Responsive Menu */
+/* Media queries for responsive design
+ These follow after primary styles so they will successfully override. 
+ */
+
+
+@media all and (orientation:portrait) {
+
+}
+@media all and (orientation:landscape) {
+
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
+   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+
+
+
+/* ----------------------------- */
+/* ==desktop medias */
+/* ----------------------------- */
+@media (min-width: 641px) {
+
+}
+
+ /* Responsive Menu */
 
 @media screen and (max-width: 768px) {
     header a.menu-link{
@@ -1015,30 +1070,6 @@ header a.menu-link {
 }
 
 
-/* Media queries for responsive design
- These follow after primary styles so they will successfully override. 
- */
-
-
-@media all and (orientation:portrait) {
-
-}
-@media all and (orientation:landscape) {
-
-}
-
-/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
-   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-
-
-
-/* ----------------------------- */
-/* ==desktop medias */
-/* ----------------------------- */
-@media (min-width: 641px) {
-
-}
-
 
 /* ----------------------------- */
 /* ==mobile */
@@ -1061,21 +1092,38 @@ header a.menu-link {
     .mw960p {
         width: auto;
     }
+    /* responsive widths for medium (m) screens, like tablets */
+    .m25 { width: 25%; }
+    .m33 { width: 33.3333%; }
+    .m50 { width: 50%; }
+    .m66 { width: 66.6666%; }
+    .m75 { width: 75%; }
+    .m100 {
+        display: block !important;
+        float: none !important;
+        clear: none !important;
+        width: auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border: 0;      
+    }
 }
 
 /* quick smartphone reset */
 @media (max-width: 640px) {
     .phone-hidden { display: none; }
     .mod,
+    .item,
     .col,
     label,
     fieldset {
         display: block !important;
+        float: none !important;
+        clear: none !important;
+        width: auto !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         border: 0;
-        float: none !important;
-        width: auto !important;
     }
     .w30,
     .w33, 
@@ -1090,14 +1138,35 @@ header a.menu-link {
         display: block !important;
         width: 100% !important;
     }
+    /* responsive widths for tiny (t) screens, like smartphones */
+    .t25 { width: 25%; }
+    .t33 { width: 33.3333%; }
+    .t50 { width: 50%; }
+    .t66 { width: 66.6666%; }
+    .t75 { width: 75%; }
+    .t100 { 
+        display: block !important;
+        float: none !important;
+        clear: none !important;
+        width: auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border: 0;
+    }
+    th,
+    td {
+        display: block !important;
+        width: auto !important;
+        text-align: left !important;
+    }
+    thead { display: none; }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    /* Style adjustments for retina devices */
+/* Style adjustments for retina devices */
 }
 
 /* orientation iOS font-size fix */
-
 @media (orientation: landscape) and (max-device-width: 768px) {
     html,
     body {
