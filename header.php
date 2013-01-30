@@ -37,7 +37,7 @@
 	
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" media="screen, projection">
+	<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.less" media="screen, projection"> -->
 	
 	<?php // Use this url to get your personnal build http://www.modernizr.com/download/ ?>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.custom.js"></script>
@@ -61,19 +61,15 @@
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</hgroup>
 
-			<div class="menu-wrapper">
-	
-			<a href="#menu" class="menu-link">Menu</a>
-			<nav id="menu" role="navigation">
-				<h3 class="assistive-text"><?php _e( 'Main menu', 'themename' ); ?></h3>			
+			<nav>
+				<h3 class="assistive-text"><?php _e( 'Main menu', 'themename' ); ?></h3>
+				<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
 				
-				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'themename' ); ?>"><?php _e( 'Skip to primary content', 'themename' ); ?></a>
-				</div>
-
-				<?php 
-    wp_nav_menu( array( 'container_class' => 'menu', 'theme_location' => 'primary','walker' => new Has_Subnav_Walker() ) ); ?>
+				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'themename' ); ?>"><?php _e( 'Skip to primary content', 'themename' ); ?></a></div>
+				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'themename' ); ?>"><?php _e( 'Skip to secondary content', 'themename' ); ?></a></div>
+				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'menu', 'container'=> 'div' )); ?>
 			</nav>
-		</div>
 		</header>
 
 		<div class="line gut">
