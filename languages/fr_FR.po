@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Geoffrey <g.crofte@creativejuiz.fr>\n"
+"Last-Translator: Stéphanie Walter\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -196,7 +196,7 @@ msgstr "Publié dans"
 
 #: Text in loop.php:49
 msgid "Tagged "
-msgstr "Tagué"
+msgstr "Tagué "
 
 #: Text in loop.php:50
 msgid "Leave a comment"
@@ -209,6 +209,24 @@ msgstr "1 commentaire"
 #: Text in loop.php:50
 msgid "% Comments"
 msgstr "% commentaires"
+
+msgid "Published on"
+msgstr "Publié le"
+
+msgid "in"
+msgstr "dans"
+
+msgid "No Comments"
+msgstr "Aucun commentaire"
+
+msgid "Permanent Link to %s"
+msgstr "Permalien vers %s"
+
+msgid "Permalink"
+msgstr "Permalien"
+
+msgid "edit"
+msgstr "éditer"
 
 #: Text in comments.php:25
 #, php-format
@@ -492,4 +510,10 @@ msgstr "&raquo;"
 #, php-format
 msgid "%1$s %2$s Feed"
 msgstr "Flux %1$s %2$s "
+
+msgid "by"
+msgstr "par"
+
+msgid "Continue reading"
+msgstr "Lire la suite"
 

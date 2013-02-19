@@ -14,18 +14,12 @@ get_header(); ?>
 					<header class="entry-header">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 
-						<div class="entry-meta">
-							<?php
-								printf( __( '<span class="meta-prep meta-prep-author">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a> <span class="meta-sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'themename' ),
-									get_permalink(),
-									get_the_date( 'c' ),
-									get_the_date(),
-									get_author_posts_url( get_the_author_meta( 'ID' ) ),
-									sprintf( esc_attr__( 'View all posts by %s', 'themename' ), get_the_author() ),
-									get_the_author()
-								);
-							?>
-						</div><!-- .entry-meta -->
+						<div class="entry-meta entry-header">                            
+				                <span class="published"><?php _e('Published on', 'themename') ?> <strong><?php the_time( get_option('date_format') ); ?></strong></span>
+				                <span class="author"><?php _e('by', 'themename') ?> <?php the_author_posts_link(); ?></span>
+								<span class="entry-categories"><?php _e('in', 'themename') ?> <?php the_category(', ') ?></span> -  <span class="comment-count"> <?php comments_popup_link(__('No Comments', 'themename'), __('1 Comment', 'themename'), __('% Comments', 'themename')); ?></span> - 
+								<span class="permalink"><a title="<?php printf(__('Permanent Link to %s', 'themename'), get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php _e('Permalink', 'themename') ?></a></span>                   		
+			          	</div>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
@@ -33,25 +27,13 @@ get_header(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'themename' ), 'after' => '</div>' ) ); ?>
 					</div><!-- .entry-content -->
 
-					<footer class="entry-meta">
-						<?php
-							$tag_list = get_the_tag_list( '', ', ' );
-							if ( '' != $tag_list ) {
-								$utility_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'themename' );
-							} else {
-								$utility_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'themename' );
-							}
-							printf(
-								$utility_text,
-								get_the_category_list( ', ' ),
-								$tag_list,
-								get_permalink(),
-								the_title_attribute( 'echo=0' )
-							);
-						?>
+				
 
-						<?php edit_post_link( __( 'Edit', 'themename' ), '<span class="edit-link">', '</span>' ); ?>
-					</footer><!-- .entry-meta -->
+					<footer class="entry-meta">			
+						<?php the_tags( '<span class="tag-links">' . __( 'Tagged ', 'themename' ) . '</span>', ', ', '<span class="meta-sep"> - </span>' ); ?>
+						<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'themename' ), __( '1 Comment', 'themename' ), __( '% Comments', 'themename' ) ); ?></span>
+						<?php edit_post_link( __( 'Edit', 'themename' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+					</footer><!-- #entry-meta -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 
 				<nav class="nav-single">

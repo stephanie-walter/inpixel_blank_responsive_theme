@@ -55,7 +55,6 @@ class Has_Subnav_Walker extends Walker_Nav_Menu{
 add_editor_style("/css/editor-style.css");
 
 
-
 /**** Add some theme support, uncomment what you need ****/
 /** 
  * Add default posts and comments RSS feed links to head
@@ -109,6 +108,43 @@ add_action( 'init', 'handcraftedwp_widgets_init' );
 
 // This theme uses wp_nav_menu() in one location.
 register_nav_menu( 'primary', __( 'Primary Menu', 'themename' ) );
+
+
+
+
+
+/* Change the lenght of the excerpt */
+function twentyeleven_excerpt_length( $length ) {
+	return 80;
+}
+add_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
+
+/**
+ * Returns a "Continue Reading" link for excerpts
+ */
+function twentyeleven_continue_reading_link() {
+	return ' <span class="readmore"><a title="'.get_the_title().'" href="'. esc_url( get_permalink() ) . '"><span class="icon-arrow-right-3" > </span>' . __( 'Continue reading', 'themename' ) . '</a></span>';
+}
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and twentyeleven_continue_reading_link()
+ */
+function twentyeleven_auto_excerpt_more( $more ) {
+	return ' &hellip;' . twentyeleven_continue_reading_link();
+}
+add_filter( 'excerpt_more', 'twentyeleven_auto_excerpt_more' );
+
+/**
+ * Adds a pretty "Continue Reading" link to custom post excerpts.
+ *
+ */
+function twentyeleven_custom_excerpt_more( $output ) {
+	if ( has_excerpt() && ! is_attachment() ) {
+		$output .= twentyeleven_continue_reading_link();
+	}
+	return $output;
+}
+add_filter( 'get_the_excerpt', 'twentyeleven_custom_excerpt_more' );
+
 
 
 /**************** Adding some html5 functionnalities to comments************/

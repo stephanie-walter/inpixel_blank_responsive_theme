@@ -32,7 +32,13 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 
 
 *Changelog*
-- v 1.2 : 
+- v1.4 : 
+* Add a "Continue Reading" like to the excerpt
+* Change the entry-meta, now they are split and can be used one by one
+* Corrected some FR translations
+
+
+- v1.2 : 
 * Removed the full-page-template : now all pages are full page by default
 * Added right-sidebar-page : if you need a right sidebar
 * Made it work with single.php 

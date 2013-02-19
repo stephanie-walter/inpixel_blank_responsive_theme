@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: stephanie \n"
+"Last-Translator: Stéphanie Walter\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 
@@ -47,6 +47,24 @@ msgstr ""
 #. Text in function
 #: functions.php:1
 msgid "\"What\\'s in your mind ?\""
+msgstr ""
+
+msgid "Published on"
+msgstr ""
+
+msgid "in"
+msgstr ""
+
+msgid "No Comments"
+msgstr ""
+
+msgid "Permanent Link to %s"
+msgstr ""
+
+msgid "Permalink"
+msgstr ""
+
+msgid "edit"
 msgstr ""
 
 #. Text in function
@@ -535,3 +553,8 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
+msgid "by"
+msgstr ""
+
+msgid "Continue reading"
+msgstr ""
