@@ -97,8 +97,8 @@ function handcraftedwp_widgets_init() {
 		'name' => __( 'Footer', 'themename' ),
 		'id' => 'footer-widget-area',
 		'description' => __( 'The footer area', 'themename' ),
-		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</li>',
+		'before_widget' => '<aside id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</aside>',
 		'before_title' => '<h2 class="widget-title">',
 		'after_title' => '</h2>',
 	) );
