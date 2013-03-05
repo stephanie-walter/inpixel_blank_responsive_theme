@@ -25,6 +25,14 @@ get_header(); ?>
 					<div class="entry-content">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'themename' ), 'after' => '</div>' ) ); ?>
+
+						<?php 
+							$branchembed = get_post_meta($post->ID, 'branchembed', true);
+							// check if the custom field has a value
+							if($branchembed != '') {
+							  echo '<div class="branchembed">'.$branchembed.'</div>';
+							} 
+						?>
 					</div><!-- .entry-content -->
 
 				

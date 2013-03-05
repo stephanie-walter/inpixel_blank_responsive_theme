@@ -224,6 +224,8 @@ function remove_thumbnail_dimensions( $html ) {
     return $html;
 } */
 
+
+
  // asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
 //	 change the UA-XXXXX-X to be your site's ID
 /*add_action('wp_footer', 'async_google_analytics');
@@ -239,4 +241,5 @@ function async_google_analytics() { ?>
 		})(document, 'script');
 	</script>
 <?php }*/ 
+
 ?>
