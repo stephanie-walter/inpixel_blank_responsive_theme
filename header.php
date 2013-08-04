@@ -78,7 +78,10 @@
 		</header>
 
 		<div class="line gut">
-			<?php if (!(is_page())){?>
+
+			<?php 
+			//  If it's not a page (= a blog post, archive, etc) we display the sidebar on the right side 
+			if (!(is_page())){?>
 			<section id="content" role="region" class="content mod left w70">
 			<?php } 
 			

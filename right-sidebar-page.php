@@ -24,7 +24,7 @@ get_header(); ?>
 				</article><!-- #post-<?php the_ID(); ?> -->
 
 				<?php // comments_template( '', true ); ?>
-	</section>
+</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
