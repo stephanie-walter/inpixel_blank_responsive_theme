@@ -33,19 +33,19 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 
 
 *Changelog*
-- v1.5 : 
+*v1.5 :* 
 * KNACSS framework was included into an external file for easier maintenance (read important note in CSS)
 * KNACSS available in LESS and Sass flavor
 * Responsive menu was rebuild and is now fully keyboard accessible
 
 
-- v1.4 : 
+*v1.4 :* 
 * Add a "Continue Reading" like to the excerpt
 * Change the entry-meta, now they are split and can be used one by one
 * Corrected some FR translations
 
 
-- v1.2 : 
+*v1.2 :* 
 * Removed the full-page-template : now all pages are full page by default
 * Added right-sidebar-page : if you need a right sidebar
 * Made it work with single.php 
