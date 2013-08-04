@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
  	$(".menu-link ").focus(function() {
     	$(this).addClass('keyboardactive');       
     }); 	
-	$(".menu > li:last-child a").blur(function() {		
+	$(".menu > li:last-child a, .menu > ul > li:last-child a ").blur(function() {		
     	$(".menu-link ").removeClass('keyboardactive active');       
     }); 
 

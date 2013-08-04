@@ -163,6 +163,9 @@ a img {
 /* ----------------------------- */
 /* == Content */
 /* ----------------------------- */
+.lteie8 .container {
+	width: 1024px;
+}
 
 /* nav */
 .content nav {
@@ -463,15 +466,18 @@ a.assistive-text:focus {
 		background: none;
 	}
 
-	.main-menu .sub-menu a {
+	.main-menu .sub-menu a,
+	.main-menu .children a {
 		color: #607890;
 	}
 
-	.main-menu .sub-menu .current-menu-item a {
+	.main-menu .sub-menu .current-menu-item a,
+	.main-menu .children .current-menu-item a {
 		color: #fff;
 	}
 
-	.main-menu .sub-menu li a {
+	.main-menu .sub-menu li a,
+	.main-menu .children li a {
 		padding-left: 30px;
 	};
 }
