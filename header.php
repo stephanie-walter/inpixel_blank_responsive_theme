@@ -61,19 +61,20 @@
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</hgroup>
 
-			<div class="menu-wrapper">
 	
-			<a href="#menu" class="menu-link">Menu</a>
-			<nav id="menu" role="navigation">
+			
+			<nav class="main-menu" id="menu" role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'themename' ); ?></h3>			
 				
 				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'themename' ); ?>"><?php _e( 'Skip to primary content', 'themename' ); ?></a>
 				</div>
 
-				<?php 
-    wp_nav_menu( array( 'container_class' => 'menu', 'theme_location' => 'primary','walker' => new Has_Subnav_Walker() ) ); ?>
+				<?php   
+					// wp_nav_menu( array( 'container_class' => 'menu main-navigation', 'theme_location' => 'primary','walker' => new Has_Subnav_Walker() ) );  
+					wp_nav_menu( array( 'container_class' => 'menu', 'theme_location' => 'primary' ) );
+					?>
 			</nav>
-		</div>
+
 		</header>
 
 		<div class="line gut">

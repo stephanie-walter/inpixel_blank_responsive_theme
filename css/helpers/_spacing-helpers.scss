@@ -1,0 +1,49 @@
+/**
+ * Spacing helpers
+ * p, m = padding,margin
+ * a, t, r, b, l = all, top, right, bottom, left
+ * s, m, l, n, 0 = small(10px), medium(20px), large(30px), zero or none(0)
+ * Source: https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
+ */
+.m-reset, .ma0 { margin: 0 !important; }
+.p-reset, .pa0 { padding: 0 !important; }
+.ma1, .mas { margin: 10px !important; }
+.ma2, .mam { margin: 20px !important; }
+.ma3, .mal { margin: 30px !important; }
+.pa1, .pas { padding: 10px; }
+.pa2, .pam { padding: 20px; }
+.pa3, .pal { padding: 30px; }
+
+.mt0, .mtn { margin-top: 0 !important; }
+.mt1, .mts { margin-top: 10px !important; }
+.mt2, .mtm { margin-top: 20px !important; }
+.mt3, .mtl { margin-top: 30px !important; }
+.mr0, .mrn { margin-right: 0; }
+.mr1, .mrs { margin-right: 10px; }
+.mr2, .mrm { margin-right: 20px; }
+.mr3, .mrl { margin-right: 30px; }
+.mb0, .mbn { margin-bottom: 0 !important; }
+.mb1, .mbs { margin-bottom: 10px !important; }
+.mb2, .mbm { margin-bottom: 20px !important; }
+.mb3, .mbl { margin-bottom: 30px !important; }
+.ml0, .mln { margin-left: 0; }
+.ml1, .mls { margin-left: 10px; }
+.ml2, .mlm { margin-left: 20px; }
+.ml3, .mll { margin-left: 30px; }
+
+.pt0, .ptn { padding-top: 0; }
+.pt1, .pts { padding-top: 10px; }
+.pt2, .ptm { padding-top: 20px; }
+.pt3, .ptl { padding-top: 30px; }
+.pr0, .prn { padding-right: 0; }
+.pr1, .prs { padding-right: 10px; }
+.pr2, .prm { padding-right: 20px; }
+.pr3, .prl { padding-right: 30px; }
+.pb0, .pbn { padding-bottom: 0; }
+.pb1, .pbs { padding-bottom: 10px; }
+.pb2, .pbm { padding-bottom: 20px; }
+.pb3, .pbl { padding-bottom: 30px; }
+.pl0, .pln { padding-left: 0; }
+.pl1, .pls { padding-left: 10px; }
+.pl2, .plm { padding-left: 20px; }
+.pl3, .pll { padding-left: 30px; }

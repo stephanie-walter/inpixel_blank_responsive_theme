@@ -15,6 +15,7 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 * Uses <a href="http://knacss.com/">Raphael Goetter's knacss</a> for the basic layout
 * Default full screen, one left sidebar template and a right sidebar template for pages
 * Responsive two levels menu using media queries and jQuery (based on <a href="http://codepen.io/bradfrost/full/qwJvF">multi toggle navigation</a>)
+* Keyboard accessibile menu (both normal and responsive version)
 * Embeds the <a href="https://github.com/inpixelitrust/WP-cleanup-enhanced">Wp-cleanup-enhanced code </a> (you can't use both plugin version and in template, so if you use the plugin please comment the line that calls the functions/wordpress_cleanup.php in functions.php)
 * Embeds <a href="http://wpengineer.com/2230/removing-comments-absolutely-wordpress/">the Remove comments absolute plugin</a> (you can comment the line that calls unctions/remove-comments-absolute.php in functions.php to disable it)
 * Embeds ready to use script clean up functions functions/script_style_cleanups.php
@@ -32,6 +33,12 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 
 
 *Changelog*
+- v1.5 : 
+* KNACSS framework was included into an external file for easier maintenance (read important note in CSS)
+* KNACSS available in LESS and Sass flavor
+* Responsive menu was rebuild and is now fully keyboard accessible
+
+
 - v1.4 : 
 * Add a "Continue Reading" like to the excerpt
 * Change the entry-meta, now they are split and can be used one by one

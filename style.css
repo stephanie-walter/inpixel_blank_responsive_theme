@@ -5,841 +5,33 @@ Github Theme URI: https://github.com/inpixelitrust/inpixel_blank_responsive_them
 Author: Stephanie Walter
 Author URI: http://www.inpixelitrust.fr
 Description: Inpixelitrust blank theme for starting a WordPress project based on <a href="http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/">Randy Jensen & Randy Hoyt HTML5 starter theme </a> with other goodies added plus chunks of Paul Irish's <a href="http://html5boilerplate.com/">HTML5 Boilerplate </a> and some final pieces of <a href="http://knacss.com/">Raphael Goetter's knacss in it</a>. Enjoy and Share the love :)
-Version: v1.4
+Version: v1.5
 License: GPL
 License URI: http://codex.wordpress.org/License
-*/
-/* ----------------------------- */
-/* summary */
-/* ----------------------------- */
-/*
-/* A. General structure 
-1- Reset 
-2- Baseline for elements
-3- Base Typography
-4- Layout and modules
-5- Hidding / unhidding content
-6- iefix
-7- Forms
-8- Images
-9- WordPress alignement
-
-/* B. WordPress template structure
-1-  General
-2-  Header
-3-  Menu
-4-  Content
-5-  Footer
-
-/* C. Media queries
-1- desktop medias
-2- mobile
-
-/* D. Print style
-*/
 
 
-/* ----------------------------- */
-/* == Reset*/
-/* ----------------------------- */
+/* Important note : I used @import rule to be able to import the KNACSS build from the official repository more easily using either CSS, Less or Sass, but on a "real" project you might want to include an merge the CSS rules directly in your main stylesheet (or use a preprocessor to do the job) */
+@import "css/knacss.css"; 
 
-/* soft reset */
-/* html,
-body,
-textarea,
-figure,
-label {
-    margin: 0;
-    padding: 0;
-}
-ul,
-ol {
-    padding-left: 2em;
-}
-code, 
-pre,
-samp {
-    white-space: pre-wrap;
-    font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
-}
-code { line-height: 1em; }
-table { margin-bottom: 1.5em; } */
-
-
-/* A hader reset */
-html,
-body,
-blockquote,
-ul,
-ol,
-form,
-p,
-div {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    background: transparent;
-}
-ul,
-ol {
-    padding-left: 2em;
-}
-blockquote {
-    quotes: none;
-    position: relative;
-    margin: 8px 0 8px 30px;
-    padding: 5px 5px 5px 20px;
-    border-left: 4px solid #666;
-    font-style: italic;
-    background: rgb(234,233,233);
-}
-blockquote:before,
-blockquote:after {
-    content: ' "';
-    content: none;
-}
-del {
-    text-decoration: line-through;
-}
-
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-a img {
-    border: none;
-}
-select,
-input,
-textarea,
-button {
-    font: 99% sans-serif;
-    color: #444;
-}
-pre,
-code,
-kbd,
-samp {
-    font-family: monospace,sans-serif;
-}
-
-/* ----------------------------- */
-/* == Baseline for elements */
-/* ---------------------------- */
-
-/* base font-size corresponds to 10px and is adapted to rem unit */
-html {
-    font-size: 62.5%;
-}
-body {
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 1.4em;
-    line-height: 1.5;  
-    color: #444;
-    background-color: #fff;
-}
-::-moz-selection {
-    text-shadow: none;
-    color: #fff;
-    background: #FF5E99;
-}
-::selection {
-    text-shadow: none;
-    color: #fff;
-    background: #FF5E99;
-}
-
-
-/* ----------------------------- */
-/* == Base Typography */
-/* ----------------------------- */
-
-/* font-sizing for content */
-/* preserve vertical-rythm, thanks to http://soqr.fr/vertical-rhythm/ */
-p,
-ul,
-ol,
-dl,
-blockquote,
-pre,
-td,
-th,
-label,
-textarea,
-caption,
-details, 
-figure, 
-hgroup {
-    font-size: 1em; /* equiv 14px */
-    line-height: 1.5;
-    margin: 1.5em 0 0;
-}
-h1, .h1-like {
-    font-size: 1.8571em; /* equiv 26px */
-    font-weight: normal;
-    line-height: 1.6154em;
-    margin: .8077em 0 0 0;
-}
-h2, .h2-like {
-    font-size: 1.7143em; /* equiv 24px */
-    font-weight: normal;
-    line-height: 1.75em;
-    margin: .875em 0 0 0;
-}
-h3, .h3-like {
-    font-size: 1.5714em; /* equiv 22px */
-    font-weight: normal;
-    line-height: 1.909em;
-    margin: .9545em 0 0 0;
-}
-h4, .h4-like {
-    font-size: 1.4286em; /* equiv 20px */
-    font-weight: normal;
-    line-height: 1.05em;
-    margin:  1.05em 0 0 0;
-}
-h5, .h5-like {
-    font-size: 1.2857em; /* equiv 18px */
-    font-weight: normal;
-    line-height: 1.1667em;
-    margin:  1.1667em 0 0 0;
-}
-h6, .h6-like {
-    font-size: 1.1429em; /* equiv 16px */
-    font-weight: normal;
-    line-height: 1.3125em;
-    margin:  1.3125em 0 0 0;
-}
-
-/* alternate font-sizing */
-.smaller {
-    font-size: .7143em; /* equiv 10px */
-    line-height: 2.1em;
-}
-.small {
-    font-size: .8571em; /* equiv 12px */
-    line-height: 1.75em;
-}
-.big {
-    font-size: 1.1429em; /* equiv 16px */
-    line-height: 1.3125em;
-}
-.bigger {
-    font-size: 1.2857em; /* equiv 18px */
-    line-height: 1.1667em;
-}
-.biggest {
-    font-size: 1.4286em; /* equiv 20px */
-    line-height: 1.05em;
-}
-
-
-/* avoid top margins on first content element */
-p:first-child,
-ul:first-child,
-ol:first-child,
-dl:first-child,
-blockquote:first-child,
-pre:first-child,
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-    margin-top: 0;
-}
-
-/* avoid margins on nested elements */
-li p,
-li ul,
-li ol {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* HTML5 tags */
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
-    display: block;
-}
-
-/* max values */
-img, table, td, blockquote, code, pre, textarea, input, video {
-    max-width: 100%;
-    height: auto; 
-}
-iframe {
-    max-width: 100%;
-}
-
-/* iframe fix for responsive  http://amobil.se/2011/11/responsive-embeds/ */
-.embed-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16/9 ratio */
-    padding-top: 30px; /* IE6 workaround*/
-    height: 0;
-    overflow: hidden;
-}
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-/* you shall not pass */
-div, textarea, table, td, th, code, pre, samp {
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    -o-hyphens: auto;
-    hyphens: auto;
-}
-
-/* pictures */
-img {
-    width: auto;
-    height: auto;
-    vertical-align: middle;
-}
-a img { border: 0; }
-
-/* scripts */
-body > script {display: none !important;}
-
-
-/* other typo */
-small {
-    font-size: 85%;
-}
-strong,
-th {
-    font-weight: bold;
-}
-td,
-td img {
-    vertical-align: top;
-}
-sub {
-    font-size: smaller;
-    vertical-align: sub;
-}
-sup {
-    font-size: smaller;
-    vertical-align: super;
-}
-pre {
-    padding: 15px;
-    white-space: pre;
-    white-space: pre-wrap;
-    white-space: pre-line;
-    word-wrap: break-word;
-}
-
-
-/* Links */
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 
-a,
-a:active,
-a:visited {
-    color: #607890;
+a,a:active,a:visited {
+	color: #607890;
 }
+
 a:hover {
-    color: #036;
+	color: #036;
 }
+
 a:link {
-    -webkit-tap-highlight-color: #FF5E99;
+	-webkit-tap-highlight-color: #FF5E99;
 }
+
 a img {
-    border: 0;
+	border: 0;
 }
 
-
-
-/* ----------------------------- */
-/* == Layout and modules */
-/* ----------------------------- */
-
-
-/* switching box model for all elements */
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-/* float layout */
-/* ----------- */
-/* tutorial : http://knacss.com/demos/tutoriel.html; */
-
-/* module, contains floats (.item is the same) */
-.mod, .item { 
-    overflow: hidden;
-}
-
-/* table layout */
-/* ------------------ */
-.row {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-}
-.row > *,
-.col {
-    display: table-cell;
-    vertical-align: top;
-}
-
-/* blocks that needs to be placed under floats */
-.clear,
-.line,
-.row {
-    clear: both;
-}
-
-/* blocks that must contain floats */
-.clearfix:after,
-.line:after,
-.mod:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* alignments (blocks and inline) */
-/* ------------------------------ */
-
-/* left elements */
-.left {
-    float: left;
-}
-img.left {
-    margin-right: 1em;
-}
-
-/* right elements */
-.right {
-    float: right;
-}
-img.right {
-    margin-left: 1em;
-}
-
-img.left, img.right {
-    margin-bottom: 5px;
-}
-
-.center    { margin: auto; }
-.txtleft   { text-align: left; }
-.txtright  { text-align: right; }
-.txtcenter { text-align: center; }
-
-/* just inline-block */
-.inbl {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: -.25em;
-}
-
-/* grids    */
-/* ------------------------------ */
-
-/* grids with 2% gutter */
-[class*=grid] > * {float: left; } /* direct childrens are floating */
-[class*=grid] > * + * { margin-left: 2%; } /* that's the gutter */
-.grid2 > * { width: 49%; }
-.grid3 > * { width: 32%; }
-.grid4 > * { width: 23.5%; }
-.grid5 > * { width: 18.4%; }
-.grid6 > * { width: 15%; }
-
-/* unequal grids (1-2, 2-1, 1-3 and 3-1) */
-.grid2-1 > *:first-child,
-.grid1-2 > * + * { width: 66%; }
-.grid1-2 > *:first-child,
-.grid2-1 > * + * { width: 32%; }
-.grid1-3 > *:first-child,
-.grid3-1 > * + * { width: 23.5%; }
-.grid3-1 > *:first-child,
-.grid1-3 > * + * { width: 74.5%; }
-
-/* blocks widths (percentage and pixels) */
-.w10    { width: 10%; }
-.w20    { width: 20%; }
-.w25    { width: 25%; }
-.w30    { width: 30%; }
-.w33    { width: 33.333%; }
-.w40    { width: 40%; }
-.w50    { width: 50%; }
-.w60    { width: 60%; }
-.w66    { width: 66.666%; }
-.w70    { width: 70%; }
-.w75    { width: 75%; }
-.w80    { width: 80%; }
-.w90    { width: 90%; }
-.w100   { width: 100%; }
-
-.w50p   { width: 50px; }
-.w100p  { width: 100px; }
-.w150p  { width: 150px; }
-.w200p  { width: 200px; }
-.w300p  { width: 300px; }
-.w400p  { width: 400px; }
-.w500p  { width: 500px; }
-.w600p  { width: 600px; }
-.w700p  { width: 700px; }
-.w800p  { width: 800px; }
-.w960p  { width: 960px; }
-.mw960p { max-width: 960px; }
-.w1140p { width: 1140px; }
-.mw1140p { max-width: 1140px; }
-
-/* spacing helpers
-p,m = padding,margin
-a,t,r,b,l = all,top,right,bottom,left
-s,m,l,n = small(10px),medium(20px),large(30px),none(0)
-source https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
-*/
-.mt0, .mtn { margin-top: 0; }
-.mt1, .mts { margin-top: 10px; }
-.mt2, .mtm { margin-top: 20px; }
-.mt3, .mtl { margin-top: 30px; }
-.mr0, .mrn { margin-right: 0; }
-.mr1, .mrs { margin-right: 10px; }
-.mr2, .mrm { margin-right: 20px; }
-.mr3, .mrl { margin-right: 30px; }
-.mb0, .mbn { margin-bottom: 0; }
-.mb1, .mbs { margin-bottom: 10px; }
-.mb2, .mbm { margin-bottom: 20px; }
-.mb3, .mbl { margin-bottom: 30px; }
-.ml0, .mln { margin-left: 0; }
-.ml1, .mls { margin-left: 10px; }
-.ml2, .mlm { margin-left: 20px; }
-.ml3, .mll { margin-left: 30px; }
-
-.pt0, .ptn { padding-top: 0; }
-.pt1, .pts { padding-top: 10px; }
-.pt2, .ptm { padding-top: 20px; }
-.pt3, .ptl { padding-top: 30px; }
-.pr0, .prn { padding-right: 0; }
-.pr1, .prs { padding-right: 10px; }
-.pr2, .prm { padding-right: 20px; }
-.pr3, .prl { padding-right: 30px; }
-.pb0, .pbn { padding-bottom: 0; }
-.pb1, .pbs { padding-bottom: 10px; }
-.pb2, .pbm { padding-bottom: 20px; }
-.pb3, .pbl { padding-bottom: 30px; }
-.pl0, .pln { padding-left: 0; }
-.pl1, .pls { padding-left: 10px; }
-.pl2, .plm { padding-left: 20px; }
-.pl3, .pll { padding-left: 30px; }
-
-.m-reset, .ma0 { margin: 0 !important; }
-.p-reset, .pa0 { padding: 0 !important; }
-.ma1, .mas { margin: 10px !important; }
-.ma2, .mam { margin: 20px !important; }
-.ma3, .mal { margin: 30px !important; }
-.pa1, .pas { padding: 10px !important; }
-.pa2, .pam { padding: 20px !important; }
-.pa3, .pal { padding: 30px !important; }
-
-
-/* ----------------------------- */
-/* == Hidding / unhidding content */
-/* ----------------------------- */
-
-/* for image replacement */
-
-.ir { 
-display: block; 
-text-indent: -999em; 
-overflow: hidden; 
-background-repeat: no-repeat; 
-text-align: left; 
-direction: ltr; 
-}
-
-/* Hide for both screenreaders and browsers 
-   css-discuss.incutio.com/wiki/Screenreader_Visibility */
-.hidden { display: none; visibility: hidden; } 
-
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible { visibility: hidden; }
-
-/* Hide only visually, but have it available for screenreaders 
-   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
-.assistive-text, 
-.visually-hidden{
-    position: absolute !important;
-    left: -7000px;
-    overflow:hidden;
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);
-}
-[dir=rtl] .visually-hidden {
-    left: auto;
-    right: -7000px;
-}
-
-a.assistive-text:active,
-a.assistive-text:focus {
-    background: #eee;
-    border-bottom: 1px solid #ddd;
-    color: #1982d1;
-    clip: auto !important;
-    font-size: 12px;
-    position: absolute;
-    text-decoration: underline;
-    top: 0;
-    left: 7.6%;
-}
-
-/* skip-links */
-.skip-links {
-    position: absolute;
-}
-.skip-links a {
-    position: absolute;
-    left: -9999px;
-    padding: 0.5em;
-    background: #000;
-    color:#fff;
-    text-decoration: none;
-}
-.skip-links a:focus {
-    position: static;
-}
-
-/* hiding content */
-.desktop-hidden {display: none;} /* hidden on desktop */
-.mobile-hidden {} /* hidden on mobile */
-.tablet-hidden {} /* hidden on tablets */
-.phone-hidden {} /* hidden on smartphones */
-
-
-
-/* ----------------------------- */
-/* ==iefix */
-/* ----------------------------- */
-
-/* haslayout for IE6/IE7 */
-.ie67 .clearfix,
-.ie67 .line,
-.ie67 .mod,
-.ie67 .row,
-.ie67 .col {
-    zoom: 1;
-}
-
-/* inline-block and table-cell for IE6/IE7 */
-/* warning: .col needs width on IE6/IE7 */
-.ie67 .btn,
-.ie67 .col,
-.ie67 .inbl {
-    display: inline;
-    zoom: 1;
-}
-.ie8 img {
-    width: auto; 
-}
-
-/* ----------------------------- */
-/* ==  Forms */
-/* ----------------------------- */
-
-legend {
-    border: 0; 
-    white-space: normal;
-}
-form,
-fieldset {
-    border: none;
-}
-input,
-button,
-select,
-label {
-    vertical-align: middle; /* @bugfix alignment */
-}
-label{ 
-    cursor: pointer; 
-} /* hand cursor on clickable input elements */
-
-
-/* webkit browsers add a 2px margin outside the chrome of form elements */  
-button, 
-input, 
-select, 
-textarea { 
-    margin: 0; 
-}
-
-/* colors for form validity 
-input:valid, textarea:valid   {  }
-input:invalid, textarea:invalid { 
-      border-radius: 1px;
-    -moz-box-shadow: 0px 0px 5px red; 
- -webkit-box-shadow: 0px 0px 5px red; 
-         box-shadow: 0px 0px 5px red;
-}
-*/
-
-button, input, select {
-    font-size: 100%;
-    margin: 0;
-    vertical-align: baseline;
-    *vertical-align: middle;   }
-textarea { 
-    overflow: auto; 
-    min-height: 5em;
-    vertical-align: top;
-    resize: vertical;
-    font-size: 1em;
-} 
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-    cursor: pointer;
-    -webkit-appearance: button;
-    *overflow: visible; 
-}
-input[type="checkbox"], input[type="radio"] {
-    padding: 0;
-    *width: 13px; *height: 13px; 
-}
-input[type="search"] {-webkit-appearance: textfield;}
-input[type="radio"] { 
-    vertical-align: text-bottom; 
-}
-input[type="checkbox"] { 
-    vertical-align: bottom; 
-}
-.ie7 input[type="checkbox"] { 
-    vertical-align: baseline; 
-}
-.ie6 input { 
-    vertical-align: text-bottom; 
-}
-/* 'x' appears on right of search input when text is entered. This removes it */
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-    display: none;
-}
-
-/* Removes inner padding and border in FF3+ */
-button::-moz-focus-inner,
-input[type='button']::-moz-focus-inner,
-input[type='reset']::-moz-focus-inner,
-input[type='submit']::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
-
-/* style the placeholder */
-::-webkit-input-placeholder {color: #777;}
-input:-moz-placeholder, textarea:-moz-placeholder {color: #777;}
-
-.ie6 legend, 
-.ie7 legend { 
-    margin-left: -7px; 
-} /* thnx ivannikolic! */
-
-
-/* haslayout for IE6/IE7 */
-.ie7 .clearfix,.ie7 .line, .ie7 .mod, .ie7 .row, .ie7 .col {
-    zoom: 1;
-}
-.no-boxshadow input:invalid, 
-.no-boxshadow textarea:invalid { background-color: #f0dddd; }
-
-/* Forms - Class for labelling required form items */
-.required {
-    color: #cc0033;
-}
-
-
-/* ----------------------------- */
-/* == Images */
-/* ----------------------------- */
-
-/*
-Resize images to fit the main content area.
-- Applies only to images uploaded via WordPress by targeting size-* classes.
-- Other images will be left alone. Use "size-auto" class to apply to other images.
-*/
-img.size-auto,
-img.size-full,
-img.size-large,
-img.size-medium,
-.attachment img,
-.widget-area img {
-    max-width: 100%;
-    height: auto; 
-}
-img.alignleft {
-    margin-right: 1em;
-}
-img.alignright {
-    margin-left: 1em;
-}
-.wp-caption {
-    padding: .5em;
-    text-align: center;
-}
-.wp-caption img {
-    margin: .25em;
-}
-.wp-caption .wp-caption-text {
-    margin: .5em;
-}
-.gallery-caption{
-}
-.gallery-item {
-    float: left;
-    width: 33%;
-    margin-top: 10px;
-    text-align: center;    
-}
-
-/* bicubic resizing for non-native sized IMG: 
-   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
-
-.ie7 img {-ms-interpolation-mode: bicubic;}
-
-
-/* ----------------------------- */
-/* == WordPress alignement */
-/* ----------------------------- */
-
-
-/* Alignment */
-.alignleft {
-    display: inline;
-    float: left;
-}
-.alignright {
-    display: inline;
-    float: right;
-}
-.aligncenter {
-    clear: both;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* Template structure here */
 
 
 /* ----------------------------- */
@@ -853,12 +45,13 @@ img.alignright {
 /* ----------------------------- */
 
 .site-title {
-    margin: .67em 0;
-    font-weight: bold;    
+	margin: .67em 0;
+	font-weight: bold;
 }
+
 .site-description {
-    margin: 0 0 1em;
-    font-weight: normal;    
+	margin: 0 0 1em;
+	font-weight: normal;
 }
 
 
@@ -866,114 +59,160 @@ img.alignright {
 /* == Menu */
 /* ----------------------------- */
 
-.menu-wrapper{
-    display: block;
-    float: left;
-    width: 100%;    
-    margin: 0 auto 1em;
-    background: #eee;
+.main-menu {
+	display: block;
+	float: left;
+	width: 100%;
+	margin: 0 auto 1em;
+	background: #eee;
 }
-header .menu ul {
-    margin: 0;
-    padding-left: 0;
-    list-style: none;    
+
+.main-menu ul {
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
 }
-header .menu li {
-    position: relative;
-    float: left;
+
+.main-menu li {
+	position: relative;
+	float: left;
 }
-header .menu a {    
-    display: block;
-    padding: 0 1em; 
-    line-height: 2em;    
-    text-decoration: none;
+
+.main-menu a {
+	display: block;
+	padding: .5em 1em;
+	line-height: 2em;
+	text-decoration: none;
 }
- header .menu a:hover,
- header .menu ul > .current-menu-item a {
-    color: #fff;
-    text-decoration: none;
-    background: rgb(51, 51, 51);
+
+.main-menu a:hover,
+.main-menu a:focus,
+.main-menu .current-menu-item a,
+.main-menu .current-menu-ancestor a {
+	color: #fff;
+	background: rgb(51, 51, 51);
 }
-header .sub-menu {
-    position: absolute;    
-    max-height: 0px;
-    overflow: hidden;
-    list-style: none outside none;
-    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-    background: rgb(51, 51, 51);
+
+.main-menu .sub-menu,
+.main-menu .children {
+	position: absolute;
+	max-height: 0;
+	overflow: hidden;
+	list-style: none outside none;
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	background: rgb(51, 51, 51);
 }
-header .sub-menu li{   
-    float:none;
+
+.main-menu .sub-menu li,
+.main-menu .children li {
+	float: none;
 }
-header .sub-menu a{
-    white-space:nowrap; 
+
+.main-menu .sub-menu a,
+.main-menu .children a {
+	white-space: nowrap;
+	color: #fff;
 }
 
 /* unhide the 2nd level */
-header li:hover .sub-menu{ 
-    max-height: 30em;
+.main-menu li:hover .sub-menu,
+.main-menu li:hover .children,
+.main-menu li.hover .sub-menu,
+.main-menu li.hover .children {
+	max-height: 30em;
 }
-header li:hover a{     
-    color:#fff;
-    background:rgb(51, 51, 51);
+
+.main-menu li:hover a {
+	color: #fff;
+	background: rgb(51, 51, 51);
 }
-header li:hover ul li a:hover{ 
-    background:rgb(0, 0, 0);
+
+.main-menu .sub-menu a:hover,
+.main-menu .children a:hover,
+.main-menu .sub-menu a:focus,
+.main-menu .children a:focus {
+	color: #fff;
+	background: rgb(0, 0, 0);
 }
-header a.menu-link {
-    display: none;
-    float: right;
+
+
+/* Styling the toggle menu link and hiding it */
+.navtoggle,
+.toggle-link {
+	display: none;
 }
+
+.main-menu .navtoggle {
+	width: 100%;
+	padding: .8em 1em;
+	text-align: right;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.navtoggle:before {
+	content: '\2630';
+	padding-right: .5em;
+	font-size: 1em;
+}
+
 
 
 /* ----------------------------- */
 /* == Content */
 /* ----------------------------- */
 
-
 /* nav */
 .content nav {
-    display: block;
-    overflow: hidden;
+	display: block;
+	overflow: hidden;
 }
+
 .content nav .nav-previous {
-    float: left;
-    width: 50%;
+	float: left;
+	width: 50%;
 }
+
 .content nav .nav-next {
-    float: right;    
-    width: 50%;
-    text-align: right;
+	float: right;
+	width: 50%;
+	text-align: right;
 }
+
 .content #nav-above {
-    display: none;
+	display: none;
 }
+
 .paged .content #nav-above,
 .single .content #nav-above {
-    display: block;
+	display: block;
 }
+
 #nav-below {
-    margin: 1em 0 0;
+	margin: 1em 0 0;
 }
+
 .page-link {
-    margin: 0 0 1em;
+	margin: 0 0 1em;
 }
 
 /* table styling */
 
 .content table,
 .content td,
-.content th{
-    border: 1px solid rgb(191, 191, 190);
-}
-.content tbody tr:nth-child(odd){
-    background:#eee
+.content th {
+	border: 1px solid rgb(191, 191, 190);
 }
 
-.entry-meta{
-    font-size: 0.9em;
-    font-style:italic;
+.content tbody tr:nth-child(odd) {
+	background: #eee;
+}
+
+.entry-meta {
+	font-size: 0.9em;
+	font-style: italic;
 }
 
 
@@ -986,252 +225,255 @@ header a.menu-link {
 
 
 /* ----------------------------- */
-/* == Media queries */
+/* == WordPress Images */
 /* ----------------------------- */
 
-/* Media queries for responsive design
- These follow after primary styles so they will successfully override. 
- */
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
 
-
-@media all and (orientation:portrait) {
-
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
 }
-@media all and (orientation:landscape) {
 
+img.alignleft {
+	margin-right: 1em;
 }
 
-/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
-   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+img.alignright {
+	margin-left: 1em;
+}
 
+.wp-caption {
+	padding: .5em;
+	text-align: center;
+}
+
+.wp-caption img {
+	margin: .25em;
+}
+
+.wp-caption .wp-caption-text {
+	margin: .5em;
+}
+
+.gallery-caption {
+}
+
+.gallery-item {
+	float: left;
+	width: 33%;
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* bicubic resizing for non-native sized IMG: 
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+
+.ie7 img {
+	-ms-interpolation-mode: bicubic;
+}
+
+
+
+/* ----------------------------- */
+/* == WordPress alignement */
+/* ----------------------------- */
+
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ----------------------------- */
+/* == Hidding / unhidding content */
+/* ----------------------------- */
+
+/* for image replacement */
+
+.ir {
+	display: block;
+	text-indent: -999em;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+}
+
+
+/* Hide for both screenreaders and browsers 
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+	display: none;
+	visibility: hidden;
+} 
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+	visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders 
+   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
+.assistive-text, 
+.visually-hidden {
+	position: absolute !important;
+	left: -7000px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+[dir=rtl] .visually-hidden {
+	left: auto;
+	right: -7000px;
+}
+
+a.assistive-text:active,
+a.assistive-text:focus {
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	color: #1982d1;
+	clip: auto !important;
+	font-size: 12px;
+	position: absolute;
+	text-decoration: underline;
+	top: 0;
+	left: 7.6%;
+}
+
+/* skip-links */
+.skip-links {
+	position: absolute;
+}
+
+.skip-links a {
+	position: absolute;
+	left: -9999px;
+	padding: 0.5em;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+}
+
+.skip-links a:focus {
+	position: static;
+}
 
 
 /* ----------------------------- */
 /* ==desktop medias */
 /* ----------------------------- */
-@media (min-width: 641px) {
-
-}
 
  /* Responsive Menu */
 
 @media screen and (max-width: 768px) {
-    header a.menu-link{
-        display:block;
-        padding: 4px ;
-    }   
-    header nav .menu  li {
-        float:none;
-        margin:0;
-    }
-    .js header nav[role=navigation] {
-        overflow:hidden;
-        max-height: 0em;
-    } 
-    .js header nav[role=navigation].active {
-       max-height: 30em;
-    }
-    header .menu .rightalign{
-         float:none;
-    }
-    header .sub-menu{
-        background:none;
-    }
-    header li:hover .sub-menu{
-        background: none repeat scroll 0 0 #333333;
-    }
-    header li:hover .sub-menu{
-        max-height: 0px;
-        overflow: hidden;
-    }
-    header .current-menu-item .sub-menu,
-    header .sub-menu.active{
-        background:rgb(51, 51, 51);
-    }
-    header .menu .has-subnav{
-        position:relative;
-    }    
-    header li .sub-menu.active{        
-        max-height: 30em;
-        overflow:visible;
-        position:relative;
-    }
-    header li .sub-menu.active li{
-        padding-left:20px;
-    }
-    /* styling the toggle menu */
-    .toggle-link{ 
-        position:absolute;
-        height:26px;
-        right:0px;
-        width:40px;
-        z-index:200;
-        font-size:0em;
-         background:rgba(255, 255, 255,0.1);       
-        cursor:pointer;
-    }
-    /* arrow to indicate that we have subnav*/
-    header .menu .has-subnav > .toggle-link:after{        
-        content: "▼";
-        font-size:16px;
-        position:absolute;
-        width:15px;
-        top:0px;
-        bottom:0px;
-        right:10px;
-        color: #607890;
-    }
-    header .menu .has-subnav  > .toggle-link.active:after{
-         content: "▲";
-    }
+	.navtoggle,
+	.toggle-link {
+		display: block;
+	}
+
+	.main-menu .menu  li {
+		float: none;
+		margin: 0;
+	}
+
+	.js .menu > ul {
+		overflow: hidden;
+		max-height: 0em;
+	}
+
+	.main-menu .active + ul,
+	.main-menu .keyboardactive + ul {
+		max-height: 90em;
+	}
+  
+	/* styling the toggle menu */
+	.toggle-link {
+		position: absolute;
+		top: 0;
+		right: 0px;
+		height: 42px;
+		width: 40px;
+		border: none;
+		z-index: 200;
+		font-size: 0em;
+		background: rgba(255, 255, 255,0.1);
+		cursor: pointer;
+	}
+	/* arrow to indicate that we have subnav*/
+	.main-menu .menu .has-subnav > .toggle-link:after {
+		content: "▼";
+		font-size: 16px;
+		position: absolute;
+		width: 15px;
+		top: 10px;
+		bottom: 0px;
+		right: 10px;
+		color: #607890;
+	}
+
+	.main-menu .menu .has-subnav  > .toggle-link.active:after {
+		content: "▲";
+	}
+	
+	/* Hide the Sub menu */
+	.main-menu li:hover .sub-menu,
+	.main-menu li:hover .children {
+		max-height: 0;
+		overflow: hidden;
+	}
+
+	/* Open the Sub menu ! */
+	.main-menu li .sub-menu.active,
+	.main-menu li.hover .sub-menu,
+	.main-menu li .children.active,
+	.main-menu li.hover .children {
+		max-height: 30em;
+		overflow: visible;
+		position: relative;
+	}
+
+	/* Sub menu styling*/
+	.main-menu .sub-menu, 
+	.main-menu .children {
+		background: none;
+	}
+
+	.main-menu .sub-menu a {
+		color: #607890;
+	}
+
+	.main-menu .sub-menu .current-menu-item a {
+		color: #fff;
+	}
+
+	.main-menu .sub-menu li a {
+		padding-left: 30px;
+	};
 }
 
 
-
-/* ----------------------------- */
-/* ==mobile */
-/* ----------------------------- */
-
-/* quick tablet reset */
-@media (max-width: 768px) {
-    .tablet-hidden { display: none; }
-    .w60,
-    .w66,
-    .w70,
-    .w75,
-    .w80,
-    .w90,
-    .w100,
-    .w600p,
-    .w700p,
-    .w800p,
-    .w960p,
-    .mw960p {
-        width: auto;
-    }
-    /* responsive widths for medium (m) screens, like tablets */
-    .m25 { width: 25%; }
-    .m33 { width: 33.3333%; }
-    .m50 { width: 50%; }
-    .m66 { width: 66.6666%; }
-    .m75 { width: 75%; }
-    .m100 {
-        display: block !important;
-        float: none !important;
-        clear: none !important;
-        width: auto !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        border: 0;      
-    }
-}
-
-/* quick smartphone reset */
-@media (max-width: 640px) {
-    .phone-hidden { display: none; }
-    .mod,
-    .item,
-    .col,
-    label,
-    fieldset {
-        display: block !important;
-        float: none !important;
-        clear: none !important;
-        width: auto !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        border: 0;
-    }
-    .w30,
-    .w33, 
-    .w40,
-    .w50,
-    .w300p,
-    .w400p,
-    .w500p {
-        width: auto;
-    }
-    .row { 
-        display: block !important;
-        width: 100% !important;
-    }
-    /* responsive widths for tiny (t) screens, like smartphones */
-    .t25 { width: 25%; }
-    .t33 { width: 33.3333%; }
-    .t50 { width: 50%; }
-    .t66 { width: 66.6666%; }
-    .t75 { width: 75%; }
-    .t100 { 
-        display: block !important;
-        float: none !important;
-        clear: none !important;
-        width: auto !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        border: 0;
-    }
-    th,
-    td {
-        display: block !important;
-        width: auto !important;
-        text-align: left !important;
-    }
-    thead { display: none; }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-/* Style adjustments for retina devices */
-}
-
-/* orientation iOS font-size fix */
-@media (orientation: landscape) and (max-device-width: 768px) {
-    html,
-    body {
-        -webkit-text-size-adjust: 100%;
-    }
-}
-
-
-/* ----------------------------- */
-/* == Print style */
-/* ----------------------------- */
-
-
-@media print {
-    p, blockquote {orphans: 2; widows: 2;}
-    blockquote, ul, ol {page-break-inside: avoid;}
-    h1, h2, h3, caption { page-break-after: avoid;}
-  * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
-  a, a:visited { color: #444 !important; text-decoration: underline; }
-  a:after { content: "(" attr(href) ")"; } 
-  abbr:after { content: "(" attr(title) ")"; }
-  .ir a:after { content: "";
-}
-/* Don't show links for images */
- pre,
-blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-}
-thead {
-    display: table-header-group;
-}
-/* css-discuss.incutio.com/wiki/Printing_Tables */
- tr,
-img {
-    page-break-inside: avoid;
-}
-@page {
-        margin: 0.5cm;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
