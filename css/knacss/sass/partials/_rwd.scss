@@ -1,0 +1,107 @@
+/* ----------------------------- */
+/* ==desktop and retina medias   */
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* ==viewport fixing for RWD     */
+/* ----------------------------- */
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+@-moz-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+@-ms-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+@-o-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+/* ---------------------------------- */
+/* ==Responsive large / small / tiny */
+/* ---------------------------------- */
+
+@mixin rwd-setup($namespace: "") {
+  .#{namespace}no-float { float: none; }
+  
+  .#{namespace}inbl {
+    @include inline-block(top);
+    float: none;
+  }
+  
+  .#{namespace}row {
+    display: table !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+  }
+
+  .#{namespace}col {
+    display: table-cell !important;
+    vertical-align: top !important;
+  }
+
+  /* Widths */
+  .#{namespace}w25 { width: 25% !important; }
+  .#{namespace}w33 { width: 33.3333% !important; }
+  .#{namespace}w50 { width: 50% !important; }
+  .#{namespace}w66 { width: 66.6666% !important; }
+  .#{namespace}w75 { width: 75% !important; }
+  .#{namespace}w100 {
+    display: block  !important;
+    float: none   !important;
+    clear: none   !important;
+    width: auto   !important;
+    margin-left: 0  !important;
+    margin-right: 0 !important;
+    border: 0;    
+  }
+
+  /* Margins */
+  .#{namespace}ma0 { margin: 0 !important; }
+}
+
+@include mq(large) {
+  @include rwd-setup("large-");
+}
+
+@include mq(small) {
+  @include rwd-setup("small-");
+}
+
+@include mq(tiny) {
+
+  /* Quick smartphone reset */
+  .mod,
+  .col,
+  fieldset {
+    display: block  !important;
+    float: none   !important;
+    clear: none   !important;
+    width: auto   !important;
+    margin-left:  0 !important;
+    margin-right: 0 !important;
+    border: 0;
+  }
+
+  .w300p,
+  .w400p,
+  .w500p {
+    width: auto;
+  }
+
+  .row { 
+    display: block !important;
+    width: 100% !important;
+  }
+
+  @include rwd-setup("tiny-");
+}

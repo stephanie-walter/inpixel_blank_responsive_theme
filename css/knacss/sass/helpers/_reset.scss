@@ -1,0 +1,153 @@
+/*----------------------------*\
+ * Soft reset                 *
+\*----------------------------*/
+
+.knacss-debug {
+  background: pink;
+  outline: 3px solid maroon;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  padding-left: 2em;
+
+  &.unstyled {
+    list-style: none;
+  }
+}
+
+code, pre, samp, kbd {
+  white-space: pre-wrap;
+  font-family: $monospace-font-stack;
+  line-height: 1em;
+}
+
+code, kbd, mark { 
+  border-radius: 2px; 
+}
+
+em { 
+  font-style: italic; 
+}
+
+strong { 
+  font-weight: bold; 
+}
+
+kbd {
+  padding: 0 2px;
+  border: 1px solid #999;
+}
+
+code {
+  padding: 2px 4px;
+  background: rgba(0,0,0,.04);
+  color: #b11; 
+}
+
+mark {
+  padding:2px 4px;
+  background: #ff0;
+}
+
+sup, sub {
+  vertical-align: 0;
+  position: relative;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+/**
+ * Avoid top margins on first content element 
+ */
+p, ul, ol dl,
+blockquote, pre,
+h1, h2, h3, h4, h5, h6 {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+/**
+ * Avoid margins on nested elements 
+ */
+li {
+  p, ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Prevents those to break out of their container
+ */
+img, table, td, 
+blockquote, code, pre, 
+textarea, input, video {
+  max-width: 100%;
+}
+
+/**
+ * Pictures
+ * 1. Bugfix for IE8
+ * 2. Bugfix for Gmap3 
+ * 3. Remove blue border on IE
+ */
+img {
+  vertical-align: middle;
+  width: auto; /* 1 */
+
+  :not(.gm-style),
+  :not(.gmnoscreen),
+  :not(.gmnoprint) {
+    & {
+      height: auto !important; /* 2 */
+    }
+  }
+
+  .gm-style,
+  .gmnoscreen,
+  .gmnoprint {
+    & {
+      max-width: none !important; /* 2 */
+    }
+  }
+
+  a & {
+    border: 0; /* 3 */
+  }
+}
+
+/**
+ * Hide script and style tags in case of table mode
+ */
+body > script,
+body > style { 
+  display: none !important;
+}
+
+/**
+ * Force word wrapping on small screens
+ */
+@include mq(small) {
+  div, textarea, 
+  table, td, th, 
+  code, pre, samp {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+  }
+}

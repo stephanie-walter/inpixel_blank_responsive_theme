@@ -1,4 +1,4 @@
-Inpixelitrust Responsive blank theme for WordPress
+Inpixelitrust Responsive blank theme for WordPress V2
 ==============================
 
 Demo link : <a href="http://www.inpixelitrust.fr/blank-responsive"> demo </a>

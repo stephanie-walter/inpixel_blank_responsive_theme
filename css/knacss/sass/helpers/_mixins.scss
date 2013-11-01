@@ -1,0 +1,70 @@
+/*----------------------------*\
+ * Mixins                     *
+\*----------------------------*/
+
+/**
+ * Mixin to handle media queries and retina
+ */
+@mixin mq($keyword) {
+  @if $keyword == large  {
+    @media (min-width: 1280px) { @content; }
+  }
+  @if $keyword == medium {
+    @media (min-width: 769px) { @content; }
+  }
+  @if $keyword == small {
+    @media (max-width: 768px)  { @content; }
+  }
+  @if $keyword == tiny  {
+    @media (max-width: 640px)  { @content; }
+  }
+  @if $keyword == retina {
+    @media 
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx) {
+        @content;
+    }
+  }
+}
+
+/**
+ * Mixin to handle REM font sizing with PX fallback
+ */
+@mixin rem($value, $base: $base-font-size) {
+  @if $legacy-support-for-ie {
+    font-size: $value * 1px;
+  }
+  font-size: $value / $base * 1rem;
+}
+
+/**
+ * Compass-like inline-block mixin
+ */ 
+@mixin inline-block($alignment: none) {
+  @if $legacy-support-for-mozilla {
+    display: -moz-inline-stack; 
+  }
+  
+    display: inline-block;
+  
+  @if $alignment and $alignment != none {
+    vertical-align: $alignment; 
+  }
+
+  @if $legacy-support-for-ie {
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline; 
+  }
+}
+
+/**
+ * Mixin to prefix properties
+ */
+@mixin prefix($property, $value) {
+  $vendors: "-webkit-", "-moz-", "-ms-", "-o-", "";
+  @each $v in $vendors {
+    #{$v}#{$property}: $value;
+  }
+}

@@ -1,0 +1,76 @@
+/* ----------------------------- */
+/* ==typography                  */
+/* ----------------------------- */
+
+/**
+ * 1. Orientation iOS font-size fix
+ */
+html {
+  font-family: $regular-font-stack;
+  line-height: 1.5;
+  color: #000;
+  
+  @media (orientation: landscape) and (max-device-width: 768px) {
+    -webkit-text-size-adjust: 100%; /* 1 */
+  }
+}
+
+/**
+ * 1. Put the base font-size at 14px
+ */
+body {
+  @include rem($base-font-size); /* 1 */
+  background: white;
+}
+
+/**
+ * Font-sizing for content
+ * Preserves vertical-rythm
+ * Source: http://soqr.fr/vertical-rhythm/ 
+ */
+p, ul, ol, dl,
+blockquote, pre,
+td, th,
+label, textarea,
+caption, figure {
+  line-height: 1.5;
+  margin: .75em 0 0;
+}
+
+$headings-size: 32 28 24 20 18 16;
+
+@for $i from 1 through length($headings-size) {
+  $selector    : "h#{$i}, .h#{$i}-like";
+  $visual      : nth($headings-size, $i);
+  $line-height : if($i < 4, 42, 21);
+  
+  #{$selector} {
+    margin: 21 / $visual * 1em (0) (0) (0);
+    line-height: $line-height / $visual;
+    @include rem($visual);
+  }
+}
+
+/**
+ * Alternate font-sizing 
+ * .smaller  => 10px
+ * .small    => 12px
+ * .big      => 16px
+ * .bigger   => 18px
+ * .biggest  => 20px
+ */
+$sizes: 
+  smaller 10, 
+  small   12, 
+  big     16, 
+  bigger  18, 
+  biggest 20;
+
+@each $size in $sizes {
+  $keyword: nth($size, 1);
+  $size-px: nth($size, 2);
+
+  .#{$keyword} {
+    @include rem($size-px);
+  }
+}

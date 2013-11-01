@@ -1,0 +1,483 @@
+/*
+Theme Name: Inpixel Blank Responsive
+Theme URI: http://www.inpixelitrust.fr/blog/en/inpixelitrust-responsive-blank-theme-wordpress/
+Github Theme URI: https://github.com/inpixelitrust/inpixel_blank_responsive_theme
+Author: Stephanie Walter
+Author URI: http://www.inpixelitrust.fr
+Description: Inpixelitrust blank theme for starting a WordPress project based on <a href="http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/">Randy Jensen & Randy Hoyt HTML5 starter theme </a> with other goodies added plus chunks of Paul Irish's <a href="http://html5boilerplate.com/">HTML5 Boilerplate </a> and some final pieces of <a href="http://knacss.com/">Raphael Goetter's knacss in it</a>. Enjoy and Share the love :)
+Version: v1.5.2
+License: GPL
+License URI: http://codex.wordpress.org/License
+
+
+/* !!! Important note : I used @import rule to be able to import the KNACSS build from the official repository more easily using either CSS, Less or Sass, but on a "real" project you might want to include an merge the CSS rules directly in your main stylesheet (or use a preprocessor to do the job) */
+@import "css/knacss/knacss.css"; 
+
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+
+a,a:active,a:visited {
+	color: #607890;
+}
+
+a:hover {
+	color: #036;
+}
+
+a:link {
+	-webkit-tap-highlight-color: #FF5E99;
+}
+
+a img {
+	border: 0;
+}
+
+
+
+/* ----------------------------- */
+/* == General */
+/* ----------------------------- */
+
+
+
+/* ----------------------------- */
+/* == Header */
+/* ----------------------------- */
+
+.site-title {
+	margin: .67em 0;
+	font-weight: bold;
+}
+
+.site-description {
+	margin: 0 0 1em;
+	font-weight: normal;
+}
+
+
+/* ----------------------------- */
+/* == Menu */
+/* ----------------------------- */
+
+.main-menu {
+	display: block;
+	float: left;
+	width: 100%;
+	margin: 0 auto 1em;
+	background: #eee;
+}
+
+.main-menu ul {
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.main-menu li {
+	position: relative;
+	float: left;
+}
+
+.main-menu a {
+	display: block;
+	padding: .5em 1em;
+	line-height: 2em;
+	text-decoration: none;
+}
+
+.main-menu a:hover,
+.main-menu a:focus,
+.main-menu .current-menu-item a,
+.main-menu .current-menu-ancestor a {
+	color: #fff;
+	background: rgb(51, 51, 51);
+}
+
+.main-menu .sub-menu,
+.main-menu .children {
+	position: absolute;
+	max-height: 0;
+	overflow: hidden;
+	list-style: none outside none;
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	background: rgb(51, 51, 51);
+}
+
+.main-menu .sub-menu li,
+.main-menu .children li {
+	float: none;
+}
+
+.main-menu .sub-menu a,
+.main-menu .children a {
+	white-space: nowrap;
+	color: #fff;
+}
+
+/* unhide the 2nd level */
+.main-menu li:hover .sub-menu,
+.main-menu li:hover .children,
+.main-menu li.hover .sub-menu,
+.main-menu li.hover .children {
+	max-height: 30em;
+}
+
+.main-menu li:hover a {
+	color: #fff;
+	background: rgb(51, 51, 51);
+}
+
+.main-menu .sub-menu a:hover,
+.main-menu .children a:hover,
+.main-menu .sub-menu a:focus,
+.main-menu .children a:focus {
+	color: #fff;
+	background: rgb(0, 0, 0);
+}
+
+
+/* Styling the toggle menu link and hiding it */
+.navtoggle,
+.toggle-link {
+	display: none;
+}
+
+.main-menu .navtoggle {
+	width: 100%;
+	padding: .8em 1em;
+	text-align: right;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.navtoggle:before {
+	content: '\2630';
+	padding-right: .5em;
+	font-size: 1em;
+}
+
+
+
+/* ----------------------------- */
+/* == Content */
+/* ----------------------------- */
+.lteie8 .container {
+	width: 1024px;
+}
+
+/* nav */
+.content nav {
+	display: block;
+	overflow: hidden;
+}
+
+.content nav .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.content nav .nav-next {
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+
+.content #nav-above {
+	display: none;
+}
+
+.paged .content #nav-above,
+.single .content #nav-above {
+	display: block;
+}
+
+#nav-below {
+	margin: 1em 0 0;
+}
+
+.page-link {
+	margin: 0 0 1em;
+}
+
+/* table styling */
+
+.content table,
+.content td,
+.content th {
+	border: 1px solid rgb(191, 191, 190);
+}
+
+.content tbody tr:nth-child(odd) {
+	background: #eee;
+}
+
+.entry-meta {
+	font-size: 0.9em;
+	font-style: italic;
+}
+
+
+/* ----------------------------- */
+/* == Footer */
+/* ----------------------------- */
+
+
+
+
+
+/* ----------------------------- */
+/* == WordPress Images */
+/* ----------------------------- */
+
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+img.alignleft {
+	margin-right: 1em;
+}
+
+img.alignright {
+	margin-left: 1em;
+}
+
+.wp-caption {
+	padding: .5em;
+	text-align: center;
+}
+
+.wp-caption img {
+	margin: .25em;
+}
+
+.wp-caption .wp-caption-text {
+	margin: .5em;
+}
+
+.gallery-caption {
+}
+
+.gallery-item {
+	float: left;
+	width: 33%;
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* bicubic resizing for non-native sized IMG: 
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+
+.ie7 img {
+	-ms-interpolation-mode: bicubic;
+}
+
+
+
+/* ----------------------------- */
+/* == WordPress alignement */
+/* ----------------------------- */
+
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ----------------------------- */
+/* == Hidding / unhidding content */
+/* ----------------------------- */
+
+/* for image replacement */
+
+.ir {
+	display: block;
+	text-indent: -999em;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+}
+
+
+/* Hide for both screenreaders and browsers 
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+	display: none;
+	visibility: hidden;
+} 
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+	visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders 
+   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
+.assistive-text, 
+.visually-hidden {
+	position: absolute !important;
+	left: -7000px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+[dir=rtl] .visually-hidden {
+	left: auto;
+	right: -7000px;
+}
+
+a.assistive-text:active,
+a.assistive-text:focus {
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	color: #1982d1;
+	clip: auto !important;
+	font-size: 12px;
+	position: absolute;
+	text-decoration: underline;
+	top: 0;
+	left: 7.6%;
+}
+
+/* skip-links */
+.skip-links {
+	position: absolute;
+}
+
+.skip-links a {
+	position: absolute;
+	left: -9999px;
+	padding: 0.5em;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+}
+
+.skip-links a:focus {
+	position: static;
+}
+
+
+/* ----------------------------- */
+/* ==desktop medias */
+/* ----------------------------- */
+
+ /* Responsive Menu */
+
+@media screen and (max-width: 768px) {
+	.navtoggle,
+	.toggle-link {
+		display: block;
+	}
+
+	.main-menu .menu  li {
+		float: none;
+		margin: 0;
+	}
+
+	.js .menu > ul {
+		overflow: hidden;
+		max-height: 0em;
+	}
+
+	.main-menu .active + ul,
+	.main-menu .keyboardactive + ul {
+		max-height: 90em;
+	}
+  
+	/* styling the toggle menu */
+	.toggle-link {
+		position: absolute;
+		top: 0;
+		right: 0px;
+		height: 42px;
+		width: 40px;
+		border: none;
+		z-index: 200;
+		font-size: 0em;
+		background: rgba(255, 255, 255,0.1);
+		cursor: pointer;
+	}
+	/* arrow to indicate that we have subnav*/
+	.main-menu .menu .has-subnav > .toggle-link:after {
+		content: "▼";
+		font-size: 16px;
+		position: absolute;
+		width: 15px;
+		top: 10px;
+		bottom: 0px;
+		right: 10px;
+		color: #607890;
+	}
+
+	.main-menu .menu .has-subnav  > .toggle-link.active:after {
+		content: "▲";
+	}
+	
+	/* Hide the Sub menu */
+	.main-menu li:hover .sub-menu,
+	.main-menu li:hover .children {
+		max-height: 0;
+		overflow: hidden;
+	}
+
+	/* Open the Sub menu ! */
+	.main-menu li .sub-menu.active,
+	.main-menu li.hover .sub-menu,
+	.main-menu li .children.active,
+	.main-menu li.hover .children {
+		max-height: 30em;
+		overflow: visible;
+		position: relative;
+	}
+
+	/* Sub menu styling*/
+	.main-menu .sub-menu, 
+	.main-menu .children {
+		background: none;
+	}
+
+	.main-menu .sub-menu a,
+	.main-menu .children a {
+		color: #607890;
+	}
+
+	.main-menu .sub-menu .current-menu-item a,
+	.main-menu .children .current-menu-item a {
+		color: #fff;
+	}
+
+	.main-menu .sub-menu li a,
+	.main-menu .children li a {
+		padding-left: 30px;
+	};
+}

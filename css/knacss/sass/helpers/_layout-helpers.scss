@@ -1,0 +1,153 @@
+/*----------------------------*\
+ * Helpers                    *
+\*----------------------------*/
+
+/**
+ * .{SIZE}-hidden and .{SIZE}-visible helpers
+ */
+$breakpoints: large, small, tiny;
+
+@each $size in $breakpoints {
+  .#{$size}-hidden {
+    @include mq($size) {
+      display: none;
+    }
+  }
+
+  .#{$size}-visible {
+    display: block;
+
+    @include mq($size) {
+      display: block;
+    }
+  }
+}
+
+
+/**
+ * Clearfix
+ */
+.clearfix {
+  &:after {
+	content: '';
+	clear: both;
+	display: table;
+  }
+
+  @if $legacy-support-for-ie {
+    *zoom: 1;
+  }
+}
+
+/**
+ * Hidden yet accessible content
+ */
+.visuallyhidden {
+  clip: rect(0 0 0 0);
+  width:   1px;
+  height:  1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  border:  0;
+  position: absolute;
+}
+
+/** 
+ * Prevent long strings to break out of their container
+ */
+.wrap {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/**
+ * Skip links 
+ */
+.skip-links {
+  position: absolute;
+
+  a {
+    position: absolute;
+    left: -7000px;
+    padding: 0.5em;
+    background: #000;
+    color:#fff;
+    text-decoration: none;
+
+    &:focus {
+      position: static;
+    }
+  }
+}
+
+/**
+ * Float layout
+ * module, contains floats (.item is the same) 
+ */
+.mod, 
+.item { 
+  overflow: hidden;
+}
+
+/** 
+ * Blocks that needs to be placed under floats 
+ */
+.clear, 
+.line, 
+.row {
+  clear: both;
+}
+
+/**
+ * Blocks that must contain floats 
+ */
+.clearfix, 
+.line, 
+.mod {
+  @extend .clearfix;
+}
+
+/**
+ * Table layout 
+ */
+.row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.row > *,
+.col {
+  display: table-cell;
+  vertical-align: top;
+}
+
+/**
+ * Inline-blocks
+ */
+.inbl {
+  @include inline-block(top);
+  margin-right: -.25em;
+}
+
+/* Alignments (blocks and inline) */
+/* ------------------------------ */
+
+.left  { float: left;  }
+.right { float: right; }
+
+img.left { margin-right: 1em; }
+img.right { margin-left: 1em; }
+
+img.left, 
+img.right { margin-bottom: 5px; }
+
+.center    { margin-left: auto; margin-right: auto; }
+.txtleft   { text-align: left; }
+.txtright  { text-align: right; }
+.txtcenter { text-align: center; }

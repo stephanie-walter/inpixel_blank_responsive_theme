@@ -1,0 +1,46 @@
+/*  The css for the login page ! */
+
+h1 a{
+	background:none;
+}
+.login h1 a {
+background-image:url(../images/logo.png) !important; 
+width:280px; 
+height:70px; 
+}
+body.login { 
+border-top-color:#bccad3; 
+}
+
+/* Barre du haut - Lien */
+.login p#backtoblog a:link,.login p#backtoblog a:visited { color:rgb(32, 110, 155) !important; }
+
+/* Barre du haut - Effet de survol*/
+.login p#backtoblog a:hover,.login p#backtoblog a:active { color:rgb(9, 87, 132) !important; text-decoration:underline; }
+
+/* Modification de la taille du bloc "Connexion" */
+#login { 
+width:400px; 
+margin:0em auto; 
+}
+
+/* Modification de bouton "Se connecter" et des autres liens*/
+#login form .submit input { 
+border-color: rgb(4, 76, 118) !important; 
+border-radius:3px !important;
+font-weight:bold; 
+color:#FFF!important; 
+text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+background: rgb(9, 87, 132); 
+/* IE6-9 */
+ 
+}
+#login form .submit input:hover { 
+background:  rgb(37, 121, 169); 
+color:#FFFFFF!important; 
+}
+
+.login #nav a { color:#7c8991!important; 
+}
+.login #nav a:hover { color:#6f7a81!important; 
+}
