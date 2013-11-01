@@ -36,6 +36,9 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 
 
 *Changelog*
+*v2 :* 
+* KNACSS framework updated to 2.6
+
 *v1.5 :* 
 * KNACSS framework was included into an external file for easier maintenance (read important note in CSS)
 * KNACSS available in LESS and Sass flavor
