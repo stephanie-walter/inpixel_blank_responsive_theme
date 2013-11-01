@@ -15,7 +15,7 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 
 * HTML5
 * Uses Paul Irish's conditionnal tags for IE
-* Uses <a href="http://knacss.com/">Raphael Goetter's knacss</a> for the basic layout
+* Uses <a href="http://knacss.com/">Raphael Goetter's knacss  V2.9</a> for the basic layout
 * Default full screen, one left sidebar template and a right sidebar template for pages
 * Responsive two levels menu using media queries and jQuery (based on <a href="http://codepen.io/bradfrost/full/qwJvF">multi toggle navigation</a>)
 * Keyboard accessibile menu (both normal and responsive version)
