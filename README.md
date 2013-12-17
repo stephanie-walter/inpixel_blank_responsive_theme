@@ -26,7 +26,7 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 * Enables now updates from WordPress directly, you'll have to <a href="https://github.com/UCF/Theme-Updater">install Theme Updater</a>. For more information <a href="http://www.disruptiveconversations.com/2012/02/how-to-auto-update-wordpress-custom-themes-using-github.html">see tutorial hier </a>
 * Under <a href="http://wordpress.org/about/gpl/">GPL V2 Licence</a>
 
-*Big Thanks to <a href="http://jmperso.eu/howdy">JM for the French translations !</a>*
+*Big Thanks to JM for the French translations !*
 *Big Thanks to for many little updates <a href="http://www.creativejuiz.fr/blog/">Geoffrey C.</a>*
 
 ----------------------------------------------------
