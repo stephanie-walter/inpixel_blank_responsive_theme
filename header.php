@@ -29,7 +29,7 @@
 	?></title>
 	
 	<!--  Mobile Viewport Fix -->
-	<meta name="viewport" content="initial-scale=1.0">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
     
 	<!-- Place favicon.ico and apple-touch-icon.png in the images folder -->
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
@@ -59,7 +59,7 @@
 			<hgroup>
 					<h1 class="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				</hgroup>
+			</hgroup>
 
 	
 			
