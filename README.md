@@ -25,6 +25,7 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 * Embeds functions, CSS, and images for the customisation of the admin area (css/custom_admin.css) and the login page (css/custom_login.css)
 * Enables now updates from WordPress directly, you'll have to <a href="https://github.com/UCF/Theme-Updater">install Theme Updater</a>. For more information <a href="http://www.disruptiveconversations.com/2012/02/how-to-auto-update-wordpress-custom-themes-using-github.html">see tutorial hier </a>
 * Under <a href="http://wordpress.org/about/gpl/">GPL V2 Licence</a>
+* <a href="http://bower.io/">Bower</a> support under the tag "inpixel_blank"
 
 *Big Thanks to JM for the French translations !*
 *Big Thanks to for many little updates <a href="http://www.creativejuiz.fr/blog/">Geoffrey C.</a>*
