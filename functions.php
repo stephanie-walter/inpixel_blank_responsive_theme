@@ -104,8 +104,6 @@ register_nav_menu( 'primary', __( 'Primary Menu', 'themename' ) );
 
 
 
-
-
 /* Change the lenght of the excerpt */
 
 if( !function_exists('twentyeleven_excerpt_length'))  {
