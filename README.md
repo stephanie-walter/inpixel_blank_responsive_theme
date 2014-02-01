@@ -8,6 +8,8 @@ Demo link : <a href="http://www.inpixelitrust.fr/blank-responsive"> demo </a>
 Inpixelitrust blank theme for starting a WordPress project based on <a href="http://randyjensenonline.com/thoughts/handcrafted-wp-starter-theme/">Randy Jensen & Randy Hoyt HTML5 starter theme </a> with other goodies added plus chunks of Paul Irish's <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> and pieces of <a href="http://knacss.com/">Raphael Goetter's knacss in it</a>
 <a href="http://www.inpixelitrust.fr/blog/en/inpixelitrust-responsive-blank-theme-wordpress/">More details about the theme can be found here</a>
 
+I can't provide support for the theme anymore, but feel free to submit some forkes if you want to solved issues / improve it.
+
 *Specificities of the theme*
 
 * HTML5
@@ -20,7 +22,7 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 * Embeds <a href="http://wpengineer.com/2230/removing-comments-absolutely-wordpress/">the Remove comments absolute plugin</a> (you can comment the line that calls unctions/remove-comments-absolute.php in functions.php to disable it)
 * Embeds ready to use script clean up functions functions/script_style_cleanups.php
 * Embeds a starting template for a custom option page functions/theme-options.php
-* Embeds a starting template for custom post types functions/custom_post_types.php
+* Provided with a Custom Post Type plugin (copy and paste custom_post_types.php to your plugin directory and activate it)
 * Embeds a version of modernizr, you can change the script in js/modernizr.custom.js
 * Embeds functions, CSS, and images for the customisation of the admin area (css/custom_admin.css) and the login page (css/custom_login.css)
 * Enables now updates from WordPress directly, you'll have to <a href="https://github.com/UCF/Theme-Updater">install Theme Updater</a>. For more information <a href="http://www.disruptiveconversations.com/2012/02/how-to-auto-update-wordpress-custom-themes-using-github.html">see tutorial hier </a>
@@ -34,6 +36,12 @@ Inpixelitrust blank theme for starting a WordPress project based on <a href="htt
 
 
 *Changelog*
+
+*v2.1 :* 
+* Styles enqueued via wp_enqueue_style
+* Custom Post Types are now a plugin you can activate / desactive
+
+
 *v2 :* 
 * KNACSS framework updated to 2.6
 

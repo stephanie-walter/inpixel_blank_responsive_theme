@@ -30,24 +30,22 @@
 	
 	<!--  Mobile Viewport Fix -->
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+
     
 	<!-- Place favicon.ico and apple-touch-icon.png in the images folder -->
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
-	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png"><!--60X60-->
-	
+	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png"><!--60X60-->	
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" media="screen, projection">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
 	
 	<?php // Use this url to get your personnal build http://www.modernizr.com/download/ ?>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.custom.js"></script>
-
-	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	
 	<!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>	
 	
 	<?php wp_head(); ?>
 	
@@ -57,10 +55,9 @@
 	<div class="hfeed container">
 
 		<header role="banner">
-			<hgroup>
-					<h1 class="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
+				<h1 class="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		
 
 			<nav class="main-menu" id="menu" role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'themename' ); ?></h3>			

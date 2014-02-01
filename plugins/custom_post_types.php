@@ -1,4 +1,22 @@
 <?php
+/*
+Plugin Name: Inpixel Blank Responsive Costum Post Type Plugin
+Plugin Script: inpixel-custom-post-type.php
+Plugin URI: https://github.com/inpixelitrust/inpixel_blank_responsive_theme
+Description: Please copie / paste this file to the Plugin Directory and activate it if you need custom post types.
+Version: 0.1
+Author: Stephanie Walter
+Author URI: http://www.inpixelitrust.fr
+
+
+=== RELEASE NOTES ===
+2014-02-01 - v1.0 - first version
+*/
+
+
+
+
+
 /********************  custom post type ************************/     
 /** We are going to create a custom post type for **** !!! **/
 add_action( 'init', 'add_cpt' );

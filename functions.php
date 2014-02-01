@@ -3,7 +3,6 @@
 
 /*** clean ups and enhancements, uncomment to use */
 require_once('functions/wordpress_cleanup.php'); //admin cleanups 
-// require_once('functions/custom_post_types.php'); // boiler template for CPT
 require_once('functions/script_style_cleanups.php'); // javascript cleanups
 // require_once('functions/remove-comments-absolute.php'); //to remove comments completely
 require_once ( 'functions/theme-options.php' );
@@ -41,6 +40,27 @@ register_nav_menus( array(
  */
 
 add_editor_style("/css/editor-style.css");
+
+/**
+ * Proper way to enqueue scripts and styles
+ */
+function theme_name_styles() {
+	wp_enqueue_style( 'mainstyle', get_stylesheet_uri(),  false,   0.1 );
+
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_name_styles' );
+
+
+// if ( !is_admin() ) { 
+//     wp_register_style(
+//         'my-style',
+//         get_stylesheet_uri(),
+//         false,
+//         0.1
+//     );
+//     wp_enqueue_style( 'my-style' );
+// }
 
 
 /**** Add some theme support, uncomment what you need ****/

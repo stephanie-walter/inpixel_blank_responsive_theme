@@ -10,7 +10,7 @@ msgstr ""
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Language: fr_FR\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: Text in functions.php:34 functions.php:98
 msgid "Primary Menu"
